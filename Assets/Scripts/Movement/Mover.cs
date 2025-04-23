@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using RPG.Combat;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,7 +6,7 @@ namespace RPG.Movement
 {
     public class Mover : MonoBehaviour
     {
-        //[SerializeField] Transform target;
+        [SerializeField] Transform target;
 
         NavMeshAgent navMeshAgent;
 
@@ -19,6 +18,12 @@ namespace RPG.Movement
         void Update()
         {
             UpdateAnimator();
+        }
+
+        public void StartMoveAction(Vector3 destination)
+        {
+            GetComponent<Fighter>().Cancel();
+            MoveTo(destination);
         }
 
         public void MoveTo(Vector3 destination)
