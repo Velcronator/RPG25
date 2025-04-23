@@ -10,14 +10,14 @@ namespace RPG.Core
         // For example, you might want to add methods to start, stop, or queue actions.
         // Example method to start an action
 
-        MonoBehaviour currentAction;
+        IAction currentAction;
 
-        public void StartAction(MonoBehaviour action)
+        public void StartAction(IAction action)
         {
             if (currentAction == action) return;
             if (currentAction != null)
             {
-                Debug.Log("Cancelling " + currentAction);
+                currentAction.Cancel();
             }
             currentAction = action;
         }
