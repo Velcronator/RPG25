@@ -1,0 +1,63 @@
+  @startuml
+  namespace RPG.Combat {
+      class Fighter {
+          -float weaponRange
+          -float timeBetweenAttacks
+          -float weaponDamage
+          -Transform target
+          -float timeSinceLastAttack
+          +void Update()
+          +void Attack(CombatTarget combatTarget)
+          +void Cancel()
+          -void AttackBehaviour()
+          -void Hit() // Animation Event
+          -bool GetIsInRange()
+      }
+      class Health {
+          -float health
+          +void TakeDamage(float damage)
+      }
+      class CombatTarget {
+      }
+      Fighter --> Health : uses
+      Fighter --> CombatTarget : targets
+  }
+
+  namespace RPG.Control {
+      class PlayerController {
+          +void Update()
+          -bool InteractWithCombat()
+          -bool InteractWithMovement()
+          -static Ray GetMouseRay()
+      }
+      PlayerController --> Fighter : uses
+      PlayerController --> Mover : uses
+      PlayerController --> CombatTarget : interacts
+  }
+
+  namespace RPG.Core {
+      interface IAction {
+          +void Cancel()
+      }
+      class ActionScheduler {
+          -IAction currentAction
+          +void StartAction(IAction action)
+      }
+      class FollowCamera {
+          -Transform target
+          +void LateUpdate()
+      }
+      Fighter ..|> IAction
+      Fighter --> ActionScheduler : uses
+  }
+
+  namespace RPG.Movement {
+      class Mover {
+          +void MoveTo(Vector3 position)
+          +void Cancel()
+          +void StartMoveAction(Vector3 destination)
+      }
+      Fighter --> Mover : uses
+      PlayerController --> Mover : uses
+  }
+  @enduml
