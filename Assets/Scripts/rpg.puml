@@ -1,27 +1,33 @@
-  @startuml
-  namespace RPG.Combat {
-      class Fighter {
-          -float weaponRange
-          -float timeBetweenAttacks
-          -float weaponDamage
-          -Transform target
-          -float timeSinceLastAttack
-          +void Update()
-          +void Attack(CombatTarget combatTarget)
-          +void Cancel()
-          -void AttackBehaviour()
-          -void Hit() // Animation Event
-          -bool GetIsInRange()
-      }
-      class Health {
-          -float health
-          +void TakeDamage(float damage)
-      }
-      class CombatTarget {
-      }
-      Fighter --> Health : uses
-      Fighter --> CombatTarget : targets
-  }
+@startuml RPG
+namespace RPG.Combat {
+    class Fighter {
+        -float weaponRange
+        -float timeBetweenAttacks
+        -float weaponDamage
+        -Health target
+        -float timeSinceLastAttack
+        +void Update()
+        +void Attack(CombatTarget combatTarget)
+        +void Cancel()
+        -void AttackBehaviour()
+        -void Hit() // Animation Event
+        -bool GetIsInRange()
+    }
+
+    class Health {
+        -float healthPoints
+        -bool isDead
+        +bool IsDead()
+        +void TakeDamage(float damage)
+        -void Die()
+    }
+
+    class CombatTarget {
+    }
+
+    Fighter --> Health : targets
+    Fighter --> CombatTarget : interacts
+}
 
   namespace RPG.Control {
       class PlayerController {
