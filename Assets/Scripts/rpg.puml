@@ -9,7 +9,10 @@ namespace RPG.Combat {
         +void Update()
         +void Attack(CombatTarget combatTarget)
         +void Cancel()
+        +bool CanAttack(CombatTarget combatTarget)
         -void AttackBehaviour()
+        -void TriggerAttack()
+        -void StopAttack()
         -void Hit() // Animation Event
         -bool GetIsInRange()
     }
@@ -29,41 +32,41 @@ namespace RPG.Combat {
     Fighter --> CombatTarget : interacts
 }
 
-  namespace RPG.Control {
-      class PlayerController {
-          +void Update()
-          -bool InteractWithCombat()
-          -bool InteractWithMovement()
-          -static Ray GetMouseRay()
-      }
-      PlayerController --> Fighter : uses
-      PlayerController --> Mover : uses
-      PlayerController --> CombatTarget : interacts
-  }
+namespace RPG.Control {
+    class PlayerController {
+        +void Update()
+        -bool InteractWithCombat()
+        -bool InteractWithMovement()
+        -static Ray GetMouseRay()
+    }
+    PlayerController --> Fighter : uses
+    PlayerController --> Mover : uses
+    PlayerController --> CombatTarget : interacts
+}
 
-  namespace RPG.Core {
-      interface IAction {
-          +void Cancel()
-      }
-      class ActionScheduler {
-          -IAction currentAction
-          +void StartAction(IAction action)
-      }
-      class FollowCamera {
-          -Transform target
-          +void LateUpdate()
-      }
-      Fighter ..|> IAction
-      Fighter --> ActionScheduler : uses
-  }
+namespace RPG.Core {
+    interface IAction {
+        +void Cancel()
+    }
+    class ActionScheduler {
+        -IAction currentAction
+        +void StartAction(IAction action)
+    }
+    class FollowCamera {
+        -Transform target
+        +void LateUpdate()
+    }
+    Fighter ..|> IAction
+    Fighter --> ActionScheduler : uses
+}
 
-  namespace RPG.Movement {
-      class Mover {
-          +void MoveTo(Vector3 position)
-          +void Cancel()
-          +void StartMoveAction(Vector3 destination)
-      }
-      Fighter --> Mover : uses
-      PlayerController --> Mover : uses
-  }
-  @enduml
+namespace RPG.Movement {
+    class Mover {
+        +void MoveTo(Vector3 position)
+        +void Cancel()
+        +void StartMoveAction(Vector3 destination)
+    }
+    Fighter --> Mover : uses
+    PlayerController --> Mover : uses
+}
+@enduml
