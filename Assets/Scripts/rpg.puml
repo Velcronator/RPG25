@@ -39,9 +39,17 @@ namespace RPG.Control {
         -bool InteractWithMovement()
         -static Ray GetMouseRay()
     }
+
+    class AIController {
+        -float chaseDistance
+        +void Update()
+        -float DistanceToPlayer()
+    }
+
     PlayerController --> Fighter : uses
     PlayerController --> Mover : uses
     PlayerController --> CombatTarget : interacts
+    AIController --> Fighter : uses
 }
 
 namespace RPG.Core {
