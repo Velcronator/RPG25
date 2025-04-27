@@ -1,7 +1,7 @@
 using System;
 using RPG.Combat;
-using RPG.Movement;
 using RPG.Core;
+using RPG.Movement;
 using UnityEngine;
 
 namespace RPG.Control
@@ -10,7 +10,7 @@ namespace RPG.Control
     {
         Health health;
 
-        private void Awake()
+        private void Start()
         {
             health = GetComponent<Health>();
         }
@@ -18,6 +18,7 @@ namespace RPG.Control
         private void Update()
         {
             if (health.IsDead()) return;
+
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
         }
@@ -35,7 +36,7 @@ namespace RPG.Control
                     continue;
                 }
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
                     GetComponent<Fighter>().Attack(target.gameObject);
                 }
