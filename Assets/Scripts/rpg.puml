@@ -7,9 +7,9 @@ namespace RPG.Combat {
         -Health target
         -float timeSinceLastAttack
         +void Update()
-        +void Attack(CombatTarget combatTarget)
+        +void Attack(GameObject combatTarget)
         +void Cancel()
-        +bool CanAttack(CombatTarget combatTarget)
+        +bool CanAttack(GameObject combatTarget)
         -void AttackBehaviour()
         -void TriggerAttack()
         -void StopAttack()
@@ -17,23 +17,16 @@ namespace RPG.Combat {
         -bool GetIsInRange()
     }
 
-    class Health {
-        -float healthPoints
-        -bool isDead
-        +bool IsDead()
-        +void TakeDamage(float damage)
-        -void Die()
-    }
-
     class CombatTarget {
     }
 
-    Fighter --> Health : targets
     Fighter --> CombatTarget : interacts
 }
 
 namespace RPG.Control {
     class PlayerController {
+        -Health health
+        +void Start()
         +void Update()
         -bool InteractWithCombat()
         -bool InteractWithMovement()
@@ -42,14 +35,36 @@ namespace RPG.Control {
 
     class AIController {
         -float chaseDistance
+        -float suspicionTime
+        -PatrolPath patrolPath
+        -float waypointTolerance
+        -float waypointDwellTime
+        -Fighter fighter
+        -Health health
+        -Mover mover
+        -GameObject player
+        -Vector3 guardPosition
+        -float timeSinceLastSawPlayer
+        -float timeSinceArrivedAtWaypoint
+        -int currentWaypointIndex
+        +void Start()
         +void Update()
-        -float DistanceToPlayer()
+        -void UpdateTimers()
+        -void PatrolBehaviour()
+        -bool AtWaypoint()
+        -void CycleWaypoint()
+        -Vector3 GetCurrentWaypoint()
+        -void SuspicionBehaviour()
+        -void AttackBehaviour()
+        -bool InAttackRangeOfPlayer()
     }
 
     PlayerController --> Fighter : uses
     PlayerController --> Mover : uses
     PlayerController --> CombatTarget : interacts
     AIController --> Fighter : uses
+    AIController --> Mover : uses
+    AIController --> PatrolPath : uses
 }
 
 namespace RPG.Core {
@@ -59,22 +74,42 @@ namespace RPG.Core {
     class ActionScheduler {
         -IAction currentAction
         +void StartAction(IAction action)
+        +void CancelCurrentAction()
     }
     class FollowCamera {
         -Transform target
         +void LateUpdate()
     }
+    class Health {
+        -float healthPoints
+        -bool isDead
+        +bool IsDead()
+        +void TakeDamage(float damage)
+        -void Die()
+    }
+    Fighter --> Health : targets
+    CombatTarget --> Health : requires
+    PlayerController --> Health : uses
+    AIController --> Health : uses
+    Mover --> Health : uses
     Fighter ..|> IAction
     Fighter --> ActionScheduler : uses
 }
 
 namespace RPG.Movement {
     class Mover {
-        +void MoveTo(Vector3 position)
-        +void Cancel()
+        -Transform target
+        -NavMeshAgent navMeshAgent
+        -Health health
+        +void Start()
+        +void Update()
         +void StartMoveAction(Vector3 destination)
+        +void MoveTo(Vector3 destination)
+        +void Cancel()
+        -void UpdateAnimator()
     }
     Fighter --> Mover : uses
     PlayerController --> Mover : uses
+    AIController --> Mover : uses
 }
 @enduml
