@@ -112,4 +112,22 @@ namespace RPG.Movement {
     PlayerController --> Mover : uses
     AIController --> Mover : uses
 }
+
+namespace RPG.Cinematics {
+    class CinematicControlRemover {
+        -GameObject player
+        +void Start()
+        -void DisableControl(PlayableDirector pd)
+        -void EnableControl(PlayableDirector pd)
+    }
+
+    class CinematicTrigger {
+        -bool alreadyTriggered
+        +void OnTriggerEnter(Collider other)
+    }
+
+    CinematicControlRemover --> PlayerController : disables
+    CinematicControlRemover --> ActionScheduler : uses
+    CinematicTrigger --> PlayableDirector : uses
+}
 @enduml
