@@ -2705,10 +2705,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2976925539372805189, guid: 030c9626c7887f04cb0165347de6275f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8286,7 +8282,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 50
-  m_NavMeshData: {fileID: 23800000, guid: 49c968ef9bb880a43ad3167605457da0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3918df2d22f0e6b4d91644107a67e20f, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &2006799641
 Transform:
