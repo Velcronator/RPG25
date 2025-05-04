@@ -1,24 +1,53 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 namespace RPG.SceneManagement
 {
     public class Portal : MonoBehaviour
     {
-        [SerializeField] private int sceneIndex = -1;
+        [SerializeField] int sceneToLoad = -1;
+        [SerializeField] Transform spawnPoint;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.tag == "Player")
             {
-                if(sceneIndex == -1)
-                {
-                    Debug.LogError("Scene index not set for portal.");
-                    return;
-                }
-                SceneManager.LoadScene(sceneIndex);
+                StartCoroutine(Transition());
             }
+        }
+
+        private IEnumerator Transition()
+        {
+            DontDestroyOnLoad(gameObject);
+            yield return SceneManager.LoadSceneAsync(sceneToLoad);
+
+            Portal otherPortal = GetOtherPortal();
+            UpdatePlayer(otherPortal);
+
+            Destroy(gameObject);
+        }
+
+        private void UpdatePlayer(Portal otherPortal)
+        {
+            GameObject player = GameObject.FindWithTag("Player");
+            player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);
+            player.transform.rotation = otherPortal.spawnPoint.rotation;
+        }
+
+        private Portal GetOtherPortal()
+        {
+            
+            foreach (Portal portal in FindObjectsByType<Portal>(FindObjectsSortMode.InstanceID))
+            {
+                if (portal == this) continue;
+
+                return portal;
+            }
+
+            return null;
         }
     }
 }
