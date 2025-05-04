@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 
 namespace RPG.SceneManagement
 {
+    enum DestinationIdentifier
+    { A, B, C, D, E, F, G, H }
+
     public class Portal : MonoBehaviour
     {
         [SerializeField] int sceneToLoad = -1;
         [SerializeField] Transform spawnPoint;
+        [SerializeField] DestinationIdentifier destination;
+
 
         private void OnTriggerEnter(Collider other)
         {
@@ -21,6 +26,12 @@ namespace RPG.SceneManagement
 
         private IEnumerator Transition()
         {
+            if(sceneToLoad < 0)
+            {
+                Debug.LogError("Scene to load is not set.");
+                yield break;
+            }
+
             DontDestroyOnLoad(gameObject);
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
@@ -39,12 +50,15 @@ namespace RPG.SceneManagement
 
         private Portal GetOtherPortal()
         {
-            
+
             foreach (Portal portal in FindObjectsByType<Portal>(FindObjectsSortMode.InstanceID))
             {
                 if (portal == this) continue;
 
+                if (portal.destination != destination) continue;
+
                 return portal;
+
             }
 
             return null;
