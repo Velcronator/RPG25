@@ -111,6 +111,7 @@ namespace RPG.Movement {
     Fighter --> Mover : uses
     PlayerController --> Mover : uses
     AIController --> Mover : uses
+    Mover --> ISaveable : implements
 }
 
 namespace RPG.Cinematics {
@@ -124,10 +125,75 @@ namespace RPG.Cinematics {
     class CinematicTrigger {
         -bool alreadyTriggered
         +void OnTriggerEnter(Collider other)
+        +object CaptureState()
+        +void RestoreState(object state)
     }
 
     CinematicControlRemover --> PlayerController : disables
     CinematicControlRemover --> ActionScheduler : uses
     CinematicTrigger --> PlayableDirector : uses
+    CinematicTrigger ..|> ISaveable : implements
+}
+
+namespace RPG.SceneManagement {
+    class Portal {
+        -int sceneToLoad
+        -Transform spawnPoint
+        -DestinationIdentifier destination
+        -float fadeOutTime
+        -float fadeInTime
+        -float fadeWaitTime
+        +void OnTriggerEnter(Collider other)
+        -IEnumerator Transition()
+        -void UpdatePlayer(Portal otherPortal)
+        -Portal GetOtherPortal()
+    }
+
+    Portal --> Fader : uses
+    Portal --> SavingWrapper : uses
+    Portal --> NavMeshAgent : uses
+}
+
+namespace RPG.Saving {
+    interface ISaveable {
+        +object CaptureState()
+        +void RestoreState(object state)
+    }
+
+    class SaveableEntity {
+        -string uniqueIdentifier
+        -static Dictionary<string, SaveableEntity> globalLookup
+        +string GetUniqueIdentifier()
+        +object CaptureState()
+        +void RestoreState(object state)
+    }
+
+    class SavingSystem {
+        +IEnumerator LoadLastScene(string saveFile)
+        +void Save(string saveFile)
+        +void Load(string saveFile)
+        +void Delete(string saveFile)
+        -Dictionary<string, object> LoadFile(string saveFile)
+        -void SaveFile(string saveFile, object state)
+        -void CaptureState(Dictionary<string, object> state)
+        -void RestoreState(Dictionary<string, object> state)
+        -string GetPathFromSaveFile(string saveFile)
+    }
+
+    class SavingWrapper {
+        -const string defaultSaveFile
+        -float fadeInTime
+        +IEnumerator Start()
+        +void Update()
+        +void Save()
+        +void Load()
+    }
+
+    SaveableEntity --> ISaveable : uses
+    SaveableEntity --> SavingSystem : uses
+    SavingWrapper --> SavingSystem : uses
+    SavingWrapper --> ISaveable : uses
+    Health --> ISaveable : implements
+    Mover --> ISaveable : implements
 }
 @enduml
