@@ -13,9 +13,17 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2431178701031624715, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 511b109c98224254db3c052ecbc67bbb, type: 2}
+    - target: {fileID: 2431178701031624715, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
       propertyPath: weaponDamage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2431178701031624715, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 4126432456216293527}
     - target: {fileID: 2694044457791806162, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -234,6 +242,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2d21ead9f817446aa6c299b76f7e89, type: 3}
+--- !u!4 &4126432456216293527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4676986922810954, guid: 9d2d21ead9f817446aa6c299b76f7e89, type: 3}
+  m_PrefabInstance: {fileID: 4131091432189267677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4133075697219742793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4283388011225748, guid: 9d2d21ead9f817446aa6c299b76f7e89, type: 3}
