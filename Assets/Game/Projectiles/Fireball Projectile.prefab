@@ -4975,6 +4975,10 @@ PrefabInstance:
       propertyPath: isHoming
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8005021338487926188, guid: ffc3c63d336bf2f4e90e18f607acae6b, type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 4883272775323824874, guid: 15596d7a22a458546b8c2265f831dd71, type: 3}
     - target: {fileID: 8770474824590876493, guid: ffc3c63d336bf2f4e90e18f607acae6b, type: 3}
       propertyPath: m_Name
       value: Fireball Projectile
