@@ -574,6 +574,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 668860912273451080, guid: 030c9626c7887f04cb0165347de6275f, type: 3}
+      propertyPath: defaultWeaponName
+      value: Unarmed
+      objectReference: {fileID: 0}
     - target: {fileID: 2976925539372805189, guid: 030c9626c7887f04cb0165347de6275f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -628,6 +632,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1722309326}
     m_Modifications:
+    - target: {fileID: 164807524222843728, guid: c9e57c2f521373c42a47f045ed6c7fd7, type: 3}
+      propertyPath: defaultWeaponName
+      value: Bow Enemy Blue
+      objectReference: {fileID: 0}
     - target: {fileID: 1067976643256562027, guid: c9e57c2f521373c42a47f045ed6c7fd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.59
