@@ -9,8 +9,8 @@ namespace RPG.Combat
     {
         [SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] GameObject equippedPrefab = null;
-        [SerializeField] float weaponDamage;
-        [SerializeField] float weaponRange;
+        [SerializeField] float weaponDamage = 5f;
+        [SerializeField] float weaponRange = 2f;
         [SerializeField] bool isRightHanded = true;
         [SerializeField] Projectile projectile = null;
 
@@ -22,13 +22,19 @@ namespace RPG.Combat
 
             if (equippedPrefab != null)
             {
-                Transform handTransform = isRightHanded ? rightHand : leftHand;
+                Transform handTransform = GetTransform(rightHand, leftHand);
                 GameObject weapon = Instantiate(equippedPrefab, handTransform);
                 weapon.name = weaponName;
             }
+
+            var overrideController = animator.runtimeAnimatorController as AnimatorOverrideController;
             if (animatorOverride != null)
             {
                 animator.runtimeAnimatorController = animatorOverride;
+            }
+            else if (overrideController != null)
+            {
+                animator.runtimeAnimatorController = overrideController.runtimeAnimatorController;
             }
         }
 
@@ -37,19 +43,19 @@ namespace RPG.Combat
             Transform oldWeapon = rightHand.Find(weaponName);
             if (oldWeapon == null)
             {
-
                 oldWeapon = leftHand.Find(weaponName);
             }
             if (oldWeapon == null) return;
 
-            oldWeapon.name = "Destroying";
+            oldWeapon.name = "DESTROYING";
             Destroy(oldWeapon.gameObject);
-
         }
 
         private Transform GetTransform(Transform rightHand, Transform leftHand)
         {
-            Transform handTransform = isRightHanded ? rightHand : leftHand;
+            Transform handTransform;
+            if (isRightHanded) handTransform = rightHand;
+            else handTransform = leftHand;
             return handTransform;
         }
 
@@ -73,9 +79,5 @@ namespace RPG.Combat
         {
             return weaponRange;
         }
-
-
-        public float GetWeaponRange() => weaponRange;
-        public float GetWeaponDamage() => weaponDamage;
     }
 }
