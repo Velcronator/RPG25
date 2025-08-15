@@ -1,8 +1,7 @@
-﻿using System;
+﻿using TMPro;
 using UnityEngine;
-using TMPro;
 
-namespace RPG.Attributes
+namespace RPG.Stats
 {
     public class ExperienceDisplay : MonoBehaviour
     {
@@ -17,7 +16,7 @@ namespace RPG.Attributes
 
         private void Update()
         {
-            text.SetText("{0:0}", experience.GetExperiencePoints());
+            text.SetText("{0:0}", experience.GetPoints());
         }
     }
 }

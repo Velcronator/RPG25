@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace RPG.Attributes
+namespace RPG.Stats
 {
     public class Experience : MonoBehaviour, ISaveable
     {
@@ -22,7 +22,7 @@ namespace RPG.Attributes
             experiencePoints = (float)state;
         }
 
-        public float GetExperiencePoints() // Fixed return type from bool to float  
+        public float GetPoints()
         {
             return experiencePoints;
         }

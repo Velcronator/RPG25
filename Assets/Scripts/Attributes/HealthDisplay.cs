@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 namespace RPG.Attributes
@@ -16,7 +15,7 @@ namespace RPG.Attributes
         }
 
         private void Update()
-        {
+        {   // todo if there is less Health arrays than Experience to level up, then this will break and get a NaN value
             text.SetText("{0:0}%", health.GetPercentage());
         }
     }
