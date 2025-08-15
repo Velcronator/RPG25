@@ -1,37 +1,48 @@
-using UnityEngine;
-using RPG.Saving;
 using System.Collections;
+using RPG.Saving;
+using UnityEngine;
 
 namespace RPG.SceneManagement
 {
     public class SavingWrapper : MonoBehaviour
     {
         const string defaultSaveFile = "save";
+
         [SerializeField] float fadeInTime = 0.2f;
 
-        IEnumerator Start()
+        private void Awake()
         {
-            if (GetComponent<SavingSystem>() == null)
-            {
-                Debug.LogError("SavingSystem component is missing.");
-                yield break;
-            }
+            StartCoroutine(LoadLastScene());
+        }
+
+        private IEnumerator LoadLastScene()
+        {
             Fader fader = FindFirstObjectByType<Fader>();
+
             fader.FadeOutImmediate();
             yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
             yield return fader.FadeIn(fadeInTime);
         }
 
-        void Update()
+        private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                Load();
-            }
             if (Input.GetKeyDown(KeyCode.S))
             {
                 Save();
             }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                Load();
+            }
+            if (Input.GetKeyDown(KeyCode.Delete))
+            {
+                Delete();
+            }
+        }
+
+        public void Load()
+        {
+            GetComponent<SavingSystem>().Load(defaultSaveFile);
         }
 
         public void Save()
@@ -39,9 +50,9 @@ namespace RPG.SceneManagement
             GetComponent<SavingSystem>().Save(defaultSaveFile);
         }
 
-        public void Load()
+        public void Delete()
         {
-            GetComponent<SavingSystem>().Load(defaultSaveFile);
+            GetComponent<SavingSystem>().Delete(defaultSaveFile);
         }
     }
 }
