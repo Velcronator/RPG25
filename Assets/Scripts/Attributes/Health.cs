@@ -7,7 +7,7 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField] private float healthPoints = -1f;
+        private float healthPoints = -1f;
 
         bool isDead = false;
 
