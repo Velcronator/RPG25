@@ -1,4 +1,5 @@
 ﻿using RPG.Saving;
+using System;
 using UnityEngine;
 
 namespace RPG.Attributes
@@ -21,5 +22,9 @@ namespace RPG.Attributes
             experiencePoints = (float)state;
         }
 
+        public float GetExperiencePoints() // Fixed return type from bool to float  
+        {
+            return experiencePoints;
+        }
     }
 }
