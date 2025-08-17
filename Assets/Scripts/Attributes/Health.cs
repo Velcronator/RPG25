@@ -29,6 +29,8 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
+            Debug.Log($"{gameObject.name} took {damage} damage from {instigator.name}");
+
             healthPoints = Mathf.Max(healthPoints - damage, 0);
 
             if (healthPoints == 0)
@@ -36,6 +38,16 @@ namespace RPG.Attributes
                 Die();
                 AwardExperience(instigator);
             }
+        }
+
+        public float GetHealthPoints()
+        {
+            return healthPoints;
+        }
+
+        public float GetMaxHealthPoints()
+        {
+            return GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         public float GetPercentage()

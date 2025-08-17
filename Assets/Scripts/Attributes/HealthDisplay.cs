@@ -16,7 +16,7 @@ namespace RPG.Attributes
 
         private void Update()
         {   // todo if there is less Health arrays than Experience to level up, then this will break and get a NaN value
-            text.SetText("{0:0}%", health.GetPercentage());
+            text.SetText("{0:0}/{1:0}", health.GetHealthPoints(), health.GetMaxHealthPoints());
         }
     }
 }
