@@ -27,13 +27,16 @@ namespace RPG.Control
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
-        private void Start()
+        private void Awake()
         {
             fighter = GetComponent<Fighter>();
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
             player = GameObject.FindWithTag("Player");
+        }
 
+        private void Start()
+        {
             guardPosition = transform.position;
         }
 
@@ -78,7 +81,7 @@ namespace RPG.Control
             }
 
             if (timeSinceArrivedAtWaypoint > waypointDwellTime)
-            {   
+            {
                 mover.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
         }
