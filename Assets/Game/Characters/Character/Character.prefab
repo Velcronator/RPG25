@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 111077695667486451, guid: c622dc810e05754468befe4d41737753, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111077695667486451, guid: c622dc810e05754468befe4d41737753, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -287,6 +287,10 @@ PrefabInstance:
     - target: {fileID: 3503474966112620258, guid: c622dc810e05754468befe4d41737753, type: 3}
       propertyPath: m_Name
       value: Damage Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651428582750284690, guid: c622dc810e05754468befe4d41737753, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
