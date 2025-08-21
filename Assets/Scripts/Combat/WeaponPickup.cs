@@ -25,7 +25,7 @@ namespace RPG.Combat
 
         private IEnumerator HideForSeconds(float seconds)
         {
-            ShowPickup(false); 
+            ShowPickup(false);
             yield return new WaitForSeconds(seconds);
             ShowPickup(true);
         }
@@ -41,11 +41,16 @@ namespace RPG.Combat
 
         public bool HandleRaycast(PlayerController callingController)
         {
-            if(Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 Pickup(callingController.GetComponent<Fighter>());
             }
             return true;
+        }
+
+        public CursorType GetCursorType()
+        {
+            return CursorType.Pickup;
         }
     }
 }
