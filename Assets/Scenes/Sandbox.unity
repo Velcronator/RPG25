@@ -6537,7 +6537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3859174964243576304, guid: 977713336b0413843a24a2c87da88a9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.51
+      value: -32.74
       objectReference: {fileID: 0}
     - target: {fileID: 3859174964243576304, guid: 977713336b0413843a24a2c87da88a9c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6545,7 +6545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3859174964243576304, guid: 977713336b0413843a24a2c87da88a9c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 3859174964243576304, guid: 977713336b0413843a24a2c87da88a9c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9032,10 +9032,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2603555325907150141, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 8487347645113041752, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_Name
       value: Core
@@ -9107,6 +9103,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 254088615731423661}
+  - {fileID: 1271310290}
   - {fileID: 1660688780}
   - {fileID: 1889083042}
   - {fileID: 1722309326}
@@ -9114,5 +9111,4 @@ SceneRoots:
   - {fileID: 1655281948}
   - {fileID: 147658124}
   - {fileID: 415571959}
-  - {fileID: 1271310290}
   - {fileID: 1206704814}
