@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &370136010105088067
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 994391279348345532}
+    m_Modifications:
+    - target: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990753925171327722, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+--- !u!4 &472821776306658255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+  m_PrefabInstance: {fileID: 370136010105088067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2371766654994755724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,6 +158,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3253565602867567152, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4133075697219742793}
+    - targetCorrespondingSourceObject: {fileID: 3253565602867567152, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472821776306658255}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 118544189835514886, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
       insertIndex: -1
