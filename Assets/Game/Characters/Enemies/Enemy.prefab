@@ -41,6 +41,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4627883631208280241}
     - target: {fileID: 1956431170573133955, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+      propertyPath: healthBarCanvas
+      value: 
+      objectReference: {fileID: 2685846508555075795}
+    - target: {fileID: 1956431170573133955, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
       propertyPath: healthComponent
       value: 
       objectReference: {fileID: 4627883631208280241}
@@ -56,6 +60,11 @@ PrefabInstance:
 --- !u!4 &472821776306658255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 264921124682806156, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
+  m_PrefabInstance: {fileID: 370136010105088067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &2685846508555075795 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2334262731294828688, guid: 2bdb02060a6031b43b8decd0500a5e0e, type: 3}
   m_PrefabInstance: {fileID: 370136010105088067}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2371766654994755724

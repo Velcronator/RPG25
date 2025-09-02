@@ -311,4 +311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b555980c576264db8c95c64dab373d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthComponent: {fileID: 0}
   foreground: {fileID: 5117374923038516243}
+  rootCanvas: {fileID: 2334262731294828688}
