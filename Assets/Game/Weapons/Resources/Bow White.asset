@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bow White
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 22100000, guid: 31729f86c06644546bd08e64853a113d, type: 2}
-  equippedPrefab: {fileID: 3320442794264425302, guid: 4adda246ad0e70d44b93429c5675aa0f, type: 3}
+  equippedPrefab: {fileID: -6636025961816357957, guid: 4adda246ad0e70d44b93429c5675aa0f, type: 3}
   weaponDamage: 1
   percentageBonus: 5
   weaponRange: 20
