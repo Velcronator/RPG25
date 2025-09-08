@@ -1,24 +1,27 @@
 using UnityEngine;
 
 namespace RPG.SceneManagement
-    {
+{
     public class TriggerFog : MonoBehaviour
     {
-        [SerializeField] private GameObject fogEffect; // Reference to the fog effect GameObject
-        [SerializeField] private string playerTag = "Player"; // Tag to identify the player
+        [SerializeField] private ParticleSystem fogParticles;
+        [SerializeField] private string playerTag = "Player";
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag(playerTag))
+            if (other.CompareTag(playerTag) && fogParticles != null)
             {
-                fogEffect.SetActive(true); // Activate the fog effect when the player enters the trigger
+                fogParticles.Play();
             }
         }
+
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag(playerTag))
+            if (other.CompareTag(playerTag) && fogParticles != null)
             {
-                fogEffect.SetActive(false); // Deactivate the fog effect when the player exits the trigger
+                fogParticles.Stop();
             }
         }
     }
 }
+

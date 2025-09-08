@@ -1312,18 +1312,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4534067207001567353, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
-      propertyPath: m_Size.z
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534067207001567353, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
-      propertyPath: m_Center.x
-      value: -15.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534067207001567353, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
-      propertyPath: m_Center.z
-      value: -0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 9152358860650020659, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
       propertyPath: m_Name
       value: FogEvent
@@ -1798,6 +1786,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10723fb731230c44a9677c07cd574b5d, type: 3}
+--- !u!1001 &2016694317
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607394293350580663, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152358860650020659, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
+      propertyPath: m_Name
+      value: FogEvent (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78e56490916cb3c47bc51d84f7e96a29, type: 3}
 --- !u!4 &2026261768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6144972147906754978, guid: d245138ca3642554dab64be6e344c162, type: 3}
@@ -1942,3 +1987,4 @@ SceneRoots:
   - {fileID: 1565058954}
   - {fileID: 2015073215}
   - {fileID: 1685002866}
+  - {fileID: 2016694317}
