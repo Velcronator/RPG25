@@ -580,7 +580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1067976643256562027, guid: c9e57c2f521373c42a47f045ed6c7fd7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.8
+      value: -16.6
       objectReference: {fileID: 0}
     - target: {fileID: 1067976643256562027, guid: c9e57c2f521373c42a47f045ed6c7fd7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -588,7 +588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1067976643256562027, guid: c9e57c2f521373c42a47f045ed6c7fd7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.7
+      value: 15.1
       objectReference: {fileID: 0}
     - target: {fileID: 1067976643256562027, guid: c9e57c2f521373c42a47f045ed6c7fd7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -861,7 +861,7 @@ Transform:
   m_GameObject: {fileID: 360837630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: -23.93, y: 1.75, z: 32.4}
+  m_LocalPosition: {x: -32.15, y: 1.75, z: 35.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -921,8 +921,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.239782, y: 4.201502, z: 4.284961}
-  m_Center: {x: 0.37038875, y: 1.6006873, z: 0.31687897}
+  m_Size: {x: 17.363451, y: 4.201502, z: 3.122264}
+  m_Center: {x: -1.5486193, y: 1.6006525, z: -0.2644863}
 --- !u!54 &360837634
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3035,6 +3035,10 @@ PrefabInstance:
     - target: {fileID: 5318416294761869367, guid: 0850d7d01531e83469d1674ab32b5d23, type: 3}
       propertyPath: m_Name
       value: Walkway_Wooden_Bldg_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318416294761869367, guid: 0850d7d01531e83469d1674ab32b5d23, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6046,7 +6050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1585434074
 Transform:
   m_ObjectHideFlags: 0
