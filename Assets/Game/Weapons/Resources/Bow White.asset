@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20c32548c4cee5419451057b49c9080, type: 3}
   m_Name: Bow White
   m_EditorClassIdentifier: 
+  itemID: fb725290-a751-4df9-accf-b15110721752
+  displayName: Bow White
+  description: 
+  icon: {fileID: 21300000, guid: d567397c26262614e8509bbeaf2e60be, type: 3}
+  pickup: {fileID: 5988261900825953772, guid: fc254502b12215b49bfe347c961283dd, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 31729f86c06644546bd08e64853a113d, type: 2}
   equippedPrefab: {fileID: -6636025961816357957, guid: 4adda246ad0e70d44b93429c5675aa0f, type: 3}
   weaponDamage: 1
