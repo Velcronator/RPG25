@@ -341,17 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scatterDistance: 1
-  dropLibrary:
-  - {fileID: 11400000, guid: 6096bdb6374f767458657575f159ddf3, type: 2}
-  - {fileID: 11400000, guid: cea7e9b20fe1dd042b214e6577c2ef72, type: 2}
-  - {fileID: 11400000, guid: cc91929236da63c4da255f53341e5bea, type: 2}
-  - {fileID: 11400000, guid: afe938b47246a9d43a6641b1ce39e9e9, type: 2}
-  - {fileID: 11400000, guid: 536f1086d1e73304681f66f50b383c92, type: 2}
-  - {fileID: 11400000, guid: afe938b47246a9d43a6641b1ce39e9e9, type: 2}
-  - {fileID: 11400000, guid: 536f1086d1e73304681f66f50b383c92, type: 2}
-  - {fileID: 11400000, guid: 138e1e34410b2ec47b05f8ea3219bdd6, type: 2}
-  - {fileID: 11400000, guid: 306a609891a5a3b48a1a20d08f45c0ba, type: 2}
-  numberOfDrops: 2
+  dropLibrary: {fileID: 11400000, guid: 7dce5fd1700e04d448e746ba3c5aeb14, type: 2}
 --- !u!114 &4627883631208280241 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6977129775510290493, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
