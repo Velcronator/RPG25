@@ -10,10 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37c68e5c13d17f34c9de1408e4e09eee, type: 3}
-  m_Name: New Dialogue
+  m_Name: New Dialogue 1
   m_EditorClassIdentifier: 
   nodes:
   - uniqueID: 1
     text: You played a bum note
     children:
     - 2
+  - uniqueID: 2
+    text: You Spud faced git, go on gooooo.
+    children: []
+  - uniqueID: 5
+    text: Give me a match?
+    children: []
+  - uniqueID: 6
+    text: 'Your arse and my face. '
+    children: []
