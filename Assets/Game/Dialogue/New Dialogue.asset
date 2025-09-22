@@ -13,16 +13,14 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: ' 5'
+  - uniqueID: 1
     text: You played a bum note
     children:
     - 2
-    - 5
-    - 1
     rect:
       serializedVersion: 2
-      x: 317
-      y: 218
+      x: 192
+      y: 97
       width: 200
       height: 100
   - uniqueID: 2
@@ -30,7 +28,7 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 621
-      y: 112
+      x: 487
+      y: 150
       width: 200
       height: 100

@@ -18,7 +18,7 @@ namespace RPG.Dialogue
             {
                 nodes.Add(new DialogueNode());
             }
-            OnValidate(); //Ensure if the game is shipped, the dictionary is still populated
+            OnValidate(); //TODO Ensure if the game is shipped, the dictionary is still populated
         }
 #endif
         private void OnValidate()

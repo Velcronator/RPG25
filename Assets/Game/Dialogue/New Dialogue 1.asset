@@ -17,11 +17,11 @@ MonoBehaviour:
     text: You played a bum note
     children:
     - 5
-    - 8
+    - 2
     rect:
       serializedVersion: 2
-      x: 331
-      y: 36
+      x: 324
+      y: 45
       width: 200
       height: 200
   - uniqueID: 2
@@ -29,17 +29,18 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 351
-      y: 269
+      x: 695
+      y: 181
       width: 200
       height: 100
   - uniqueID: 5
     text: Give me a match?
-    children: []
+    children:
+    - 8
     rect:
       serializedVersion: 2
-      x: 603
-      y: 46
+      x: 686
+      y: 54
       width: 200
       height: 100
   - uniqueID: 8
@@ -47,7 +48,7 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 776
-      y: 281
+      x: 1017
+      y: 35
       width: 200
       height: 100

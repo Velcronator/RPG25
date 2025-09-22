@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
@@ -32,6 +33,7 @@ namespace RPG.Dialogue.Editor
         private void OnEnable()
         {
             Selection.selectionChanged += OnSelectionChanged;
+
             nodeStyle = new GUIStyle();
             nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
             nodeStyle.normal.textColor = Color.white;
@@ -60,7 +62,11 @@ namespace RPG.Dialogue.Editor
                 ProcessEvents();
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    OnGUINode(node);
+                    DrawConnections(node);
+                }
+                foreach (DialogueNode node in selectedDialogue.GetAllNodes())
+                {
+                    DrawNode(node);
                 }
             }
         }
@@ -87,7 +93,7 @@ namespace RPG.Dialogue.Editor
             }
         }
 
-        private void OnGUINode(DialogueNode node)
+        private void DrawNode(DialogueNode node)
         {
             GUILayout.BeginArea(node.rect, nodeStyle);
             EditorGUI.BeginChangeCheck();
@@ -104,19 +110,29 @@ namespace RPG.Dialogue.Editor
                 node.uniqueID = newUniqueID;
             }
 
+            GUILayout.EndArea();
+        }
+
+        private void DrawConnections(DialogueNode node)
+        {
+            Vector3 startPosition = new Vector2(node.rect.xMax, node.rect.center.y);
             foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
             {
-                EditorGUILayout.LabelField(childNode.text);
+                Vector3 endPosition = new Vector2(childNode.rect.xMin, childNode.rect.center.y);
+                Vector3 controlPointOffset = endPosition - startPosition;
+                controlPointOffset.y = 0;
+                controlPointOffset.x *= 0.8f;
+                Handles.DrawBezier(
+                    startPosition, endPosition,
+                    startPosition + controlPointOffset,
+                    endPosition - controlPointOffset,
+                    Color.white, null, 4f);
             }
-
-
-            GUILayout.EndArea();
         }
 
         private DialogueNode GetNodeAtPoint(Vector2 point)
         {
             DialogueNode foundNode = null;
-
             foreach (DialogueNode node in selectedDialogue.GetAllNodes())
             {
                 if (node.rect.Contains(point))
