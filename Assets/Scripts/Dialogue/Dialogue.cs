@@ -7,7 +7,7 @@ namespace RPG.Dialogue
     public class Dialogue : ScriptableObject
     {
         [SerializeField]
-        List<DialogueNode> nodes = new List<DialogueNode>();
+        List<DialogueNode> nodes;
 
 #if UNITY_EDITOR
         private void Awake()
@@ -21,6 +21,11 @@ namespace RPG.Dialogue
         public IEnumerable<DialogueNode> GetAllNodes()
         {
             return nodes;
+        }
+
+        public DialogueNode GetRootNode()
+        {
+            return nodes[0];
         }
     }
 }
