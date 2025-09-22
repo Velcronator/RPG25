@@ -21,17 +21,16 @@ MonoBehaviour:
     - 1
     rect:
       serializedVersion: 2
-      x: 300
-      y: 115
+      x: 317
+      y: 218
       width: 200
       height: 100
   - uniqueID: 2
     text: You only have two problems
-    children:
-    - 2
+    children: []
     rect:
       serializedVersion: 2
-      x: 572
-      y: 116
+      x: 621
+      y: 112
       width: 200
       height: 100

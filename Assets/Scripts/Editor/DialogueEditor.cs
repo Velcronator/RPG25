@@ -33,7 +33,7 @@ namespace RPG.Dialogue.Editor
         {
             Selection.selectionChanged += OnSelectionChanged;
             nodeStyle = new GUIStyle();
-            nodeStyle.normal.background = EditorGUIUtility.Load("node1") as Texture2D;
+            nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
             nodeStyle.normal.textColor = Color.white;
             nodeStyle.padding = new RectOffset(20, 20, 20, 20);
             nodeStyle.border = new RectOffset(12, 12, 12, 12);
@@ -73,7 +73,6 @@ namespace RPG.Dialogue.Editor
                 if (draggingNode != null)
                 {
                     draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
-                    GUI.changed = true;
                 }
             }
             else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
@@ -93,7 +92,7 @@ namespace RPG.Dialogue.Editor
             GUILayout.BeginArea(node.rect, nodeStyle);
             EditorGUI.BeginChangeCheck();
 
-            EditorGUILayout.LabelField("Node:", EditorStyles.whiteBoldLabel);
+            EditorGUILayout.LabelField("Node:", EditorStyles.whiteLabel);
             string newText = EditorGUILayout.TextField(node.text);
             string newUniqueID = EditorGUILayout.TextField(node.uniqueID);
 
@@ -104,6 +103,12 @@ namespace RPG.Dialogue.Editor
                 node.text = newText;
                 node.uniqueID = newUniqueID;
             }
+
+            foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
+            {
+                EditorGUILayout.LabelField(childNode.text);
+            }
+
 
             GUILayout.EndArea();
         }

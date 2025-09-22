@@ -16,20 +16,21 @@ MonoBehaviour:
   - uniqueID: 1
     text: You played a bum note
     children:
-    - 2
+    - 5
+    - 8
     rect:
       serializedVersion: 2
-      x: 318
-      y: 112
+      x: 331
+      y: 36
       width: 200
-      height: 100
+      height: 200
   - uniqueID: 2
     text: You Spud faced git, go on gooooo.
     children: []
     rect:
       serializedVersion: 2
-      x: 226
-      y: 289
+      x: 351
+      y: 269
       width: 200
       height: 100
   - uniqueID: 5
@@ -41,12 +42,12 @@ MonoBehaviour:
       y: 46
       width: 200
       height: 100
-  - uniqueID: 6
+  - uniqueID: 8
     text: 'Your arse and my face. '
     children: []
     rect:
       serializedVersion: 2
-      x: 564
-      y: 242
+      x: 776
+      y: 281
       width: 200
       height: 100

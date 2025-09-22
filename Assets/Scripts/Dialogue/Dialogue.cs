@@ -9,6 +9,8 @@ namespace RPG.Dialogue
         [SerializeField]
         List<DialogueNode> nodes;
 
+        Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
+
 #if UNITY_EDITOR
         private void Awake()
         {
@@ -16,8 +18,18 @@ namespace RPG.Dialogue
             {
                 nodes.Add(new DialogueNode());
             }
+            OnValidate(); //Ensure if the game is shipped, the dictionary is still populated
         }
 #endif
+        private void OnValidate()
+        {
+            nodeLookup.Clear();
+            foreach (DialogueNode node in GetAllNodes())
+            {
+                nodeLookup[node.uniqueID] = node;
+            }
+        }
+
         public IEnumerable<DialogueNode> GetAllNodes()
         {
             return nodes;
@@ -26,6 +38,17 @@ namespace RPG.Dialogue
         public DialogueNode GetRootNode()
         {
             return nodes[0];
+        }
+
+        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
+        {
+            foreach (string childID in parentNode.children)
+            {
+                if (nodeLookup.ContainsKey(childID))
+                {
+                    yield return nodeLookup[childID];
+                }
+            }
         }
     }
 }
