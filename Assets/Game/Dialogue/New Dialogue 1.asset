@@ -13,42 +13,13 @@ MonoBehaviour:
   m_Name: New Dialogue 1
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: 1
-    text: You played a bum note
+  - uniqueID: 0577d1eb-371a-4f56-9807-df877379f4d1
+    text: Hello you spud faced git
     children:
-    - 5
-    - 2
+    - 535ca60a-8ea6-4920-accf-22275d439ede
     rect:
       serializedVersion: 2
-      x: 324
-      y: 45
-      width: 200
-      height: 200
-  - uniqueID: 2
-    text: You Spud faced git, go on gooooo.
-    children: []
-    rect:
-      serializedVersion: 2
-      x: 695
-      y: 181
-      width: 200
-      height: 100
-  - uniqueID: 5
-    text: Give me a match?
-    children:
-    - 8
-    rect:
-      serializedVersion: 2
-      x: 686
-      y: 54
-      width: 200
-      height: 100
-  - uniqueID: 8
-    text: 'Your arse and my face. '
-    children: []
-    rect:
-      serializedVersion: 2
-      x: 1017
-      y: 35
+      x: 238
+      y: 126
       width: 200
       height: 100
