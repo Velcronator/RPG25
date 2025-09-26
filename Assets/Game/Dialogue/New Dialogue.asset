@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5707992770774651901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: c803a84d-e1b7-4437-82aa-77af0514febe
+  m_EditorClassIdentifier: 
+  text: chicken parmy
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1076
+    y: 93
+    width: 200
+    height: 100
+--- !u!114 &-2704499565933095661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 27abef97-07fd-4ae7-8130-cd951a486fb2
+  m_EditorClassIdentifier: 
+  text: pai
+  children:
+  - f70f6db7-92ec-436c-8212-72dd1c4d3304
+  - f7a66c52-4efd-4c29-ac55-e7bb69d1e1bf
+  rect:
+    serializedVersion: 2
+    x: 415
+    y: 118
+    width: 200
+    height: 100
+--- !u!114 &-3532659412838243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: a5797d24-9ae6-40d0-a4f3-be28c95f625f
+  m_EditorClassIdentifier: 
+  text: pad thai
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1071
+    y: 323
+    width: 200
+    height: 100
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,4 +75,96 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 0}
+  - {fileID: 3228836681289209201}
+  - {fileID: -2704499565933095661}
+  - {fileID: 247932648543580131}
+  - {fileID: 8124036633617214668}
+  - {fileID: 5569000903045919168}
+  - {fileID: -3532659412838243}
+  - {fileID: -5707992770774651901}
+--- !u!114 &247932648543580131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: f70f6db7-92ec-436c-8212-72dd1c4d3304
+  m_EditorClassIdentifier: 
+  text: alex
+  children:
+  - c803a84d-e1b7-4437-82aa-77af0514febe
+  rect:
+    serializedVersion: 2
+    x: 781
+    y: 81
+    width: 200
+    height: 100
+--- !u!114 &3228836681289209201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 2affc13a-89b4-43c9-af9f-97e9e17980d4
+  m_EditorClassIdentifier: 
+  text: Parent
+  children:
+  - 27abef97-07fd-4ae7-8130-cd951a486fb2
+  - cdb028a3-d124-4206-a439-93d3a4bde3b6
+  rect:
+    serializedVersion: 2
+    x: 91
+    y: 119
+    width: 200
+    height: 100
+--- !u!114 &5569000903045919168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: f7a66c52-4efd-4c29-ac55-e7bb69d1e1bf
+  m_EditorClassIdentifier: 
+  text: mia
+  children:
+  - a5797d24-9ae6-40d0-a4f3-be28c95f625f
+  rect:
+    serializedVersion: 2
+    x: 781
+    y: 278
+    width: 200
+    height: 100
+--- !u!114 &8124036633617214668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: cdb028a3-d124-4206-a439-93d3a4bde3b6
+  m_EditorClassIdentifier: 
+  text: mai
+  children:
+  - f70f6db7-92ec-436c-8212-72dd1c4d3304
+  - f7a66c52-4efd-4c29-ac55-e7bb69d1e1bf
+  rect:
+    serializedVersion: 2
+    x: 412
+    y: 253
+    width: 200
+    height: 100
