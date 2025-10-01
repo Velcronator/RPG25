@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 
 namespace RPG.Dialogue
@@ -13,6 +13,7 @@ namespace RPG.Dialogue
         {
             currentNode = currentDialogue.GetRootNode();
         }
+
         public string GetText()
         {
             if (currentNode == null)
@@ -23,15 +24,17 @@ namespace RPG.Dialogue
             return currentNode.GetText();
         }
 
+        public IEnumerable<string> GetChoices()
+        {
+            yield return "You complete uter bastard";
+            yield return "It's a laugh ain't it?";
+            yield return "So we have a really long... string of bollocks here I don't know why.";
+        }
+
         public void Next()
         {
             DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
             currentNode = children[Random.Range(0, children.Length)];
-        }
-
-        public string[] GetChoices()
-        {
-            return new string[] { "Choice 1", "Choice 2", "Choice 3" };
         }
 
         public void SelectChoice(int index)
@@ -58,6 +61,5 @@ namespace RPG.Dialogue
         {
             Debug.Log("Quit.");
         }
-
     }
 }

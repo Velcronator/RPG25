@@ -1293,7 +1293,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 150
     m_Right: 150
-    m_Top: -50
+    m_Top: 0
     m_Bottom: 50
   m_ChildAlignment: 0
   m_Spacing: 20
@@ -1332,6 +1332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIText: {fileID: 690824682950273250}
   nextButton: {fileID: 771388915306575908}
+  choiceRoot: {fileID: 4107839780927727584}
+  choicePrefab: {fileID: 2249370205955570613, guid: 9ce7b715476ac7949b0876aedf361483, type: 3}
 --- !u!1001 &666867399383865859
 PrefabInstance:
   m_ObjectHideFlags: 0
