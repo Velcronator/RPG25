@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6a5183c5-952f-4d58-940d-722b3bdefcef
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: You don't look like you'refrom around here.
+  text: You don't look like you're from around here.
   children:
   - 31051b7d-8e7f-4ea2-a872-fcc955197259
   - 7d31636e-e69d-42bc-977c-c067ee363d3e
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: f31396d8-ff81-43de-b1f3-05e9797fc637
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Newton, eh? I heard there'strouble brewing down there.
+  text: Newton, eh? I heard there's trouble brewing down there.
   children:
   - 8aa2bf9c-6bbf-4586-a182-a68b8f780e54
   - 8383784a-53fe-4825-ad86-d219dda671d4
@@ -177,7 +177,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 888
-    y: 303
+    y: 300
     width: 200
     height: 100
 --- !u!114 &3222724752298407663
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: f5184dfd-0396-454e-82d1-5a2b33e7c687
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Don't you worry about it. Say,do you have something to eat?I'm starving.
+  text: Don't you worry about it. Say, do you have something to eat? I'm starving.
   children: []
   rect:
     serializedVersion: 2

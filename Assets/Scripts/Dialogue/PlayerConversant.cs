@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -6,20 +7,26 @@ namespace RPG.Dialogue
     public class PlayerConversant : MonoBehaviour
     {
         [SerializeField] Dialogue currentDialogue;
+        DialogueNode currentNode = null;
 
+        private void Awake()
+        {
+            currentNode = currentDialogue.GetRootNode();
+        }
         public string GetText()
         {
-            if (currentDialogue == null)
+            if (currentNode == null)
             {
                 return "";
             }
 
-            return currentDialogue.GetRootNode().GetText();
+            return currentNode.GetText();
         }
 
         public void Next()
         {
-            Debug.Log("Next.");
+            DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
+            currentNode = children[Random.Range(0, children.Length)];
         }
 
         public string[] GetChoices()
@@ -39,7 +46,7 @@ namespace RPG.Dialogue
 
         public bool HasNext()
         {
-            return true;
+            return currentDialogue.GetAllChildren(currentNode).Any();
         }
 
         public void StartDialogue()
