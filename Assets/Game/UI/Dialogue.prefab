@@ -49,11 +49,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 200
-  m_MinHeight: -1
+  m_MinWidth: -1
+  m_MinHeight: 0
   m_PreferredWidth: -1
-  m_PreferredHeight: -1
-  m_FlexibleWidth: 8
+  m_PreferredHeight: 0
+  m_FlexibleWidth: 9
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
 --- !u!1 &1832144227952356587
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 4169028422228016389}
   - component: {fileID: 5431642006212731816}
   m_Layer: 0
-  m_Name: AI Responce
+  m_Name: AI Response
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 200
     m_Right: -150
-    m_Top: 0
+    m_Top: 30
     m_Bottom: 20
   m_ChildAlignment: 2
   m_Spacing: 0
@@ -1187,10 +1187,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 64
-  m_MinHeight: 64
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
+  m_MinWidth: 32
+  m_MinHeight: 32
+  m_PreferredWidth: 64
+  m_PreferredHeight: 64
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -1332,6 +1332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIText: {fileID: 690824682950273250}
   nextButton: {fileID: 771388915306575908}
+  AIResponse: {fileID: 6228843662997305365}
   choiceRoot: {fileID: 4107839780927727584}
   choicePrefab: {fileID: 2249370205955570613, guid: 9ce7b715476ac7949b0876aedf361483, type: 3}
 --- !u!1001 &666867399383865859

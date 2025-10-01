@@ -8,10 +8,16 @@ namespace RPG.Dialogue
     {
         [SerializeField] Dialogue currentDialogue;
         DialogueNode currentNode = null;
+        bool isChoosing = false;
 
         private void Awake()
         {
             currentNode = currentDialogue.GetRootNode();
+        }
+
+        public bool IsChoosing()
+        {
+            return isChoosing;
         }
 
         public string GetText()
@@ -24,32 +30,33 @@ namespace RPG.Dialogue
             return currentNode.GetText();
         }
 
-        public IEnumerable<string> GetChoices()
+        public IEnumerable<DialogueNode> GetChoices()
         {
-            yield return "You complete uter bastard";
-            yield return "It's a laugh ain't it?";
-            yield return "So we have a really long... string of bollocks here I don't know why.";
+            return currentDialogue.GetPlayerChildren(currentNode);
         }
 
         public void Next()
         {
-            DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
-            currentNode = children[Random.Range(0, children.Length)];
-        }
+            int numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
+            if (numPlayerResponses > 0)
+                {
+                isChoosing = true;
+                return;
+            }
 
-        public void SelectChoice(int index)
-        {
-            Debug.Log("Selected choice: " + index);
-        }
-
-        public bool IsChoosing()
-        {
-            return false;
+            DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
+            int randomIndex = Random.Range(0, children.Count());
+            currentNode = children[randomIndex];
         }
 
         public bool HasNext()
         {
             return currentDialogue.GetAllChildren(currentNode).Any();
+        }
+
+        public void SelectChoice(int index)
+        {
+            Debug.Log("Selected choice: " + index);
         }
 
         public void StartDialogue()
