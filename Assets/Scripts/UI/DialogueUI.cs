@@ -18,6 +18,7 @@ namespace RPG.UI
         void Start()
         {
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
+            playerConversant.onConversationUpdated += UpdateUI;
             nextButton.onClick.AddListener(Next);
 
             UpdateUI();
@@ -26,22 +27,18 @@ namespace RPG.UI
         void Next()
         {
             playerConversant.Next();
-            UpdateUI();
         }
 
         private void UpdateUI()
         {
+            if(!playerConversant.IsActive())
+            {
+                return;
+            }
             AIResponse.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
             if (playerConversant.IsChoosing())
             {
-                DestroyChildren(); //choiceRoot.DetachChildren(); 
-                foreach (DialogueNode choice in playerConversant.GetChoices())
-                {
-                    GameObject choiceInstance = Instantiate(choicePrefab, choiceRoot);
-                    var textComp = choiceInstance.GetComponentInChildren<TextMeshProUGUI>();
-                    textComp.text = choice.GetText();
-                }
                 BuildChoiceList();
             }
             else
@@ -63,7 +60,6 @@ namespace RPG.UI
                 button.onClick.AddListener(() =>
                 {
                     playerConversant.SelectChoice(choice);
-                    UpdateUI();
                 });
             }
         }
