@@ -10,28 +10,33 @@ namespace RPG.UI
         PlayerConversant playerConversant;
         [SerializeField] TextMeshProUGUI AIText;
         [SerializeField] Button nextButton;
+        [SerializeField] Button quitButton;
         [SerializeField] GameObject AIResponse;
         [SerializeField] Transform choiceRoot;
         [SerializeField] GameObject choicePrefab;
 
-        // Start is called before the first frame update
         void Start()
         {
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
             playerConversant.onConversationUpdated += UpdateUI;
-            nextButton.onClick.AddListener(Next);
+            nextButton.onClick.AddListener(() => playerConversant.Next());
+            quitButton.onClick.AddListener(() => playerConversant.Quit());
 
             UpdateUI();
         }
 
-        void Next()
+        void OnDestroy()
         {
-            playerConversant.Next();
+            if (playerConversant != null)
+            {
+                playerConversant.onConversationUpdated -= UpdateUI;
+            }
         }
 
         private void UpdateUI()
         {
-            if(!playerConversant.IsActive())
+            gameObject.SetActive(playerConversant.IsActive());
+            if (!playerConversant.IsActive())
             {
                 return;
             }

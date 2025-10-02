@@ -83,7 +83,10 @@ namespace RPG.Dialogue
 
         public void Quit()
         {
-            Debug.Log("Quit.");
+            currentDialogue = null;
+            currentNode = null;
+            isChoosing = false;
+            onConversationUpdated();
         }
     }
 }
