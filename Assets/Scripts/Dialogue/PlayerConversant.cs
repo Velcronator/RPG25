@@ -8,23 +8,24 @@ namespace RPG.Dialogue
 {
     public class PlayerConversant : MonoBehaviour
     {
-        [SerializeField] Dialogue testDialogue;
         Dialogue currentDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
 
         public event Action onConversationUpdated;
 
-        IEnumerator Start()
-        {
-            yield return new WaitForSeconds(2);
-            StartDialogue(testDialogue);
-        }
-
         public void StartDialogue(Dialogue newDialogue)
         {
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
+            onConversationUpdated();
+        }
+
+        public void Quit()
+        {
+            currentDialogue = null;
+            currentNode = null;
+            isChoosing = false;
             onConversationUpdated();
         }
 
@@ -72,21 +73,15 @@ namespace RPG.Dialogue
 
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
             int randomIndex = UnityEngine.Random.Range(0, children.Count());
-            currentNode = children[randomIndex];
+            currentNode = children[randomIndex]; 
+            // TODO Add support for multiple AI responses
+            // If no children, end dialogue
             onConversationUpdated();
         }
 
         public bool HasNext()
         {
             return currentDialogue.GetAllChildren(currentNode).Any();
-        }
-
-        public void Quit()
-        {
-            currentDialogue = null;
-            currentNode = null;
-            isChoosing = false;
-            onConversationUpdated();
         }
     }
 }

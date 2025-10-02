@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: The level of intelligence of guards is terrific.
-  children: []
+  children:
+  - c4d41928-3ca5-417f-bec1-18cfeb6b3bb9
   rect:
     serializedVersion: 2
-    x: 875
-    y: 295
+    x: 896
+    y: 204
     width: 200
     height: 100
---- !u!114 &-2455243004613252541
+--- !u!114 &-5130630496350007846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31,15 +32,82 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 6f0d72e9-5b8f-4b99-8b80-32f8ddb2af66
+  m_Name: 5fb7bf8e-3e21-4943-880b-36f666059344
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: Where you holding the door when brains where handed out
-  children: []
+  text: Not unless your a comedian.
+  children:
+  - c4d41928-3ca5-417f-bec1-18cfeb6b3bb9
   rect:
     serializedVersion: 2
-    x: 874
-    y: 101
+    x: 898
+    y: 345
+    width: 200
+    height: 100
+--- !u!114 &-1399558861012352461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: c4d41928-3ca5-417f-bec1-18cfeb6b3bb9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I like you
+  children:
+  - fa64c3ee-9e67-4b1d-9594-fb9f68a2deb6
+  rect:
+    serializedVersion: 2
+    x: 1219
+    y: 203
+    width: 200
+    height: 100
+--- !u!114 &-1323824858211743906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 59d21098-67ff-430c-abfc-dd18844a32dc
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Your Face?
+  children:
+  - e446b806-a88b-4391-aec9-29b2a55ceb46
+  rect:
+    serializedVersion: 2
+    x: 367
+    y: 263
+    width: 200
+    height: 100
+--- !u!114 &-887097120614115274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: e446b806-a88b-4391-aec9-29b2a55ceb46
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That's rude aint it.
+  children:
+  - 5fb7bf8e-3e21-4943-880b-36f666059344
+  rect:
+    serializedVersion: 2
+    x: 623
+    y: 314
     width: 200
     height: 100
 --- !u!114 &-423440507447775533
@@ -56,11 +124,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: That's amazing
-  children: []
+  children:
+  - c4d41928-3ca5-417f-bec1-18cfeb6b3bb9
   rect:
     serializedVersion: 2
-    x: 875
-    y: 196
+    x: 900
+    y: 60
     width: 200
     height: 100
 --- !u!114 &-316057142675785117
@@ -79,6 +148,7 @@ MonoBehaviour:
   text: It's a laugh ain't it?
   children:
   - 56a772ba-b0a1-4189-9a46-b0035c1e52c4
+  - 59d21098-67ff-430c-abfc-dd18844a32dc
   rect:
     serializedVersion: 2
     x: 112
@@ -101,9 +171,13 @@ MonoBehaviour:
   - {fileID: -316057142675785117}
   - {fileID: 11431784378084484}
   - {fileID: 6962920922797402014}
-  - {fileID: -2455243004613252541}
   - {fileID: -423440507447775533}
   - {fileID: -7372138816612992818}
+  - {fileID: -1323824858211743906}
+  - {fileID: -887097120614115274}
+  - {fileID: -5130630496350007846}
+  - {fileID: -1399558861012352461}
+  - {fileID: 6137794593648078586}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &11431784378084484
 MonoBehaviour:
@@ -123,8 +197,29 @@ MonoBehaviour:
   - 1112b7d8-d8d9-46a7-8383-bb8332a64a79
   rect:
     serializedVersion: 2
-    x: 362
-    y: 189
+    x: 369
+    y: 119
+    width: 200
+    height: 100
+--- !u!114 &6137794593648078586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: fa64c3ee-9e67-4b1d-9594-fb9f68a2deb6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: ofc
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1469
+    y: 203
     width: 200
     height: 100
 --- !u!114 &6962920922797402014
@@ -142,7 +237,6 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   text: the noise you make at the back or your throat.
   children:
-  - 6f0d72e9-5b8f-4b99-8b80-32f8ddb2af66
   - e85b87ef-a530-4aaf-82c1-1ea0fa99d47d
   - 251a8f72-ebb9-4ca6-8e42-775fb3756d94
   rect:
