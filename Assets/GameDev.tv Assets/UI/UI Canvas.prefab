@@ -475,7 +475,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2012917585700316199}
   m_HandleRect: {fileID: 224153372062608982}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5182,6 +5182,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2068979577038210057, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
     - target: {fileID: 2232712445286769331, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5334,6 +5338,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3821422629544259165, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
     - target: {fileID: 4107839780927727584, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5429,6 +5437,10 @@ PrefabInstance:
     - target: {fileID: 4572972556124015050, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928787024872304881, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
+      propertyPath: m_fontSize
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 4930104753309056998, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5793,6 +5805,14 @@ PrefabInstance:
     - target: {fileID: 7612367535472905539, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701796970623638997, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901295971750170704, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
+      propertyPath: m_fontSize
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 8149295912422261969, guid: 817b01e7cae1ef546befbe889567ea4b, type: 3}
       propertyPath: m_AnchorMax.y
