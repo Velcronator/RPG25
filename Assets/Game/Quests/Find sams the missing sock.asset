@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Find sams the missing sock
   m_EditorClassIdentifier: 
   objectives:
-  - 
-  - 
-  - 
+  - Long socks
+  - Short socks
+  - Bull socks

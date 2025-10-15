@@ -1,11 +1,9 @@
 using GameDevTV.Core.UI.Tooltips;
+using RPG.Quests;
 using UnityEngine;
 
 namespace RPG.UI.Quests
 {
-    /// <summary>
-    /// Spawns a tooltip for a quest when the mouse hovers over the UI element.
-    /// </summary>
     public class QuestTooltipSpawner : TooltipSpawner
     {
         public override bool CanCreateTooltip()
@@ -15,6 +13,8 @@ namespace RPG.UI.Quests
 
         public override void UpdateTooltip(GameObject tooltip)
         {
+            Quest quest = GetComponent<QuestItemUI>().GetQuest();
+            tooltip.GetComponent<QuestTooltipUI>().Setup(quest);
         }
     }
 }
