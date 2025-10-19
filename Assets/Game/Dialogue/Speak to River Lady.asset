@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3807210744898687082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 41ed8007-e9a1-41d8-98fa-63d4bce3f2b6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: And you are?
+  children:
+  - 6f0664d0-4166-4594-bbc5-1ad1b00f53ea
+  - 05cb9dbe-b052-44d7-81b2-258eb5ab175c
+  rect:
+    serializedVersion: 2
+    x: 124
+    y: 154
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c68e5c13d17f34c9de1408e4e09eee, type: 3}
+  m_Name: Speak to River Lady
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -3807210744898687082}
+  - {fileID: 4352795553428844812}
+  - {fileID: 2858248356987743895}
+  - {fileID: 7788844588867179745}
+  - {fileID: 2929756053408295656}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &2858248356987743895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 05cb9dbe-b052-44d7-81b2-258eb5ab175c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Nobody in particular
+  children:
+  - cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
+  rect:
+    serializedVersion: 2
+    x: 393
+    y: 221
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2929756053408295656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Well off you go then. '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 726
+    y: 294
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4352795553428844812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 6f0664d0-4166-4594-bbc5-1ad1b00f53ea
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I'm a fisherman
+  children:
+  - 0dac7d83-c04e-45c2-a46f-cde8de2a7520
+  rect:
+    serializedVersion: 2
+    x: 409
+    y: 82
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7788844588867179745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 0dac7d83-c04e-45c2-a46f-cde8de2a7520
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: The lady by the river has a market. Maybe try her
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 726
+    y: 119
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveQuest

@@ -3667,6 +3667,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7336309158422203826, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
+      propertyPath: quest
+      value: 
+      objectReference: {fileID: 11400000, guid: bd617e02f304542439ee5c679bd0bebe, type: 2}
     - target: {fileID: 8010290993340253652, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
       propertyPath: uniqueIdentifier
       value: fa09fe6f-d8bb-4fa9-847d-cadc490017fc
@@ -3678,6 +3682,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1249599654}
+    - targetCorrespondingSourceObject: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1249599679}
   m_SourcePrefab: {fileID: 100100000, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
 --- !u!4 &1249599639 stripped
 Transform:
@@ -3696,7 +3703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84f4cf11b859d049a463831ba4f0cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: bee68dfa6285487448b97444ec542bbf, type: 2}
+  dialogue: {fileID: 11400000, guid: da4bde957a6d7224d9835733a34a5171, type: 2}
   conversantName: Dopey Guard
 --- !u!114 &1249599664 stripped
 MonoBehaviour:
@@ -3709,6 +3716,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b273df9de6e9a6498423e6cbe164fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1249599678 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7336309158422203826, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
+  m_PrefabInstance: {fileID: 1249599638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604974321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a187c55b50df409cb2ac0f7173f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1249599679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604974321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2552c4b5aaf5957489b3348a8251da6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: GiveQuest
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1249599678}
+        m_TargetAssemblyTypeName: RPG.Quests.QuestGiver, Assembly-CSharp
+        m_MethodName: GiveQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1251906517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4795323464247647025, guid: 508b0bde8bfb74a42aff18ddc5c942f9, type: 3}
@@ -14911,7 +14957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8694389590823472958, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -665.1238
+      value: -665.12396
       objectReference: {fileID: 0}
     - target: {fileID: 8694750333546272382, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchorMax.x
