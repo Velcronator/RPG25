@@ -3685,6 +3685,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1249599679}
+    - targetCorrespondingSourceObject: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1249599680}
   m_SourcePrefab: {fileID: 100100000, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
 --- !u!4 &1249599639 stripped
 Transform:
@@ -3716,17 +3719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b273df9de6e9a6498423e6cbe164fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1249599678 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7336309158422203826, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
-  m_PrefabInstance: {fileID: 1249599638}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604974321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43a187c55b50df409cb2ac0f7173f63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1249599679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3743,7 +3735,7 @@ MonoBehaviour:
   onTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1249599678}
+      - m_Target: {fileID: 1249599680}
         m_TargetAssemblyTypeName: RPG.Quests.QuestGiver, Assembly-CSharp
         m_MethodName: GiveQuest
         m_Mode: 1
@@ -3755,6 +3747,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1249599680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604974321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a187c55b50df409cb2ac0f7173f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: bd617e02f304542439ee5c679bd0bebe, type: 2}
 --- !u!4 &1251906517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4795323464247647025, guid: 508b0bde8bfb74a42aff18ddc5c942f9, type: 3}
@@ -9471,6 +9476,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2134204921}
+    - targetCorrespondingSourceObject: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134204945}
+    - targetCorrespondingSourceObject: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134204946}
   m_SourcePrefab: {fileID: 100100000, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
 --- !u!4 &2134204902 stripped
 Transform:
@@ -9530,6 +9541,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b273df9de6e9a6498423e6cbe164fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2134204945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984703062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2552c4b5aaf5957489b3348a8251da6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: TestObjective
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2134204946}
+        m_TargetAssemblyTypeName: RPG.Quests.QuestCompletion, Assembly-CSharp
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2134204946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984703062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8e36d21f029e849af4c27a1404c00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: bd617e02f304542439ee5c679bd0bebe, type: 2}
+  objective: Get her a fish
 --- !u!1001 &2134286011
 PrefabInstance:
   m_ObjectHideFlags: 0

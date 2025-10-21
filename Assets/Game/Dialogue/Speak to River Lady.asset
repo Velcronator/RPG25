@@ -90,7 +90,7 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: 
+  onExitAction: TestObjective
 --- !u!114 &4352795553428844812
 MonoBehaviour:
   m_ObjectHideFlags: 0
