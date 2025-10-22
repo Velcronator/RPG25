@@ -15,10 +15,14 @@ MonoBehaviour:
   objectives:
   - reference: 1
     description: Talk to son
-  - reference: 2
-    description: Give fish
-  - reference: 3
-    description: Where's the cream?
   rewards:
-  - number: 1
+  - number: 3
     item: {fileID: 11400000, guid: 6096bdb6374f767458657575f159ddf3, type: 2}
+  - number: 2
+    item: {fileID: 11400000, guid: afe938b47246a9d43a6641b1ce39e9e9, type: 2}
+  - number: 1
+    item: {fileID: 11400000, guid: afe938b47246a9d43a6641b1ce39e9e9, type: 2}
+  - number: 1
+    item: {fileID: 11400000, guid: cea7e9b20fe1dd042b214e6577c2ef72, type: 2}
+  - number: 7
+    item: {fileID: 11400000, guid: 306a609891a5a3b48a1a20d08f45c0ba, type: 2}
