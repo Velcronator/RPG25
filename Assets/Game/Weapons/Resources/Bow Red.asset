@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 0ecdb243-3661-479d-9474-57d3c8f327c2
   displayName: Bow Red
-  description: 
+  description: Red Bow It's a bewdy
   icon: {fileID: 21300000, guid: a2a06e4cb74b43b4aa351fe941a1af79, type: 3}
   pickup: {fileID: 5988261900825953772, guid: fc254502b12215b49bfe347c961283dd, type: 3}
   stackable: 0

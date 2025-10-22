@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Talk to Lady by the river
   m_EditorClassIdentifier: 
   objectives:
-  - Get her a fish
-  - Speak to the son
-  - Do a hand stand
+  - reference: 1
+    description: Talk to son
+  - reference: 2
+    description: Give fish
+  - reference: 3
+    description: Where's the cream?
+  rewards:
+  - number: 1
+    item: {fileID: 11400000, guid: 6096bdb6374f767458657575f159ddf3, type: 2}

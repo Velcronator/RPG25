@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 214fc271-bc82-47c8-93eb-4e9bc04d44ca
   displayName: Unarmed
-  description: 
+  description: Fisty cuffs
   icon: {fileID: 0}
   pickup: {fileID: 0}
   stackable: 0
