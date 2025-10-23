@@ -1,8 +1,9 @@
-using System;
 using GameDevTV.Inventories;
 using GameDevTV.Saving;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static RPG.Quests.Quest;
 
 namespace RPG.Quests
 {
@@ -27,7 +28,7 @@ namespace RPG.Quests
         {
             QuestStatus status = GetQuestStatus(quest);
             status.CompleteObjective(objective);
-            if(status.IsComplete())
+            if (status.IsComplete())
             {
                 GiveReward(quest);
             }
@@ -59,14 +60,84 @@ namespace RPG.Quests
             return null;
         }
 
+        //private void GiveReward(Quest quest)
+        //{
+        //    foreach (var reward in quest.GetRewards())
+        //    {
+        //        bool success = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, reward.number);
+        //        if (!success)
+        //        {
+        //            GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
+        //        }
+        //    }
+        //}
+
+        //private void GiveReward(Quest quest)
+        //{
+        //    foreach (Quest.Reward reward in quest.GetRewards())
+        //    {
+        //        // in case rewards are not stackable, we need to add them one by one
+        //        if(reward.item.IsStackable())
+        //        {
+        //            bool success = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, reward.number);
+        //            if (!success)
+        //            {
+        //                GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            for (int i = 0; i < reward.number; i++)
+        //            {
+        //                bool success = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, 1);
+        //                if (!success)
+        //                {
+        //                    GetComponent<ItemDropper>().DropItem(reward.item, 1);
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
         private void GiveReward(Quest quest)
         {
-            foreach (var reward in quest.GetRewards())
+            foreach (Quest.Reward reward in quest.GetRewards())
             {
-                bool success = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, reward.number);
-                if (!success)
+                // in case the reward is not stackable
+                if (!reward.item.IsStackable())
                 {
-                    GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
+                    int given = 0;
+
+                    // add all possible to empty slots
+                    for (int i = 0; i < reward.number; i++)
+                    {
+                        bool isGiven = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, 1);
+                        if (!isGiven) break;
+                        given++;
+                    }
+
+                    // if entire reward was given, go to the next reward
+                    if (given == reward.number) continue;
+
+                    // if given less than in reward, drop the difference
+                    for (int i = given; i < reward.number; i++)
+                    {
+                        GetComponent<ItemDropper>().DropItem(reward.item, 1);
+                    }
+                }
+
+                // if stackable, drop/add several units
+                else
+                {
+                    bool isGiven = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, reward.number);
+
+                    if (!isGiven)
+                    {
+                        for (int i = 0; i < reward.number; i++)
+                        {
+                            GetComponent<ItemDropper>().DropItem(reward.item, 1);
+                        }
+                    }
                 }
             }
         }
