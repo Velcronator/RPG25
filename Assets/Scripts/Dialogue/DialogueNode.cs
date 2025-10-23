@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using RPG.Core;
 using UnityEditor;
 using UnityEngine;
 
@@ -19,6 +20,8 @@ namespace RPG.Dialogue
         string onEnterAction;
         [SerializeField]
         string onExitAction; // TODO: implement multi-action support use List<string> or array
+        [SerializeField]
+        Condition condition;
 
         public Rect GetRect()
         {
@@ -49,6 +52,11 @@ namespace RPG.Dialogue
         {
             return onExitAction;
         } 
+
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
+        }
 
 #if UNITY_EDITOR
         public void SetPosition(Vector2 newPosition)

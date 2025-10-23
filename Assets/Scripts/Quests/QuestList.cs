@@ -2,12 +2,12 @@ using GameDevTV.Inventories;
 using GameDevTV.Saving;
 using System;
 using System.Collections.Generic;
+using RPG.Core;
 using UnityEngine;
-using static RPG.Quests.Quest;
 
 namespace RPG.Quests
 {
-    public class QuestList : MonoBehaviour, ISaveable
+    public class QuestList : MonoBehaviour, ISaveable, IPredicateEvaluator
     {
         List<QuestStatus> statuses = new List<QuestStatus>();
 
@@ -68,33 +68,6 @@ namespace RPG.Quests
         //        if (!success)
         //        {
         //            GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
-        //        }
-        //    }
-        //}
-
-        //private void GiveReward(Quest quest)
-        //{
-        //    foreach (Quest.Reward reward in quest.GetRewards())
-        //    {
-        //        // in case rewards are not stackable, we need to add them one by one
-        //        if(reward.item.IsStackable())
-        //        {
-        //            bool success = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, reward.number);
-        //            if (!success)
-        //            {
-        //                GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            for (int i = 0; i < reward.number; i++)
-        //            {
-        //                bool success = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, 1);
-        //                if (!success)
-        //                {
-        //                    GetComponent<ItemDropper>().DropItem(reward.item, 1);
-        //                }
-        //            }
         //        }
         //    }
         //}
@@ -163,6 +136,13 @@ namespace RPG.Quests
                 statuses.Add(new QuestStatus(objectState));
             }
         }
-    }
 
+
+        public bool? Evaluate(string predicate, string[] parameters)
+        {
+            if (predicate != "HasQuest") return null;
+
+            return HasQuest(Quest.GetByName(parameters[0]));
+        }
+    }
 }
