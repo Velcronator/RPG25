@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5500525241717326005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: d739ea18-018a-436f-93b8-65a22f95b6d8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I have the goods. Ya know what I mean.
+  children:
+  - fad45756-1523-4c92-a19b-674d248bf6a5
+  rect:
+    serializedVersion: 2
+    x: 387
+    y: 387
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasInventoryItem
+    parameters:
+    - e50a4d9a-d276-46d1-b9f7-9fbcfa3d39ad
+--- !u!114 &-4898685755850075756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: fad45756-1523-4c92-a19b-674d248bf6a5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Come on through
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 725
+    y: 420
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-3807210744898687082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,6 +71,7 @@ MonoBehaviour:
   children:
   - 6f0664d0-4166-4594-bbc5-1ad1b00f53ea
   - 05cb9dbe-b052-44d7-81b2-258eb5ab175c
+  - d739ea18-018a-436f-93b8-65a22f95b6d8
   rect:
     serializedVersion: 2
     x: 84
@@ -76,6 +131,8 @@ MonoBehaviour:
   - {fileID: 2929756053408295656}
   - {fileID: -3172827673933810453}
   - {fileID: 3248134944132873195}
+  - {fileID: -5500525241717326005}
+  - {fileID: -4898685755850075756}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &2858248356987743895
 MonoBehaviour:
@@ -143,12 +200,12 @@ MonoBehaviour:
   m_Name: e74900c2-a3ed-448b-a344-5d7ed11034dc
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Then you have some coins.
+  text: Great
   children: []
   rect:
     serializedVersion: 2
-    x: 1241
-    y: 125
+    x: 1265
+    y: 243
     width: 200
     height: 100
   onEnterAction: 

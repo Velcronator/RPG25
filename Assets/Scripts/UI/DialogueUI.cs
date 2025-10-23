@@ -58,7 +58,10 @@ namespace RPG.UI
 
         private void BuildChoiceList()
         {
-            DestroyChildren(); //choiceRoot.DetachChildren(); 
+            foreach (Transform item in choiceRoot)
+            {
+                Destroy(item.gameObject);
+            }
             foreach (DialogueNode choice in playerConversant.GetChoices())
             {
                 GameObject choiceInstance = Instantiate(choicePrefab, choiceRoot);
@@ -69,14 +72,6 @@ namespace RPG.UI
                 {
                     playerConversant.SelectChoice(choice);
                 });
-            }
-        }
-
-        private void DestroyChildren()
-        {
-            foreach (Transform item in choiceRoot)
-            {
-                Destroy(item.gameObject);
             }
         }
     }
