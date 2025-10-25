@@ -11,6 +11,7 @@ namespace RPG.Dialogue
         [SerializeField]
         bool isPlayerSpeaking = false; // if more than 2 speakers, change to enum
         [SerializeField]
+        [TextArea(3, 20)]
         string text;
         [SerializeField]
         List<string> children = new List<string>();

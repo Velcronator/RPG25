@@ -13,22 +13,30 @@ MonoBehaviour:
   m_Name: d739ea18-018a-436f-93b8-65a22f95b6d8
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: I have the goods. Ya know what I mean.
+  text: Where is she?
   children:
-  - fad45756-1523-4c92-a19b-674d248bf6a5
+  - 813a5924-f93f-4b35-878b-3453058398fe
   rect:
     serializedVersion: 2
-    x: 387
-    y: 387
+    x: 969
+    y: 25
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: HasInventoryItem
-    parameters:
-    - e50a4d9a-d276-46d1-b9f7-9fbcfa3d39ad
---- !u!114 &-4898685755850075756
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Talk to Lady by the river
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Talk to Lady by the river
+        negate: 1
+--- !u!114 &-4775740582363620607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,22 +46,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: fad45756-1523-4c92-a19b-674d248bf6a5
+  m_Name: b92bda14-1812-4cc2-9f60-865507022dab
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Come on through
+  text: Oh it's you again. Find me sardines.
   children: []
   rect:
     serializedVersion: 2
-    x: 725
-    y: 420
+    x: 1228
+    y: 125
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-3807210744898687082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,18 +78,16 @@ MonoBehaviour:
   children:
   - 6f0664d0-4166-4594-bbc5-1ad1b00f53ea
   - 05cb9dbe-b052-44d7-81b2-258eb5ab175c
-  - d739ea18-018a-436f-93b8-65a22f95b6d8
   rect:
     serializedVersion: 2
-    x: 84
-    y: 151
+    x: 92
+    y: 166
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-3172827673933810453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,21 +101,29 @@ MonoBehaviour:
   m_Name: c5c607ca-b76b-4a5b-9205-9acfee2cab4e
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: I've already seen her.
+  text: I'm already on the sardine hunt.
   children:
-  - e74900c2-a3ed-448b-a344-5d7ed11034dc
+  - b92bda14-1812-4cc2-9f60-865507022dab
   rect:
     serializedVersion: 2
-    x: 969
-    y: 170
+    x: 965
+    y: 127
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: HasQuest
-    parameters:
-    - Talk to Lady by the river
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Talk to Lady by the river
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Talk to Lady by the river
+        negate: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,10 +143,37 @@ MonoBehaviour:
   - {fileID: 7788844588867179745}
   - {fileID: 2929756053408295656}
   - {fileID: -3172827673933810453}
-  - {fileID: 3248134944132873195}
   - {fileID: -5500525241717326005}
-  - {fileID: -4898685755850075756}
+  - {fileID: 6418086569544629903}
+  - {fileID: -4775740582363620607}
+  - {fileID: 9031676015854091320}
+  - {fileID: 898453415820978378}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &898453415820978378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 4c6a432e-3727-4e65-833c-9d5d2cb7a371
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yummy. I'll open the door for you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1217
+    y: 238
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &2858248356987743895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,15 +192,14 @@ MonoBehaviour:
   - cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
   rect:
     serializedVersion: 2
-    x: 393
-    y: 221
+    x: 373
+    y: 369
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &2929756053408295656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,45 +213,18 @@ MonoBehaviour:
   m_Name: cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: 'Well off you go then. '
+  text: Don't waste our time. Back home sunny.
   children: []
   rect:
     serializedVersion: 2
-    x: 726
-    y: 294
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: TestObjective
-  condition:
-    predicate: 
-    parameters: []
---- !u!114 &3248134944132873195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: e74900c2-a3ed-448b-a344-5d7ed11034dc
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: Great
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 1265
-    y: 243
+    x: 663
+    y: 359
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &4352795553428844812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,15 +243,54 @@ MonoBehaviour:
   - 0dac7d83-c04e-45c2-a46f-cde8de2a7520
   rect:
     serializedVersion: 2
-    x: 394
-    y: 113
+    x: 371
+    y: 176
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
+--- !u!114 &6418086569544629903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 63cf6e57-6901-4681-83fa-67db7fbf8205
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I've got some sardines?
+  children:
+  - 4c6a432e-3727-4e65-833c-9d5d2cb7a371
+  rect:
+    serializedVersion: 2
+    x: 969
+    y: 227
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Talk to Lady by the river
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Talk to Lady by the river
+        negate: 0
+      - predicate: HasInventoryItem
+        parameters:
+        - e50a4d9a-d276-46d1-b9f7-9fbcfa3d39ad
+        negate: 0
 --- !u!114 &7788844588867179745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,17 +304,44 @@ MonoBehaviour:
   m_Name: 0dac7d83-c04e-45c2-a46f-cde8de2a7520
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: The lady by the river has a market. Maybe try her
+  text: There is a lady who has a market. Just Quietly between us. Get me some sardines
+    and I'll let you through the gate.
   children:
   - c5c607ca-b76b-4a5b-9205-9acfee2cab4e
+  - d739ea18-018a-436f-93b8-65a22f95b6d8
+  - 63cf6e57-6901-4681-83fa-67db7fbf8205
   rect:
     serializedVersion: 2
-    x: 719
-    y: 170
+    x: 645
+    y: 135
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: GiveQuest
   condition:
-    predicate: 
-    parameters: []
+    and: []
+--- !u!114 &9031676015854091320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 813a5924-f93f-4b35-878b-3453058398fe
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: My mum loves them. She is by the river.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1228
+    y: 18
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []

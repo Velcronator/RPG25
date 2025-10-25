@@ -26,8 +26,7 @@ MonoBehaviour:
   onEnterAction: TestRootEntry
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-7874048119995694014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,8 +52,7 @@ MonoBehaviour:
   onEnterAction: TestSelection
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-6808927583450623192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,8 +77,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: Attack
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-4009486894197966476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,8 +103,32 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
+--- !u!114 &-1401741375353024994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 45e1c1b5-e84b-4257-8054-342f7f36b07a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: On your way
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1159
+    y: 420
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-877648939693159108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +155,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +181,7 @@ MonoBehaviour:
   - {fileID: -4009486894197966476}
   - {fileID: 8363613287315215292}
   - {fileID: 4286121371895940348}
+  - {fileID: -1401741375353024994}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &2605421693619696476
 MonoBehaviour:
@@ -187,8 +208,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &2708581928001091935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,8 +234,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &3222724752298407663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,8 +261,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &4286121371895940348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +275,7 @@ MonoBehaviour:
   m_Name: c3f38d2d-e14a-485f-8284-55980b555e81
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Funny you don't look like a Newtown
+  text: Funny you don't look like a Newtownian
   children:
   - 8383784a-53fe-4825-ad86-d219dda671d4
   rect:
@@ -269,8 +287,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &4597094613453678646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,10 +310,9 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: TestObjective
+  onExitAction: CompleteObjective
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &8363613287315215292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +329,7 @@ MonoBehaviour:
   text: Did I say Newton? I'm actually from Springville.
   children:
   - d97d6fb9-4bf5-4aa9-be60-fe5823add0e7
+  - 45e1c1b5-e84b-4257-8054-342f7f36b07a
   rect:
     serializedVersion: 2
     x: 893
@@ -322,8 +339,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &8945706007564434494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,5 +366,4 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: TestExitAction
   condition:
-    predicate: 
-    parameters: []
+    and: []
