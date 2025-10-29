@@ -1,18 +1,23 @@
+using System;
 using UnityEngine;
 
 namespace RPG.Shops
 {
     public class Shopper : MonoBehaviour
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        Shop activeShop = null;
+
+        public event Action activeShopChange;
+
+        public void SetActiveShop(Shop shop)
         {
-            
+            activeShop = shop;
+            activeShopChange?.Invoke();
         }
-        // Update is called once per frame
-        void Update()
+
+        public Shop GetActiveShop()
         {
-            
+            return activeShop;
         }
     }
 }
