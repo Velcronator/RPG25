@@ -878,7 +878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776986452968672711, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 776986452968672711, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_AnchorMin.x
@@ -886,11 +886,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776986452968672711, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 776986452968672711, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 776986452968672711, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_SizeDelta.y
@@ -926,7 +926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776986452968672711, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1977.7573
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 776986452968672711, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -943,6 +943,34 @@ PrefabInstance:
     - target: {fileID: 776986452968672711, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 794903511192915580, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 794903511192915580, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 794903511192915580, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2868962158586726576}
+    - target: {fileID: 794903511192915580, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 794903511192915580, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 794903511192915580, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RPG.UI.Shops.ShopUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 794903511192915580, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7931923599260628939, guid: df7967713d8a0824aadac7ca5a03d171, type: 3}
       propertyPath: m_Name
@@ -1705,6 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36fac5850ff2f047b695032ec19242c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopName: {fileID: 3670172931406847282}
 --- !u!224 &8358210017104835842 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4003406662305824272, guid: cd89024236caf0345878d6699e3159b9, type: 3}
@@ -2192,6 +2221,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8522649527537367718, guid: ed4cb8fe2aac66c47b856860e6c8b53a, type: 3}
   m_PrefabInstance: {fileID: 7480325473148957833}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3670172931406847282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6134015630113450427, guid: ed4cb8fe2aac66c47b856860e6c8b53a, type: 3}
+  m_PrefabInstance: {fileID: 7480325473148957833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7653877356661365529
 PrefabInstance:
   m_ObjectHideFlags: 0
