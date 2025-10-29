@@ -1734,6 +1734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopName: {fileID: 3670172931406847282}
+  listRoot: {fileID: 260272368468352277}
+  rowPrefab: {fileID: 420494791038515127, guid: d808c3e8e7dd777439e1eeb84825b320, type: 3}
 --- !u!224 &8358210017104835842 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4003406662305824272, guid: cd89024236caf0345878d6699e3159b9, type: 3}
