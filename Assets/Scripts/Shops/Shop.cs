@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using GameDevTV.Inventories;
 using RPG.Control;
@@ -16,14 +17,20 @@ namespace RPG.Shops
         {
             public InventoryItem item;
             [Min(0)] public int initialStock = 0;
-            [Range(0f, 100f)] public float buyingDiscountPercentage = 0f; 
+            [Range(0f, 100f)] public float buyingDiscountPercentage = 0f;
         }
 
         Dictionary<InventoryItem, int> transaction = new Dictionary<InventoryItem, int>();
+        Shopper currentShopper = null;
 
         public event Action onChange;
 
-        public IEnumerable<ShopItem> GetFilteredItems() 
+        public void SetShopper(Shopper shopper)
+        {
+            currentShopper = shopper;
+        }
+
+        public IEnumerable<ShopItem> GetFilteredItems()
         {
             foreach (StockItemConfig config in stockConfig)
             {
@@ -39,7 +46,30 @@ namespace RPG.Shops
         public void SelectMode(bool isBuying) {}
         public bool IsBuyingMode() { return true; }
         public bool CanTransact() { return true; }
-        public void ConfirmTransaction() {}
+
+        public void ConfirmTransaction()
+        {
+            Inventory shopperInventory = currentShopper.GetComponent<Inventory>();
+            if (shopperInventory == null) return;
+
+            // Transfer to or from the inventory
+            var transactionSnapshot = new Dictionary<InventoryItem, int>(transaction);
+            foreach (InventoryItem item in transactionSnapshot.Keys)
+            {
+                int quantity = transactionSnapshot[item];
+                for (int i = 0; i < quantity; i++)
+                {
+                    bool success = shopperInventory.AddToFirstEmptySlot(item, 1);
+                    if (success)
+                    {
+                        AddToTransaction(item, -1);
+                    }
+                }
+            }
+            // Removal from transaction
+            // Debting or Crediting of funds
+        }
+
         public float TransactionTotal() { return 0; }
 
         public string GetShopName()
@@ -47,7 +77,7 @@ namespace RPG.Shops
             return shopName;
         }
 
-        public void AddToTransaction(InventoryItem item, int quantity) 
+        public void AddToTransaction(InventoryItem item, int quantity)
         {
             if (!transaction.ContainsKey(item))
             {
