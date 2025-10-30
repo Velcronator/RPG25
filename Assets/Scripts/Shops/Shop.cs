@@ -9,19 +9,26 @@ namespace RPG.Shops
     public class Shop : MonoBehaviour, IRaycastable
     {
         [SerializeField] string shopName;
+        [SerializeField] StockItemConfig[] stockConfig;
+
+        [Serializable]
+        class StockItemConfig
+        {
+            public InventoryItem item;
+            [Min(0)] public int initialStock = 0;
+            [Range(0f, 100f)] public float buyingDiscountPercentage = 0f; 
+        }
+
 
         public event Action onChange;
 
         public IEnumerable<ShopItem> GetFilteredItems() 
         {
-            yield return new ShopItem(InventoryItem.GetFromID("e50a4d9a-d276-46d1-b9f7-9fbcfa3d39ad"),
-                10, 10.0f, 0);
-            yield return new ShopItem(InventoryItem.GetFromID("135bd571-f3cb-462b-80fd-7816762360d3"),
-                10, 10.0f, 0);
-            yield return new ShopItem(InventoryItem.GetFromID("0935e90f-0534-4d28-a882-2fa50115ce9a"),
-                10, 1000.99f, 0); 
-            yield return new ShopItem(InventoryItem.GetFromID("0935e90f-0534-4d28-a882-2fa50115ce9a"),
-                10, 10.0f, 0);
+            foreach (StockItemConfig config in stockConfig)
+            {
+                float price = config.item.GetPrice() * (1 - config.buyingDiscountPercentage/100);
+                yield return new ShopItem(config.item, config.initialStock, price, 0);
+            }
         }
 
         public void SelectFilter(ItemCategory category) {}
