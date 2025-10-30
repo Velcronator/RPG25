@@ -1,5 +1,5 @@
-using GameDevTV.Inventories;
 using System;
+using GameDevTV.Inventories;
 using UnityEngine;
 
 namespace RPG.Shops
@@ -42,6 +42,11 @@ namespace RPG.Shops
         public InventoryItem GetInventoryItem()
         {
             return item;
+        }
+
+        public int GetQuantityInTransaction()
+        {
+            return quantityInTransaction;
         }
     }
 }
