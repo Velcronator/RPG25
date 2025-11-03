@@ -54,16 +54,9 @@ namespace RPG.Shops
                 float price = GetPrice(config);
                 int quantityInTransaction = 0;
                 transaction.TryGetValue(config.item, out quantityInTransaction);
-                int currentStock = stock[config.item];
-                yield return new ShopItem(config.item, currentStock, price, quantityInTransaction);
+                int availability = GetAvailability(config.item);
+                yield return new ShopItem(config.item, availability, price, quantityInTransaction);
             }
-        }
-
-        private float GetPrice(StockItemConfig config)
-        {
-            float price = config.item.GetPrice() * (1 - config.buyingDiscountPercentage / 100);
-            if (isBuyingMode) return price;
-            else return price * (sellingPercentage / 100);
         }
 
         public void SelectFilter(ItemCategory category) { }
@@ -75,6 +68,7 @@ namespace RPG.Shops
             isBuyingMode = isBuying;
             onChange?.Invoke();
         }
+
         public bool IsBuyingMode()
         {
             return isBuyingMode;
@@ -140,7 +134,7 @@ namespace RPG.Shops
                     if (success)
                     {
                         AddToTransaction(item, -1);
-                        stock[item] --;
+                        stock[item]--;
                         shopperPurse.UpdateBalance(-price);
                     }
                 }
@@ -152,7 +146,7 @@ namespace RPG.Shops
 
         public float TransactionTotal()
         {
-            float total = 0f;
+            float total = 0;
             foreach (ShopItem item in GetAllItems())
             {
                 total += item.GetPrice() * item.GetQuantityInTransaction();
@@ -173,9 +167,10 @@ namespace RPG.Shops
             }
 
 
-            if (transaction[item] + quantity > stock[item])
+            int availability = GetAvailability(item);
+            if (transaction[item] + quantity > availability)
             {
-                transaction[item] = stock[item];
+                transaction[item] = availability;
             }
             else
             {
@@ -202,6 +197,43 @@ namespace RPG.Shops
                 callingController.GetComponent<Shopper>().SetActiveShop(this);
             }
             return true;
+        }
+
+        private int GetAvailability(InventoryItem item)
+        {
+            if (isBuyingMode)
+            {
+                return stock[item];
+            }
+
+            return CountItemsInInventory(item);
+        }
+
+        private int CountItemsInInventory(InventoryItem item)
+        {
+            Inventory inventory = currentShopper.GetComponent<Inventory>();
+            if (inventory == null) return 0;
+
+            int total = 0;
+            for (int i = 0; i < inventory.GetSize(); i++)
+            {
+                if (inventory.GetItemInSlot(i) == item)
+                {
+                    total += inventory.GetNumberInSlot(i);
+                }
+            }
+            return total;
+        }
+
+        private float GetPrice(StockItemConfig config)
+        {
+            float price = config.item.GetPrice() * (1 - config.buyingDiscountPercentage / 100);
+            if (isBuyingMode)
+            {
+                return price;
+            }
+
+            return price * (sellingPercentage / 100);
         }
     }
 }
