@@ -184,7 +184,5 @@ namespace RPG.Shops
             }
             return true;
         }
-
-
     }
 }
