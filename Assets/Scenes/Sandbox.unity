@@ -4354,11 +4354,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[1].initialStock
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[2].initialStock
-      value: 1
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+      propertyPath: stockConfig.Array.data[1].buyingDiscountPercentage
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+      propertyPath: stockConfig.Array.data[2].buyingDiscountPercentage
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 23974356087880867, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16878,7 +16886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8694389590823472958, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -665.1232
+      value: -665.12354
       objectReference: {fileID: 0}
     - target: {fileID: 8694750333546272382, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchorMax.x
