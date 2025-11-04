@@ -26,6 +26,7 @@ namespace RPG.Shops
         Dictionary<InventoryItem, int> stock = new Dictionary<InventoryItem, int>();
         Shopper currentShopper = null;
         bool isBuyingMode = true;
+        ItemCategory filter = ItemCategory.None;
 
         public event Action onChange;
 
@@ -59,9 +60,16 @@ namespace RPG.Shops
             }
         }
 
-        public void SelectFilter(ItemCategory category) { }
+        public void SelectFilter(ItemCategory category) 
+        { 
+            filter = category;
+            onChange?.Invoke();
+        }
 
-        public ItemCategory GetFilter() { return ItemCategory.None; }
+        public ItemCategory GetFilter() 
+        {
+            return filter; 
+        }
 
         public void SelectMode(bool isBuying)
         {
