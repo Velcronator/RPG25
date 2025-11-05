@@ -29,6 +29,7 @@ namespace GameDevTV.Inventories
         [SerializeField] bool stackable = false;
         [Tooltip("The price of the item.")]
         [SerializeField] float price;
+        [SerializeField] ItemCategory category = ItemCategory.None;
 
         // STATE
         static Dictionary<string, InventoryItem> itemLookupCache;
@@ -107,8 +108,10 @@ namespace GameDevTV.Inventories
 
         public float GetPrice() { return price; }
 
+        public ItemCategory GetCategory() { return category; }
+
         // PRIVATE
-        
+
         void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
             // Generate and save a new UUID if this is blank.
