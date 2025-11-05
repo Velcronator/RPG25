@@ -83,6 +83,11 @@ namespace RPG.UI.Shops
                 switchButton.GetComponentInChildren<TextMeshProUGUI>().text = "Switch to Buying";
                 confirmButton.GetComponentInChildren<TextMeshProUGUI>().text = "Sell";
             }
+
+            foreach(FilterButtonUI button in GetComponentsInChildren<FilterButtonUI>())
+            {
+                button.FreshUI();
+            }
         }
 
         public void Close()
