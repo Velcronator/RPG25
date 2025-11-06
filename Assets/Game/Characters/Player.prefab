@@ -422,4 +422,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf41eedd39ce9664994a1073b14735dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingGold: 400
+  startingBalance: 400
