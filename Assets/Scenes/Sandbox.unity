@@ -4314,7 +4314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stock.Array.data[0].item
@@ -4339,15 +4339,15 @@ PrefabInstance:
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[2].item
       value: 
-      objectReference: {fileID: 11400000, guid: 6096bdb6374f767458657575f159ddf3, type: 2}
+      objectReference: {fileID: 11400000, guid: 8fa7ad9d088c110408c7e4125f5e4a61, type: 2}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[3].item
       value: 
-      objectReference: {fileID: 11400000, guid: afe938b47246a9d43a6641b1ce39e9e9, type: 2}
+      objectReference: {fileID: 11400000, guid: 6096bdb6374f767458657575f159ddf3, type: 2}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[4].item
       value: 
-      objectReference: {fileID: 11400000, guid: 8fa7ad9d088c110408c7e4125f5e4a61, type: 2}
+      objectReference: {fileID: 11400000, guid: afe938b47246a9d43a6641b1ce39e9e9, type: 2}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[5].item
       value: 
@@ -4366,10 +4366,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[2].initialStock
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[3].initialStock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+      propertyPath: stockConfig.Array.data[4].initialStock
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
@@ -4382,10 +4386,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[2].levelToUnlock
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[3].levelToUnlock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+      propertyPath: stockConfig.Array.data[4].levelToUnlock
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
@@ -4402,6 +4410,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: stockConfig.Array.data[3].buyingDiscountPercentage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+      propertyPath: stockConfig.Array.data[4].buyingDiscountPercentage
       value: 99
       objectReference: {fileID: 0}
     - target: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
@@ -16953,7 +16965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8694389590823472958, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -665.124
+      value: -665.12396
       objectReference: {fileID: 0}
     - target: {fileID: 8694750333546272382, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchorMax.x
