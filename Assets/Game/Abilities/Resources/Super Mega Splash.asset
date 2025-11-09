@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1660ea14e0e81489994af34b4e3d5e, type: 3}
+  m_Name: Super Mega Splash
+  m_EditorClassIdentifier: 
+  itemID: 6d6daff4-9a7c-46c9-b46a-258525758f1c
+  displayName: Super Mega Splash
+  description: Drown the mother suckers
+  icon: {fileID: 21300000, guid: 24f026b2149d1ba4a9e54a83850398ae, type: 3}
+  pickup: {fileID: 7821825647229910463, guid: e70d94598459f1645ac6f443db9bdbc6, type: 3}
+  stackable: 0
+  price: 10
+  category: 5
+  consumable: 0
