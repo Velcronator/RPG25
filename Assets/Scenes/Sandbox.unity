@@ -8008,7 +8008,7 @@ GameObject:
   - component: {fileID: 1638666499}
   - component: {fileID: 1638666498}
   - component: {fileID: 1638666497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain_East
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8252,7 +8252,7 @@ GameObject:
   - component: {fileID: 1681149021}
   - component: {fileID: 1681149020}
   - component: {fileID: 1681149019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12550,6 +12550,10 @@ PrefabInstance:
     - target: {fileID: 3006700686447604626, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007747925676140246, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3020926284037834795, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -16973,7 +16977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8694389590823472958, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -665.12354
+      value: -665.1238
       objectReference: {fileID: 0}
     - target: {fileID: 8694750333546272382, guid: 0d58b4e15e3776747b7e2df4d9f32cb5, type: 3}
       propertyPath: m_AnchorMax.x
