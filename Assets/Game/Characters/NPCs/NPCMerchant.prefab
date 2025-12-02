@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCMerchant
       objectReference: {fileID: 0}
+    - target: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4130333466837831597, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -22,3 +22,5 @@ MonoBehaviour:
   category: 5
   consumable: 0
   targetingStrategy: {fileID: 11400000, guid: aa8b4a66c3d9e67478640fad89d52f3f, type: 2}
+  filterStrategies:
+  - {fileID: 11400000, guid: 89402e24a00898c47823d501baa624a8, type: 2}
