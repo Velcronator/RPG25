@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop Keeper
       objectReference: {fileID: 0}
+    - target: {fileID: 118544189835514886, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
+      propertyPath: m_TagString
+      value: ShopKeeper
+      objectReference: {fileID: 0}
     - target: {fileID: 2431178701031624715, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -117,6 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopName: 
+  sellingPercentage: 50
+  stockConfig: []
 --- !u!1001 &7421909470062594102
 PrefabInstance:
   m_ObjectHideFlags: 0
