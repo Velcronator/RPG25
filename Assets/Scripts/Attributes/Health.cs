@@ -4,6 +4,7 @@ using GameDevTV.Saving;
 using RPG.Stats;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 namespace RPG.Attributes
 {
@@ -132,6 +133,11 @@ namespace RPG.Attributes
             {
                 Die();
             }
+        }
+
+        internal void TakeDamage(object user, float v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
