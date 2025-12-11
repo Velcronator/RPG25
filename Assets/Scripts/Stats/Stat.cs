@@ -5,7 +5,9 @@
         Health,
         ExperienceReward,
         ExperienceToLevelUp,
-        Damage
+        Damage,
+        Mana,
+        ManaRegenRate
         //Strength,
         //Defense,
         //Intelligence,
