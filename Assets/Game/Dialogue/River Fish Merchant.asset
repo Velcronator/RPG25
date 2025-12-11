@@ -14,11 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: How can i get there?
-  children: []
+  children:
+  - a309df92-2128-42ac-bbd2-4dab4e90b13c
   rect:
     serializedVersion: 2
     x: 912
     y: 256
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2942749115043101575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: a309df92-2128-42ac-bbd2-4dab4e90b13c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Hungry guards are easy to persuade.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1219
+    y: 302
     width: 200
     height: 100
   onEnterAction: 
@@ -92,7 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Access is blocked?
-  children: []
+  children:
+  - a309df92-2128-42ac-bbd2-4dab4e90b13c
   rect:
     serializedVersion: 2
     x: 911
@@ -150,6 +177,7 @@ MonoBehaviour:
   - {fileID: -887097120614115274}
   - {fileID: -5130630496350007846}
   - {fileID: -817414062259451011}
+  - {fileID: -2942749115043101575}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &11431784378084484
 MonoBehaviour:
