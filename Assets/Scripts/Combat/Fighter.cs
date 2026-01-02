@@ -4,7 +4,6 @@ using RPG.Core;
 using GameDevTV.Saving;
 using RPG.Attributes;
 using RPG.Stats;
-using System.Collections.Generic;
 using GameDevTV.Utils;
 using GameDevTV.Inventories;
 
@@ -90,6 +89,18 @@ namespace RPG.Combat
         public Health GetTarget()
         {
             return target;
+        }
+
+        public Transform GetHandTransform(bool isRightHand)
+        {
+            if (isRightHand) 
+            {
+                return rightHandTransform;
+            }
+            else 
+            {
+                return leftHandTransform;
+            }
         }
 
         private void AttackBehaviour()
