@@ -80,7 +80,9 @@ namespace RPG.Combat
             onHit.Invoke();
 
             if (hitEffect != null)
-            {
+            {   // Create hit effect at the aim location
+                if (target == null)
+                    target = health;
                 Instantiate(hitEffect, GetAimLocation(), transform.rotation);
             }
 
