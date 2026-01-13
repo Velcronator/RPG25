@@ -55,6 +55,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8702454708721182187}
     m_Modifications:
+    - target: {fileID: 1244387152534889972, guid: cd89024236caf0345878d6699e3159b9, type: 3}
+      propertyPath: trait
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280510365619930839, guid: cd89024236caf0345878d6699e3159b9, type: 3}
+      propertyPath: trait
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2603723262891503645, guid: cd89024236caf0345878d6699e3159b9, type: 3}
       propertyPath: m_Name
       value: Traits Window
@@ -146,6 +154,14 @@ PrefabInstance:
     - target: {fileID: 4003406662305824272, guid: cd89024236caf0345878d6699e3159b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595221573512447741, guid: cd89024236caf0345878d6699e3159b9, type: 3}
+      propertyPath: trait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163725637935842037, guid: cd89024236caf0345878d6699e3159b9, type: 3}
+      propertyPath: trait
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
