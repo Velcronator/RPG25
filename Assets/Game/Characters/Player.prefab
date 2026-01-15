@@ -469,3 +469,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3bd53dfed4a474cbe145488fe49053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonusConfig:
+  - trait: 0
+    stat: 0
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - trait: 0
+    stat: 3
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - trait: 2
+    stat: 3
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - trait: 3
+    stat: 4
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - trait: 3
+    stat: 5
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
