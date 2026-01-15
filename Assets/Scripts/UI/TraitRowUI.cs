@@ -23,7 +23,7 @@ namespace RPG.UI
         }
 
         private void Update()
-        {
+        {   // todo: optimize by only updating when necessary
             minusButton.interactable = playerTraitStore.CanAssignPoints(trait, -1);
             plusButton.interactable = playerTraitStore.CanAssignPoints(trait, +1);
 

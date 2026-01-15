@@ -7,7 +7,8 @@
         ExperienceToLevelUp,
         Damage,
         Mana,
-        ManaRegenRate
+        ManaRegenRate,
+        TotalTraitPoints
         //Strength,
         //Defense,
         //Intelligence,
