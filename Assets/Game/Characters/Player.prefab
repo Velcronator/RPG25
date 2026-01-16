@@ -490,3 +490,7 @@ MonoBehaviour:
     stat: 5
     additiveBonusPerPoint: 0
     percentageBonusPerPoint: 5
+  - trait: 4
+    stat: 7
+    additiveBonusPerPoint: 5
+    percentageBonusPerPoint: 0

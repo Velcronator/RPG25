@@ -8,7 +8,8 @@
         Damage,
         Mana,
         ManaRegenRate,
-        TotalTraitPoints
+        TotalTraitPoints,
+        BuyingDiscountPercentage,
         //Strength,
         //Defense,
         //Intelligence,
