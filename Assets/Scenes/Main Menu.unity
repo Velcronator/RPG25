@@ -1781,6 +1781,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0850d7d01531e83469d1674ab32b5d23, type: 3}
+--- !u!114 &1143040451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6193575218288154631, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+  m_PrefabInstance: {fileID: 2869651420768609706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7bca65d362c18e43ad1ef554704f130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1157738952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4901449512730716757, guid: 551b7813c96bb7a489d4a370b09cfc14, type: 3}
@@ -4087,9 +4098,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 599109371199664986, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
-      propertyPath: m_text
-      value: Project Swap Dragon
+    - target: {fileID: 4122985584026913415, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122985584026913415, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122985584026913415, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1143040451}
+    - target: {fileID: 4122985584026913415, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122985584026913415, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122985584026913415, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RPG.UI.MainMenuUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122985584026913415, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6604603642987096359, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
       propertyPath: m_Name
@@ -4176,8 +4211,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6148652877124147277, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a2f94e965dee64db1970652ab4d993, type: 3}
