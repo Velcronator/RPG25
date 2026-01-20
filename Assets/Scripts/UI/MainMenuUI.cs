@@ -24,20 +24,5 @@ namespace RPG.UI
         {
             savingWrapper.value.ContinueGame();
         }
-
-        public void LoadGame()
-        {
-            Debug.Log("Starting load game panel...");
-        }
-
-        public void NewGame()
-        {
-            Debug.Log("Starting new game panel...");
-        }
-
-        public void QuitGame()
-        {
-            Debug.Log("Quitting game...");
-        }
     }
 }
