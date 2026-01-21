@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using GameDevTV.Saving;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -31,6 +32,13 @@ namespace RPG.SceneManagement
             if (string.IsNullOrEmpty(saveFile)) return;
             SetCurrentSave(saveFile);
             StartCoroutine(LoadFirstScene());
+        }
+
+        public void LoadGame(string saveFile)
+        {
+            if (string.IsNullOrEmpty(saveFile)) return;
+            SetCurrentSave(saveFile);
+            ContinueGame();
         }
 
         private void SetCurrentSave(string saveFile)
@@ -88,6 +96,11 @@ namespace RPG.SceneManagement
         public void Delete()
         {
             GetComponent<SavingSystem>().Delete(GetCurrentSave());
+        }
+
+        public IEnumerable<string> ListSaves()
+        {
+            return GetComponent<SavingSystem>().ListSaves();
         }
     }
 }
