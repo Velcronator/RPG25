@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,13 +12,13 @@ namespace RPG.UI
 
         private void OnEnable()
         {
+            SavingWrapper savingWrapper = FindFirstObjectByType<SavingWrapper>();
+            if (savingWrapper == null) return;
+
             foreach (Transform child in contentRoot)
             {
                 Destroy(child.gameObject);
             }
-
-            SavingWrapper savingWrapper = FindFirstObjectByType<SavingWrapper>();
-            if (savingWrapper == null) return;
 
             foreach (string save in savingWrapper.ListSaves())
             {
