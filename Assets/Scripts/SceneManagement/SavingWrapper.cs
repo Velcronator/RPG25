@@ -111,6 +111,11 @@ namespace RPG.SceneManagement
             GetComponent<SavingSystem>().Delete(GetCurrentSave());
         }
 
+        public void Delete(string saveFile)
+        {
+            GetComponent<SavingSystem>().Delete(saveFile);
+        }
+
         public IEnumerable<string> ListSaves()
         {
             return GetComponent<SavingSystem>().ListSaves();

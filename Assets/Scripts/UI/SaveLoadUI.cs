@@ -26,11 +26,24 @@ namespace RPG.UI
 
                 TMP_Text textComp = buttonInstance.GetComponentInChildren<TMP_Text>();
                 textComp.text = save;
-                Button button = buttonInstance.GetComponentInChildren<Button>();
-                button.onClick.AddListener(() =>
+
+                Button[] buttons = buttonInstance.GetComponentsInChildren<Button>();
+
+                // Assuming first button is Load
+                buttons[0].onClick.AddListener(() =>
                 {
                     savingWrapper.LoadGame(save);
                 });
+
+                // Assuming second button is Delete
+                if (buttons.Length > 1)
+                {
+                    buttons[1].onClick.AddListener(() =>
+                    {
+                        savingWrapper.Delete(save);
+                        OnEnable(); // Refresh the list
+                    });
+                }
             }
         }
     }
