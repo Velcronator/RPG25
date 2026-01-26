@@ -23,7 +23,7 @@ namespace RPG.Control
 
         private void Start()
         {
-            if(GetComponent<Health>().IsDead())
+            if (GetComponent<Health>().IsDead())
             {
                 Respawn();
             }
@@ -51,11 +51,11 @@ namespace RPG.Control
         {
             foreach (AIController enemyControllers in FindObjectsByType<AIController>(FindObjectsSortMode.None))
             {
-                enemyControllers.Reset();
                 Health health = enemyControllers.GetComponent<Health>();
                 if (health && !health.IsDead())
                 {
                     health.Heal(health.GetMaxHealthPoints() * enemyHealthRegenPercentage / 100);
+                    enemyControllers.Reset();
                 }
             }
         }
