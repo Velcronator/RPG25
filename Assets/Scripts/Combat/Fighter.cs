@@ -6,6 +6,7 @@ using RPG.Attributes;
 using RPG.Stats;
 using GameDevTV.Utils;
 using GameDevTV.Inventories;
+using System;
 
 namespace RPG.Combat
 {
@@ -15,6 +16,7 @@ namespace RPG.Combat
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Transform leftHandTransform = null;
         [SerializeField] WeaponConfig defaultWeapon = null;
+        [SerializeField] float autoAttackRange = 4f;
 
         Health target;
         Equipment equipment;
@@ -48,7 +50,11 @@ namespace RPG.Combat
             timeSinceLastAttack += Time.deltaTime;
 
             if (target == null) return;
-            if (target.IsDead()) return;
+            if (target.IsDead())
+            {
+                target = FindNewTargetInRange();
+                if (target == null) return;
+            }
 
             if (!GetIsInRange(target.transform))
             {
@@ -112,6 +118,40 @@ namespace RPG.Combat
                 TriggerAttack();
                 timeSinceLastAttack = 0;
             }
+        }
+
+        private Health FindNewTargetInRange()
+        {
+            // Sphere cast to find targets in range 
+            // More efficient than Physics.SphereCastAll
+            // TODO  Physics.OverlapSphereNonAlloc: Layer mask to only hit enemies
+            Collider[] hits = Physics.OverlapSphere(transform.position, autoAttackRange);
+            return FindClosestValidTarget(hits);
+        }
+
+        private Health FindClosestValidTarget(Collider[] colliders)
+        {
+            float closestDistance = Mathf.Infinity;
+            Health closestTarget = null;
+            
+            foreach (var collider in colliders)
+            {
+                if (!IsValidTarget(collider, out Health health)) continue;
+                
+                float distance = Vector3.Distance(transform.position, health.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestTarget = health;
+                }
+            }
+            return closestTarget;
+        }
+
+        private bool IsValidTarget(Collider collider, out Health health)
+        {
+            health = collider.GetComponent<Health>();
+            return health != null && !health.IsDead() && health.gameObject != gameObject;
         }
 
         private void TriggerAttack()
