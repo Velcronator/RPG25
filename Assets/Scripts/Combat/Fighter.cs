@@ -99,11 +99,11 @@ namespace RPG.Combat
 
         public Transform GetHandTransform(bool isRightHand)
         {
-            if (isRightHand) 
+            if (isRightHand)
             {
                 return rightHandTransform;
             }
-            else 
+            else
             {
                 return leftHandTransform;
             }
@@ -133,11 +133,11 @@ namespace RPG.Combat
         {
             float closestDistance = Mathf.Infinity;
             Health closestTarget = null;
-            
+
             foreach (var collider in colliders)
             {
                 if (!IsValidTarget(collider, out Health health)) continue;
-                
+
                 float distance = Vector3.Distance(transform.position, health.transform.position);
                 if (distance < closestDistance)
                 {
@@ -166,6 +166,13 @@ namespace RPG.Combat
             if (target == null) { return; }
 
             float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
+            BaseStats targetBaseStats = target.GetComponent<BaseStats>();
+
+            if (targetBaseStats != null)
+            {
+                float defence = targetBaseStats.GetStat(Stat.Defence);
+                damage /= 1 + defence / damage;
+            }
 
             if (currentWeapon.value != null)
             {

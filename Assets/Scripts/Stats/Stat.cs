@@ -10,6 +10,7 @@
         ManaRegenRate,
         TotalTraitPoints,
         BuyingDiscountPercentage,
+        Defence,
         //Strength,
         //Defense,
         //Intelligence,
