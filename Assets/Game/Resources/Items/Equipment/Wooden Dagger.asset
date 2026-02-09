@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20c32548c4cee5419451057b49c9080, type: 3}
+  m_Name: Wooden Dagger
+  m_EditorClassIdentifier: 
+  itemID: 167e0640-75b7-428f-8f44-ff1c7835f2d1
+  displayName: Wooden Dagger
+  description: Dagger made from local Maple trees
+  icon: {fileID: 21300000, guid: 6b8a1d63e2f93964da05302d1ff6bc82, type: 3}
+  pickup: {fileID: 4232530539477956152, guid: bd05f6d3e8b69a14787907c1da6e82ab, type: 3}
+  stackable: 0
+  price: 0
+  category: 0
+  allowedEquipLocation: 5
+  animatorOverride: {fileID: 22100000, guid: 84983e51c10b7db4fa8697fd669d31b8, type: 2}
+  equippedPrefab: {fileID: 7644132343094360384, guid: f959b0457d9228647940671e3d755aa5, type: 3}
+  weaponDamage: 5
+  percentageBonus: 0
+  weaponRange: 1
+  isRightHanded: 1
+  projectile: {fileID: 0}

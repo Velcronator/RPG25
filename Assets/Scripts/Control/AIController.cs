@@ -60,7 +60,27 @@ namespace RPG.Control
 
         private void Start()
         {
+            currentWaypointIndex = GetClosestWaypoint();
+        }
 
+        private int GetClosestWaypoint()
+        {
+            if (patrolPath == null) return 0;
+
+            int closestIndex = 0;
+            float closestDistance = Mathf.Infinity;
+
+            for (int i = 0; i < patrolPath.transform.childCount; i++)
+            {
+                float distance = Vector3.Distance(transform.position, patrolPath.GetWaypoint(i));
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestIndex = i;
+                }
+            }
+
+            return closestIndex;
         }
 
         private void Update()
