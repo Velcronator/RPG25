@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopName: 
   sellingPercentage: 50
+  maximumBarterDiscount: 80
   stockConfig: []
 --- !u!1001 &7421909470062594102
 PrefabInstance:

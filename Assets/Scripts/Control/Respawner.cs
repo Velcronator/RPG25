@@ -37,13 +37,13 @@ namespace RPG.Control
         private IEnumerator RespawnRoutine()
         {
             SavingWrapper savingWrapper = FindFirstObjectByType<SavingWrapper>();
-            savingWrapper.Save();
+            //savingWrapper.Save(); TODO: just for testing, remove later
             yield return new WaitForSeconds(respawnDelay);
             Fader fader = FindFirstObjectByType<Fader>();
             yield return fader.FadeOut(fadeTime);
             RespawnPlayer();
             ResetEnemies();
-            savingWrapper.Save();
+            //savingWrapper.Save(); TODO: just for testing, remove later
             yield return fader.FadeIn(fadeTime);
         }
 

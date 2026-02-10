@@ -20,6 +20,7 @@ namespace RPG.Control
         [Range(0,1)]
         [SerializeField] float patrolSpeedFraction = 0.2f;
         [SerializeField] float shoutDistance = 5f;
+        [SerializeField] PatrolType patrolType = PatrolType.Sequential;
 
         Fighter fighter;
         Health health;
@@ -31,6 +32,12 @@ namespace RPG.Control
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
         float timeSinceAggrevated = Mathf.Infinity;
         int currentWaypointIndex = 0;
+
+        enum PatrolType
+        {
+            Sequential,
+            Random
+        }
 
         private void Awake()
         {
@@ -143,7 +150,29 @@ namespace RPG.Control
 
         private void CycleWaypoint()
         {
-            currentWaypointIndex = patrolPath.GetNextIndex(currentWaypointIndex);
+            if (patrolType == PatrolType.Sequential)
+            {
+                currentWaypointIndex = patrolPath.GetNextIndex(currentWaypointIndex);
+            }
+            else if (patrolType == PatrolType.Random)
+            {
+                int previousIndex = currentWaypointIndex;
+                int waypointCount = patrolPath.transform.childCount;
+                
+                // Avoid picking the same waypoint if there are multiple waypoints
+                if (waypointCount > 1)
+                {
+                    do
+                    {
+                        currentWaypointIndex = UnityEngine.Random.Range(0, waypointCount);
+                    }
+                    while (currentWaypointIndex == previousIndex);
+                }
+                else
+                {
+                    currentWaypointIndex = 0;
+                }
+            }
         }
 
         private Vector3 GetCurrentWaypoint()
