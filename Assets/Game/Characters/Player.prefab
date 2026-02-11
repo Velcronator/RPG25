@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf41eedd39ce9664994a1073b14735dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 400
+  startingBalance: 380
 --- !u!114 &3456719746924890349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,3 +509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4922258bdaa46644eaa98b4874372b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnLocation: {fileID: 0}
+  respawnDelay: 3
+  fadeTime: 0.2
+  healthRegenPercentage: 20
+  enemyHealthRegenPercentage: 20

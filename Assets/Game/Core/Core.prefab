@@ -2103,10 +2103,6 @@ PrefabInstance:
       propertyPath: startingLevel
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4688877982981290390, guid: 030c9626c7887f04cb0165347de6275f, type: 3}
-      propertyPath: startingBalance
-      value: 450
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
