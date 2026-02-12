@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
-using GameDevTV.Saving;
+﻿using GameDevTV.Saving;
+using GameDevTV.Utils;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.Stats
 {
-    public class TraitStore : MonoBehaviour, IModifierProvider, ISaveable
+    public class TraitStore : MonoBehaviour, IModifierProvider, ISaveable, IPredicateEvaluator
     {
         [SerializeField] TraitBonus[] bonusConfig;
         [System.Serializable]
@@ -134,5 +136,34 @@ namespace RPG.Stats
         {
             assignedPoints = new Dictionary<Trait, int>((IDictionary<Trait, int>)state);
         }
+
+        public bool? Evaluate(EPredicate predicate, string[] parameters)
+        {
+            switch (predicate)
+            {
+                case EPredicate.MinimumTrait:
+                    Trait trait = (Trait)System.Enum.Parse(typeof(Trait), parameters[0]);
+                    int minimumPoints = int.Parse(parameters[1]);
+                    return GetPoints(trait) >= minimumPoints;
+                
+                case EPredicate.HasTrait:
+                    Trait checkTrait = (Trait)System.Enum.Parse(typeof(Trait), parameters[0]);
+                    return GetPoints(checkTrait) > 0;
+            }
+            
+            return null; // This evaluator doesn't handle other predicates
+        }
+
+        //public bool? Evaluate(string predicate, string[] parameters)
+        //{
+        //    if (predicate == "MinimumTrait")
+        //    {
+        //        if (Enum.TryParse<Trait>(parameters[0], out Trait trait))
+        //        {
+        //            return GetPoints(trait) >= Int32.Parse(parameters[1]);
+        //        }
+        //    }
+        //    return null;
+        //}
     }
 }

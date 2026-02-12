@@ -10,11 +10,8 @@ namespace GameDevTV.Utils
         MinimumTrait,
         HasItem,
         HasItems,
-        HasItemEquipped
-    }
-
-    public interface IPredicateEvaluator
-    {
-        bool? Evaluate(EPredicate predicate, string[] parameters);
+        HasItemEquipped,
+        HasItemInInventory,
+        HasTrait
     }
 }

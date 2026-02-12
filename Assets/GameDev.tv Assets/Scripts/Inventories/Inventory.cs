@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using GameDevTV.Saving;
-using RPG.Core;
 using System.Collections.Generic;
+using GameDevTV.Utils;
 
 namespace GameDevTV.Inventories
 {
@@ -294,12 +294,12 @@ namespace GameDevTV.Inventories
             }
         }
 
-        public bool? Evaluate(string predicate, string[] parameters)
+        public bool? Evaluate(EPredicate predicate, string[] parameters)
         {
             switch (predicate)
             {
-                case "HasInventoryItem":
-                return HasItem(InventoryItem.GetFromID(parameters[0]));
+                case EPredicate.HasItem:
+                    return HasItem(InventoryItem.GetFromID(parameters[0]));
             }
 
             return null;

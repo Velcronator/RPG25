@@ -1,8 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RPG.Core
+namespace GameDevTV.Utils
 {
     [System.Serializable]
     public class Condition
@@ -45,7 +44,7 @@ namespace RPG.Core
         class Predicate
         {
             [SerializeField]
-            string predicate;
+            EPredicate predicate;
             [SerializeField]
             string[] parameters;
             [SerializeField]
