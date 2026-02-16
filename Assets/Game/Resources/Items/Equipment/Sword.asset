@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   itemID: 0935e90f-0534-4d28-a882-2fa50115ce9a
-  displayName: Sword
-  description: Pointy thing
+  displayName: Sword of Kaos
+  description: Pointy thing of destruction
   icon: {fileID: 21300000, guid: 03cc55b856c07d746977fd3855f80d43, type: 3}
   pickup: {fileID: 3526975436606107263, guid: 99d918f03d9011e49a7f83a237f1629a, type: 3}
   stackable: 0
-  price: 175
+  price: 350
   category: 2
   allowedEquipLocation: 5
   equipCondition:
@@ -31,8 +31,8 @@ MonoBehaviour:
         negate: 0
   animatorOverride: {fileID: 22100000, guid: 84983e51c10b7db4fa8697fd669d31b8, type: 2}
   equippedPrefab: {fileID: 5998283576179889942, guid: 432153830da4e3c48b4141d151fa807b, type: 3}
-  weaponDamage: 2
-  percentageBonus: 5
+  weaponDamage: 9.5
+  percentageBonus: 0
   weaponRange: 2
   isRightHanded: 1
   projectile: {fileID: 0}

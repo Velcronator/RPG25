@@ -6,6 +6,7 @@ namespace RPG.Stats
         Grunt,
         Mage,
         Archer,
-        Minion
+        Minion,
+        Heavy
     }
 }
