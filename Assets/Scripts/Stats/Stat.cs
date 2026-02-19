@@ -12,7 +12,6 @@
         BuyingDiscountPercentage,
         Defence,
         //Strength,
-        //Defense,
         //Intelligence,
         //Dexterity,
         //Speed,
