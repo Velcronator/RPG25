@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 7914095686865841442}
+  - {fileID: 8459654766279582261}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &7914095686865841442
 MonoBehaviour:
@@ -29,11 +30,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: I hear the shop keeper has a sword you probably want to get a hold of.
-  children: []
+  children:
+  - b8387036-00fd-4215-a91a-f4baa596e713
   rect:
     serializedVersion: 2
     x: 47
     y: 146
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &8459654766279582261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: b8387036-00fd-4215-a91a-f4baa596e713
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I don't have enough Strength
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 360
+    y: 95
     width: 200
     height: 100
   onEnterAction: 

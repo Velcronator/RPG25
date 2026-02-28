@@ -223,6 +223,7 @@ MonoBehaviour:
       - predicate: 3
         parameters:
         - Give fish to the bridge guard
+        - Give fish to the bridge guard
         negate: 1
 --- !u!114 &2903913917235011367
 MonoBehaviour:
@@ -269,8 +270,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 658
-    y: 376
+    x: 660
+    y: 377
     width: 200
     height: 100
   onEnterAction: 
@@ -312,6 +313,7 @@ MonoBehaviour:
       - predicate: 1
         parameters:
         - Give fish to the bridge guard
+        - Give fish to the bridge guard
         negate: 0
       - predicate: 2
         parameters:
@@ -321,6 +323,7 @@ MonoBehaviour:
     - or:
       - predicate: 3
         parameters:
+        - Give fish to the bridge guard
         - Give fish to the bridge guard
         negate: 1
 --- !u!114 &6418086569544629903
@@ -354,14 +357,16 @@ MonoBehaviour:
         parameters:
         - Give fish to the bridge guard
         - GetFish
-        negate: 0
+        negate: 1
       - predicate: 3
         parameters:
+        - Give fish to the bridge guard
         - Give fish to the bridge guard
         negate: 0
     - or:
       - predicate: 3
         parameters:
+        - Give fish to the bridge guard
         - Give fish to the bridge guard
         negate: 0
 --- !u!114 &7788844588867179745

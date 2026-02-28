@@ -46,7 +46,7 @@ namespace GameDevTV.Utils
         }
 
         [System.Serializable]
-        class Predicate
+        public class Predicate
         {
             [SerializeField]
             EPredicate predicate;
