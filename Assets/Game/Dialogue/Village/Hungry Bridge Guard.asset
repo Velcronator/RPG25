@@ -1,0 +1,420 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5500525241717326005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: d739ea18-018a-436f-93b8-65a22f95b6d8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Where is she?
+  children:
+  - 813a5924-f93f-4b35-878b-3453058398fe
+  rect:
+    serializedVersion: 2
+    x: 969
+    y: 25
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Give Fish to the bridge guard
+        negate: 1
+--- !u!114 &-4775740582363620607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: b92bda14-1812-4cc2-9f60-865507022dab
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oohh I do love some fish.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1232
+    y: 126
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-3807210744898687082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 41ed8007-e9a1-41d8-98fa-63d4bce3f2b6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: And you are?
+  children:
+  - 6f0664d0-4166-4594-bbc5-1ad1b00f53ea
+  - 05cb9dbe-b052-44d7-81b2-258eb5ab175c
+  - 63cf6e57-6901-4681-83fa-67db7fbf8205
+  - 3e4e4572-8eef-4ecc-bf2e-c16f95c16cb6
+  rect:
+    serializedVersion: 2
+    x: 110
+    y: 227
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-3172827673933810453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: c5c607ca-b76b-4a5b-9205-9acfee2cab4e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I'm already on the hunt.
+  children:
+  - b92bda14-1812-4cc2-9f60-865507022dab
+  rect:
+    serializedVersion: 2
+    x: 968
+    y: 135
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c68e5c13d17f34c9de1408e4e09eee, type: 3}
+  m_Name: Hungry Bridge Guard
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -3807210744898687082}
+  - {fileID: 4352795553428844812}
+  - {fileID: 2858248356987743895}
+  - {fileID: 7788844588867179745}
+  - {fileID: 2929756053408295656}
+  - {fileID: -3172827673933810453}
+  - {fileID: -5500525241717326005}
+  - {fileID: 6418086569544629903}
+  - {fileID: -4775740582363620607}
+  - {fileID: 9031676015854091320}
+  - {fileID: 898453415820978378}
+  - {fileID: 2903913917235011367}
+  - {fileID: 1187245113540804671}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &898453415820978378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 4c6a432e-3727-4e65-833c-9d5d2cb7a371
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yummy. I'll open the door for you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1232
+    y: 317
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveFish
+  condition:
+    and: []
+--- !u!114 &1187245113540804671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 82a3c4c4-325e-45d4-9211-3df0311696a7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You may pass
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 652
+    y: 520
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        negate: 0
+--- !u!114 &2858248356987743895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 05cb9dbe-b052-44d7-81b2-258eb5ab175c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Nobody in particular
+  children:
+  - cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
+  rect:
+    serializedVersion: 2
+    x: 363
+    y: 292
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        negate: 1
+--- !u!114 &2903913917235011367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 3e4e4572-8eef-4ecc-bf2e-c16f95c16cb6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: May I pass my good man
+  children:
+  - cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
+  - 82a3c4c4-325e-45d4-9211-3df0311696a7
+  rect:
+    serializedVersion: 2
+    x: 350
+    y: 445
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &2929756053408295656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Don't waste my time. Back home. I can't hear you over the rumbling of my
+    stomach!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 658
+    y: 376
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        negate: 1
+--- !u!114 &4352795553428844812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 6f0664d0-4166-4594-bbc5-1ad1b00f53ea
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I'm a fisherman
+  children:
+  - 0dac7d83-c04e-45c2-a46f-cde8de2a7520
+  rect:
+    serializedVersion: 2
+    x: 379
+    y: 132
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Give fish to the bridge guard
+        negate: 0
+      - predicate: 2
+        parameters:
+        - Give fish to the bridge guard
+        - GiveFish
+        negate: 1
+    - or:
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        negate: 1
+--- !u!114 &6418086569544629903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 63cf6e57-6901-4681-83fa-67db7fbf8205
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I've got some sooties?
+  children:
+  - 4c6a432e-3727-4e65-833c-9d5d2cb7a371
+  rect:
+    serializedVersion: 2
+    x: 957
+    y: 260
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 2
+        parameters:
+        - Give fish to the bridge guard
+        - GetFish
+        negate: 0
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        negate: 0
+    - or:
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        negate: 0
+--- !u!114 &7788844588867179745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 0dac7d83-c04e-45c2-a46f-cde8de2a7520
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: There is a lady who has a market. Just quietly between us. Get me some sardines
+    and I'll let you through the gate.
+  children:
+  - c5c607ca-b76b-4a5b-9205-9acfee2cab4e
+  - d739ea18-018a-436f-93b8-65a22f95b6d8
+  - 63cf6e57-6901-4681-83fa-67db7fbf8205
+  rect:
+    serializedVersion: 2
+    x: 661
+    y: 134
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &9031676015854091320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 813a5924-f93f-4b35-878b-3453058398fe
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: By the river.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1228
+    y: 18
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []

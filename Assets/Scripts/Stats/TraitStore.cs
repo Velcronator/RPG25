@@ -139,31 +139,14 @@ namespace RPG.Stats
 
         public bool? Evaluate(EPredicate predicate, string[] parameters)
         {
-            switch (predicate)
+            if (predicate == EPredicate.MinimumTrait)
             {
-                case EPredicate.MinimumTrait:
-                    Trait trait = (Trait)System.Enum.Parse(typeof(Trait), parameters[0]);
-                    int minimumPoints = int.Parse(parameters[1]);
-                    return GetPoints(trait) >= minimumPoints;
-                
-                case EPredicate.HasTrait:
-                    Trait checkTrait = (Trait)System.Enum.Parse(typeof(Trait), parameters[0]);
-                    return GetPoints(checkTrait) > 0;
+                if (Enum.TryParse<Trait>(parameters[0], out Trait trait))
+                {
+                    return GetPoints(trait) >= Int32.Parse(parameters[1]);
+                }
             }
-            
-            return null; // This evaluator doesn't handle other predicates
+            return null;
         }
-
-        //public bool? Evaluate(string predicate, string[] parameters)
-        //{
-        //    if (predicate == "MinimumTrait")
-        //    {
-        //        if (Enum.TryParse<Trait>(parameters[0], out Trait trait))
-        //        {
-        //            return GetPoints(trait) >= Int32.Parse(parameters[1]);
-        //        }
-        //    }
-        //    return null;
-        //}
     }
 }

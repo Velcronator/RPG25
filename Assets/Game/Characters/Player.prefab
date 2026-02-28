@@ -170,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5746716283594519896, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
       propertyPath: uniqueIdentifier
-      value: player
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6977129775510290493, guid: e508a9c35323fa0499fd11e3972a1f58, type: 3}
       propertyPath: health

@@ -101,11 +101,15 @@ namespace RPG.Quests
                 case EPredicate.HasQuest:
                     return HasQuest(Quest.GetByName(parameters[0]));
                 case EPredicate.CompletedQuest:
-                    return GetQuestStatus(Quest.GetByName(parameters[0])).IsComplete();
+                    QuestStatus status = GetQuestStatus(Quest.GetByName(parameters[0]));
+                    if (status == null) return false;
+                    return status.IsComplete();
+                case EPredicate.CompletedObjective:
+                    QuestStatus teststatus = GetQuestStatus(Quest.GetByName(parameters[0]));
+                    if (teststatus == null) return false;
+                    return teststatus.IsObjectiveComplete(parameters[1]);
             }
-
             return null;
         }
     }
-
 }

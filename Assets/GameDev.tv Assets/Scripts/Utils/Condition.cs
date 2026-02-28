@@ -11,6 +11,11 @@ namespace GameDevTV.Utils
 
         public bool Check(IEnumerable<IPredicateEvaluator> evaluators)
         {
+            if (and == null || and.Length == 0)
+            {
+                return true;
+            }
+
             foreach (Disjunction dis in and)
             {
                 if (!dis.Check(evaluators))

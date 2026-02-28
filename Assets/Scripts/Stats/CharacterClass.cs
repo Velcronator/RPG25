@@ -7,6 +7,7 @@ namespace RPG.Stats
         Mage,
         Archer,
         Minion,
-        Heavy
+        Heavy,
+        NPCMale
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5500525241717326005
+--- !u!114 &-4406864778070545807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,58 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: d739ea18-018a-436f-93b8-65a22f95b6d8
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: Where is she?
-  children:
-  - 813a5924-f93f-4b35-878b-3453058398fe
-  rect:
-    serializedVersion: 2
-    x: 969
-    y: 25
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
-  condition:
-    and:
-    - or:
-      - predicate: HasQuest
-        parameters:
-        - Talk to Lady by the river
-        negate: 0
-    - or:
-      - predicate: CompletedQuest
-        parameters:
-        - Talk to Lady by the river
-        negate: 1
---- !u!114 &-4775740582363620607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: b92bda14-1812-4cc2-9f60-865507022dab
+  m_Name: b4887915-14a8-4212-8ef5-6f2905f9ad62
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Oh it's you again. Find me sardines.
-  children: []
+  text: "The Overloads poured enough sludge in here to choke a crocodilian. It\u2019s
+    a lost cause."
+  children:
+  - a1d115b3-ddaf-48ed-9bd4-cdfda443977f
   rect:
     serializedVersion: 2
-    x: 1228
-    y: 125
+    x: 582
+    y: 92
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
---- !u!114 &-3807210744898687082
+--- !u!114 &-3003082962377024138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,24 +37,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 41ed8007-e9a1-41d8-98fa-63d4bce3f2b6
+  m_Name: 9ca52e4a-18b9-4dce-8fbc-1b299fd62a6c
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: And you are?
+  isPlayerSpeaking: 1
+  text: How long has the river been like this? There must be a way to fix it.
   children:
-  - 6f0664d0-4166-4594-bbc5-1ad1b00f53ea
-  - 05cb9dbe-b052-44d7-81b2-258eb5ab175c
+  - b4887915-14a8-4212-8ef5-6f2905f9ad62
   rect:
     serializedVersion: 2
-    x: 92
-    y: 166
+    x: 332
+    y: 92
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
---- !u!114 &-3172827673933810453
+--- !u!114 &-1955387660878345370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,32 +63,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: c5c607ca-b76b-4a5b-9205-9acfee2cab4e
+  m_Name: 99726a39-a677-4529-86ff-dd7ce64a583b
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: I'm already on the sardine hunt.
+  text: Hmmm I better hold my nose. Just give me the fish for the guard.
   children:
-  - b92bda14-1812-4cc2-9f60-865507022dab
+  - 14868161-7c07-45d6-9704-3f459745b46c
   rect:
     serializedVersion: 2
-    x: 965
-    y: 127
+    x: 339
+    y: 212
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    and:
-    - or:
-      - predicate: HasQuest
-        parameters:
-        - Talk to Lady by the river
-        negate: 0
-    - or:
-      - predicate: CompletedQuest
-        parameters:
-        - Talk to Lady by the river
-        negate: 1
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,22 +89,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37c68e5c13d17f34c9de1408e4e09eee, type: 3}
-  m_Name: Speak to River Lady
+  m_Name: Fisher Lady
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: -3807210744898687082}
-  - {fileID: 4352795553428844812}
-  - {fileID: 2858248356987743895}
-  - {fileID: 7788844588867179745}
-  - {fileID: 2929756053408295656}
-  - {fileID: -3172827673933810453}
-  - {fileID: -5500525241717326005}
-  - {fileID: 6418086569544629903}
-  - {fileID: -4775740582363620607}
-  - {fileID: 9031676015854091320}
-  - {fileID: 898453415820978378}
+  - {fileID: 6481945533770220608}
+  - {fileID: -3003082962377024138}
+  - {fileID: 5519360008509986194}
+  - {fileID: -1955387660878345370}
+  - {fileID: -4406864778070545807}
+  - {fileID: 2951247709108383915}
+  - {fileID: 6142306826480042531}
+  - {fileID: 2652685406395150311}
+  - {fileID: 4116839530531742615}
   newNodeOffset: {x: 250, y: 0}
---- !u!114 &898453415820978378
+--- !u!114 &2652685406395150311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,22 +112,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 4c6a432e-3727-4e65-833c-9d5d2cb7a371
+  m_Name: a1d115b3-ddaf-48ed-9bd4-cdfda443977f
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Yummy. I'll open the door for you.
+  text: ' It''s nice to hear a voice that isn''t just wingin'' about the stench. '
   children: []
   rect:
     serializedVersion: 2
-    x: 1217
-    y: 238
+    x: 943
+    y: 211
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: 
+  onExitAction: GetFish
   condition:
-    and: []
---- !u!114 &2858248356987743895
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Give fish to the bridge guard
+        negate: 0
+--- !u!114 &2951247709108383915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,48 +142,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 05cb9dbe-b052-44d7-81b2-258eb5ab175c
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: Nobody in particular
-  children:
-  - cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
-  rect:
-    serializedVersion: 2
-    x: 373
-    y: 369
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
-  condition:
-    and: []
---- !u!114 &2929756053408295656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: cb8e0a7e-4af5-4d80-b4ff-b885e7fcc33c
+  m_Name: 14868161-7c07-45d6-9704-3f459745b46c
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Don't waste our time. Back home sunny.
+  text: You should. This place was a paradise till they came.
+  children:
+  - a1d115b3-ddaf-48ed-9bd4-cdfda443977f
+  rect:
+    serializedVersion: 2
+    x: 578
+    y: 209
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &4116839530531742615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 7018c19e-ad56-4aab-8411-c17b0b2204ce
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Get your sooties. Fresh from the sludge.
   children: []
   rect:
     serializedVersion: 2
-    x: 663
-    y: 359
+    x: 66
+    y: 448
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
---- !u!114 &4352795553428844812
+--- !u!114 &5519360008509986194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,23 +193,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 6f0664d0-4166-4594-bbc5-1ad1b00f53ea
+  m_Name: 1f48aaab-4291-40bd-8a4c-42a8232f9f1f
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: I'm a fisherman
+  text: "That\u2019s a lot for mutated sludge. It's for the guard."
   children:
-  - 0dac7d83-c04e-45c2-a46f-cde8de2a7520
+  - 3fd10d07-b96a-4f16-83d8-ca226159a268
   rect:
     serializedVersion: 2
-    x: 371
-    y: 176
+    x: 330
+    y: 353
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
---- !u!114 &6418086569544629903
+--- !u!114 &6142306826480042531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,16 +219,45 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 63cf6e57-6901-4681-83fa-67db7fbf8205
+  m_Name: 3fd10d07-b96a-4f16-83d8-ca226159a268
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: I've got some sardines?
+  isPlayerSpeaking: 0
+  text: Right. Straight to business then.
   children:
-  - 4c6a432e-3727-4e65-833c-9d5d2cb7a371
+  - a1d115b3-ddaf-48ed-9bd4-cdfda443977f
   rect:
     serializedVersion: 2
-    x: 969
-    y: 227
+    x: 580
+    y: 353
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &6481945533770220608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 7e6c1631-ef86-48ba-bfca-a4cd40618863
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Lookin' to buy a one-way ticket to a stomach ache? These 'Soot-Bellies' aren't
+    getting any fresher, and neither is the air.
+  children:
+  - 9ca52e4a-18b9-4dce-8fbc-1b299fd62a6c
+  - 1f48aaab-4291-40bd-8a4c-42a8232f9f1f
+  - 99726a39-a677-4529-86ff-dd7ce64a583b
+  rect:
+    serializedVersion: 2
+    x: 29
+    y: 212
     width: 200
     height: 100
   onEnterAction: 
@@ -278,70 +265,7 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasQuest
+      - predicate: 1
         parameters:
-        - Talk to Lady by the river
+        - Give fish to the bridge guard
         negate: 0
-    - or:
-      - predicate: CompletedQuest
-        parameters:
-        - Talk to Lady by the river
-        negate: 0
-      - predicate: HasInventoryItem
-        parameters:
-        - e50a4d9a-d276-46d1-b9f7-9fbcfa3d39ad
-        negate: 0
---- !u!114 &7788844588867179745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 0dac7d83-c04e-45c2-a46f-cde8de2a7520
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: There is a lady who has a market. Just Quietly between us. Get me some sardines
-    and I'll let you through the gate.
-  children:
-  - c5c607ca-b76b-4a5b-9205-9acfee2cab4e
-  - d739ea18-018a-436f-93b8-65a22f95b6d8
-  - 63cf6e57-6901-4681-83fa-67db7fbf8205
-  rect:
-    serializedVersion: 2
-    x: 645
-    y: 135
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: GiveQuest
-  condition:
-    and: []
---- !u!114 &9031676015854091320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 813a5924-f93f-4b35-878b-3453058398fe
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: My mum loves them. She is by the river.
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 1228
-    y: 18
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
-  condition:
-    and: []

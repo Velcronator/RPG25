@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5130630496350007846
+--- !u!114 &-3959576313256024734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,41 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 5fb7bf8e-3e21-4943-880b-36f666059344
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: How can i get there?
-  children:
-  - a309df92-2128-42ac-bbd2-4dab4e90b13c
-  rect:
-    serializedVersion: 2
-    x: 912
-    y: 256
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
-  condition:
-    and: []
---- !u!114 &-2942749115043101575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: a309df92-2128-42ac-bbd2-4dab4e90b13c
+  m_Name: 03a5233c-3bea-4a66-a7eb-cfd6a9b1f440
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Hungry guards are easy to persuade.
-  children: []
+  text: Threat? Ya wanna live? They got a stomach that rules the head. Buy him off
+    with the right snack.
+  children:
+  - 59d21098-67ff-430c-abfc-dd18844a32dc
   rect:
     serializedVersion: 2
-    x: 1219
-    y: 302
+    x: 548
+    y: 165
     width: 200
     height: 100
   onEnterAction: 
@@ -64,13 +40,40 @@ MonoBehaviour:
   m_Name: 59d21098-67ff-430c-abfc-dd18844a32dc
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: I need sardines
+  text: Sooty Bellies?
   children:
   - e446b806-a88b-4391-aec9-29b2a55ceb46
+  - ff528821-1aaa-49b4-a630-6164180652ed
   rect:
     serializedVersion: 2
-    x: 367
-    y: 263
+    x: 822
+    y: 177
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: Give fish to the bridge guard
+  condition:
+    and: []
+--- !u!114 &-910600419145361238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: ab2eca9d-741c-4aca-a962-6f7191a4c1b2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Is the guard really that much of a threat?
+  children:
+  - 03a5233c-3bea-4a66-a7eb-cfd6a9b1f440
+  rect:
+    serializedVersion: 2
+    x: 285
+    y: 167
     width: 200
     height: 100
   onEnterAction: 
@@ -90,40 +93,12 @@ MonoBehaviour:
   m_Name: e446b806-a88b-4391-aec9-29b2a55ceb46
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Here have some, but talk to the Mage Wizard across the river
-  children:
-  - 5fb7bf8e-3e21-4943-880b-36f666059344
-  - 0d3162d4-a1f8-4bab-8053-1778b8a49479
+  text: If you can call that oily sludge a fish, then yes. Sooty Bellies.
+  children: []
   rect:
     serializedVersion: 2
-    x: 623
-    y: 314
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: CompletedObjective
-  condition:
-    and: []
---- !u!114 &-817414062259451011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 0d3162d4-a1f8-4bab-8053-1778b8a49479
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: Access is blocked?
-  children:
-  - a309df92-2128-42ac-bbd2-4dab4e90b13c
-  rect:
-    serializedVersion: 2
-    x: 911
-    y: 359
+    x: 1107
+    y: 114
     width: 200
     height: 100
   onEnterAction: 
@@ -143,14 +118,16 @@ MonoBehaviour:
   m_Name: a0cce581-443f-462d-8bcd-d33eb4bfd4fe
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Ohh keep your voice down
+  text: Shhh! Keep your voice down, unless you want the bridge guards breathing down
+    our necks.
   children:
   - 56a772ba-b0a1-4189-9a46-b0035c1e52c4
-  - 59d21098-67ff-430c-abfc-dd18844a32dc
+  - ab2eca9d-741c-4aca-a962-6f7191a4c1b2
+  - f9a829bf-61cd-4ecb-acc9-ad2e1233c37b
   rect:
     serializedVersion: 2
-    x: 119
-    y: 200
+    x: 35
+    y: 167
     width: 200
     height: 100
   onEnterAction: 
@@ -167,7 +144,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37c68e5c13d17f34c9de1408e4e09eee, type: 3}
-  m_Name: River Fish Merchant
+  m_Name: Guy Near Bridge
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -316057142675785117}
@@ -175,9 +152,11 @@ MonoBehaviour:
   - {fileID: 6962920922797402014}
   - {fileID: -1323824858211743906}
   - {fileID: -887097120614115274}
-  - {fileID: -5130630496350007846}
-  - {fileID: -817414062259451011}
-  - {fileID: -2942749115043101575}
+  - {fileID: -910600419145361238}
+  - {fileID: 1210438976801616382}
+  - {fileID: -3959576313256024734}
+  - {fileID: 5222453197342285967}
+  - {fileID: 6443316905848801196}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &11431784378084484
 MonoBehaviour:
@@ -192,13 +171,90 @@ MonoBehaviour:
   m_Name: 56a772ba-b0a1-4189-9a46-b0035c1e52c4
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: What is it?
+  text: I need to get past that guard. Any ideas?
   children:
   - 1112b7d8-d8d9-46a7-8383-bb8332a64a79
   rect:
     serializedVersion: 2
-    x: 369
-    y: 119
+    x: 286
+    y: 49
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &1210438976801616382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: f9a829bf-61cd-4ecb-acc9-ad2e1233c37b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I don't care. Just tell me how to get across.
+  children:
+  - 86902f0d-95b5-4955-89f7-2094bcfc0756
+  rect:
+    serializedVersion: 2
+    x: 292
+    y: 285
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &5222453197342285967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 86902f0d-95b5-4955-89f7-2094bcfc0756
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Dare devil then. Just buy them off with food. It's scare round here.
+  children:
+  - 59d21098-67ff-430c-abfc-dd18844a32dc
+  rect:
+    serializedVersion: 2
+    x: 542
+    y: 285
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &6443316905848801196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: ff528821-1aaa-49b4-a630-6164180652ed
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Just follow the river to the market
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1107
+    y: 252
     width: 200
     height: 100
   onEnterAction: 
@@ -218,12 +274,13 @@ MonoBehaviour:
   m_Name: 1112b7d8-d8d9-46a7-8383-bb8332a64a79
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: I don't want any trouble.
-  children: []
+  text: You can bribe them easily enough. They can't resist a fresh catch.
+  children:
+  - 59d21098-67ff-430c-abfc-dd18844a32dc
   rect:
     serializedVersion: 2
-    x: 630
-    y: 188
+    x: 559
+    y: 31
     width: 200
     height: 100
   onEnterAction: 
