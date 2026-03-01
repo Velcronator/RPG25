@@ -4754,7 +4754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2400157350947267722, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
       propertyPath: m_Name
-      value: Enemy (2)
+      value: Enemy Bridge Guard
       objectReference: {fileID: 0}
     - target: {fileID: 2774216837265983032, guid: 29c436548fe1b6f4c940a9bc4a4badbc, type: 3}
       propertyPath: startingLevel

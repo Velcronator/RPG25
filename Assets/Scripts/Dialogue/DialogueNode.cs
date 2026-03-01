@@ -22,6 +22,8 @@ namespace RPG.Dialogue
         string onExitAction; // TODO: implement multi-action support use List<string> or array
         [SerializeField]
         Condition condition;
+        [SerializeField]
+        bool isRootNode = false;
 
         public Rect GetRect()
         {
@@ -56,6 +58,11 @@ namespace RPG.Dialogue
         public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
         {
             return condition.Check(evaluators);
+        }
+
+        public bool IsRootNode()
+        {
+            return isRootNode;
         }
 
 #if UNITY_EDITOR
@@ -97,6 +104,12 @@ namespace RPG.Dialogue
             EditorUtility.SetDirty(this);
         }
 
+        public void SetRootNode(bool value)
+        {
+            Undo.RecordObject(this, "Toggle Root Node");
+            isRootNode = value;
+            EditorUtility.SetDirty(this);
+        }
 #endif
     }
 }

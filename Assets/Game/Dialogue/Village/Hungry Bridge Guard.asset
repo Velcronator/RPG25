@@ -357,18 +357,13 @@ MonoBehaviour:
         parameters:
         - Give fish to the bridge guard
         - GetFish
-        negate: 1
-      - predicate: 3
-        parameters:
-        - Give fish to the bridge guard
-        - Give fish to the bridge guard
         negate: 0
     - or:
       - predicate: 3
         parameters:
         - Give fish to the bridge guard
-        - Give fish to the bridge guard
-        negate: 0
+        - GetFish
+        negate: 1
 --- !u!114 &7788844588867179745
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ namespace RPG.Dialogue
         {
             currentConversant = newConversant;
             currentDialogue = newDialogue;
-            currentNode = currentDialogue.GetRootNode();
+            currentNode = currentDialogue.GetRootNode(GetComponents<IPredicateEvaluator>());
             TriggerEnterAction();
             onConversationUpdated();
         }

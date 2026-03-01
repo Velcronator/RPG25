@@ -11,7 +11,7 @@ namespace GameDevTV.Utils
 
         public bool Check(IEnumerable<IPredicateEvaluator> evaluators)
         {
-            if (and == null || and.Length == 0)
+            if (IsEmpty())
             {
                 return true;
             }
@@ -24,6 +24,11 @@ namespace GameDevTV.Utils
                 }
             }
             return true;
+        }
+
+        public bool IsEmpty()
+        {
+            return and == null || and.Length == 0;
         }
 
         [System.Serializable]

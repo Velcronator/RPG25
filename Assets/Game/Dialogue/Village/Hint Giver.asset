@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1838002847191168516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 8d1347f4-ecfb-47fa-a287-5f0f1c48bde1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: you are too weak and no quest
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 199
+    y: 149
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,10 +39,10 @@ MonoBehaviour:
   m_Name: Hint Giver
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 7914095686865841442}
-  - {fileID: 8459654766279582261}
+  - {fileID: -1838002847191168516}
+  - {fileID: 980055733717226666}
   newNodeOffset: {x: 250, y: 0}
---- !u!114 &7914095686865841442
+--- !u!114 &980055733717226666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26,60 +52,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 984d088e-e8fd-4947-8e52-82c94fa1ca30
+  m_Name: 8ae31860-916d-48c6-9909-135a6d9faf89
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: I hear the shop keeper has a sword you probably want to get a hold of.
-  children:
-  - b8387036-00fd-4215-a91a-f4baa596e713
+  text: You have a quest
+  children: []
   rect:
     serializedVersion: 2
-    x: 47
-    y: 146
+    x: 194
+    y: 287
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
---- !u!114 &8459654766279582261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: b8387036-00fd-4215-a91a-f4baa596e713
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: I don't have enough Strength
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 360
-    y: 95
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
-  condition:
-    and:
-    - or:
-      - predicate: 1
-        parameters:
-        - Give fish to the bridge guard
-        - 4
-        negate: 0
-      - predicate: 8
-        parameters:
-        - 8314807c-253c-4863-b93a-6f7418f174d4
-        - 4
-        negate: 0
-      - predicate: 5
-        parameters:
-        - 
-        - 4
-        negate: 0
+  isRootNode: 1

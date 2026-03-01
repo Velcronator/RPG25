@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using GameDevTV.Utils;
 
 namespace RPG.Dialogue
 {
@@ -37,7 +38,45 @@ namespace RPG.Dialogue
 
         public DialogueNode GetRootNode()
         {
+            // Return first node that passes condition check
             return nodes[0];
+        }
+
+        public DialogueNode GetRootNode(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            // Find the first root node whose conditions are met
+            foreach (DialogueNode node in GetRootNodes())
+            {
+                if (node.CheckCondition(evaluators))
+                {
+                    return node;
+                }
+            }
+            // Fallback to the first node if no conditions are met
+            return nodes[0];
+        }
+
+        public IEnumerable<DialogueNode> GetRootNodes()
+        {
+            // Return all nodes marked as potential root nodes
+            // You could add a [SerializeField] bool isRootNode to DialogueNode
+            // For now, we can consider nodes with no parents as roots
+            foreach (DialogueNode node in nodes)
+            {
+                bool isRoot = true;
+                foreach (DialogueNode potentialParent in nodes)
+                {
+                    if (potentialParent.GetChildren().Contains(node.name))
+                    {
+                        isRoot = false;
+                        break;
+                    }
+                }
+                if (isRoot)
+                {
+                    yield return node;
+                }
+            }
         }
 
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)

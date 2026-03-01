@@ -19,14 +19,15 @@ MonoBehaviour:
   - 59d21098-67ff-430c-abfc-dd18844a32dc
   rect:
     serializedVersion: 2
-    x: 548
-    y: 165
+    x: 787
+    y: 391
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &-1323824858211743906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,14 +47,15 @@ MonoBehaviour:
   - ff528821-1aaa-49b4-a630-6164180652ed
   rect:
     serializedVersion: 2
-    x: 822
-    y: 177
+    x: 1009
+    y: 402
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: Give fish to the bridge guard
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &-910600419145361238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,14 +74,15 @@ MonoBehaviour:
   - 03a5233c-3bea-4a66-a7eb-cfd6a9b1f440
   rect:
     serializedVersion: 2
-    x: 285
-    y: 167
+    x: 547
+    y: 249
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &-887097120614115274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,43 +100,15 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1107
-    y: 114
+    x: 1230
+    y: 353
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
---- !u!114 &-316057142675785117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: a0cce581-443f-462d-8bcd-d33eb4bfd4fe
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: Shhh! Keep your voice down, unless you want the bridge guards breathing down
-    our necks.
-  children:
-  - 56a772ba-b0a1-4189-9a46-b0035c1e52c4
-  - ab2eca9d-741c-4aca-a962-6f7191a4c1b2
-  - f9a829bf-61cd-4ecb-acc9-ad2e1233c37b
-  rect:
-    serializedVersion: 2
-    x: 35
-    y: 167
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
-  condition:
-    and: []
+  isRootNode: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +122,6 @@ MonoBehaviour:
   m_Name: Guy Near Bridge
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: -316057142675785117}
   - {fileID: 11431784378084484}
   - {fileID: 6962920922797402014}
   - {fileID: -1323824858211743906}
@@ -157,6 +131,8 @@ MonoBehaviour:
   - {fileID: -3959576313256024734}
   - {fileID: 5222453197342285967}
   - {fileID: 6443316905848801196}
+  - {fileID: 7151696392221928707}
+  - {fileID: 3546273498961744873}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &11431784378084484
 MonoBehaviour:
@@ -176,14 +152,21 @@ MonoBehaviour:
   - 1112b7d8-d8d9-46a7-8383-bb8332a64a79
   rect:
     serializedVersion: 2
-    x: 286
-    y: 49
+    x: 557
+    y: 127
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    and: []
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        - 
+        negate: 1
+  isRootNode: 0
 --- !u!114 &1210438976801616382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,14 +185,51 @@ MonoBehaviour:
   - 86902f0d-95b5-4955-89f7-2094bcfc0756
   rect:
     serializedVersion: 2
-    x: 292
-    y: 285
+    x: 549
+    y: 388
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
+--- !u!114 &3546273498961744873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 1709733c-b299-4988-85a1-787c3dfd324e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Shhh! Keep your voice down, unless you want the bridge guards breathing down
+    our necks.
+  children:
+  - 56a772ba-b0a1-4189-9a46-b0035c1e52c4
+  - ab2eca9d-741c-4aca-a962-6f7191a4c1b2
+  - f9a829bf-61cd-4ecb-acc9-ad2e1233c37b
+  rect:
+    serializedVersion: 2
+    x: 261
+    y: 355
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        - 
+        negate: 1
+  isRootNode: 1
 --- !u!114 &5222453197342285967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,14 +248,15 @@ MonoBehaviour:
   - 59d21098-67ff-430c-abfc-dd18844a32dc
   rect:
     serializedVersion: 2
-    x: 542
-    y: 285
+    x: 779
+    y: 497
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &6443316905848801196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,14 +274,15 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1107
-    y: 252
+    x: 1231
+    y: 453
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &6962920922797402014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,11 +301,44 @@ MonoBehaviour:
   - 59d21098-67ff-430c-abfc-dd18844a32dc
   rect:
     serializedVersion: 2
-    x: 559
-    y: 31
+    x: 793
+    y: 249
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
+--- !u!114 &7151696392221928707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: ec6eadd4-281f-4b4c-b6a7-bb6142c72bf5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Thank the spirits the guard is gone.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 256
+    y: 200
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Give fish to the bridge guard
+        - 
+        negate: 0
+  isRootNode: 1
