@@ -66,4 +66,10 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    and: []
+    and:
+    - or:
+      - predicate: 7
+        parameters:
+        - 54ef4816-8f94-46bb-a1e4-1bf57ecd08aa
+        - 
+        negate: 0
