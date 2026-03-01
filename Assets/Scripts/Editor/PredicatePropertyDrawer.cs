@@ -135,6 +135,7 @@ namespace GameDevTV.Utils.Editor
             {
                 element.stringValue = ids[newIndex];
             }
+            EditorGUI.EndProperty();
         }
 
         void DrawTrait(Rect position, SerializedProperty element)

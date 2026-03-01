@@ -68,8 +68,18 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: 7
+      - predicate: 1
         parameters:
-        - 54ef4816-8f94-46bb-a1e4-1bf57ecd08aa
+        - Give fish to the bridge guard
+        - 4
+        negate: 0
+      - predicate: 8
+        parameters:
+        - 8314807c-253c-4863-b93a-6f7418f174d4
+        - 4
+        negate: 0
+      - predicate: 5
+        parameters:
         - 
+        - 4
         negate: 0
