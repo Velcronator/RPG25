@@ -12,6 +12,7 @@ namespace RPG.Quests
         List<QuestStatus> statuses = new List<QuestStatus>();
 
         public event Action onUpdate;
+        public event Action<Quest> onQuestCompleted;
 
         public void AddQuest(Quest quest)
         {
@@ -31,6 +32,10 @@ namespace RPG.Quests
             if (status.IsComplete())
             {
                 GiveReward(quest);
+                if (onQuestCompleted != null)
+                {
+                    onQuestCompleted(quest);
+                }
             }
             if (onUpdate != null)
             {

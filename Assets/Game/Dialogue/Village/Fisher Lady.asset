@@ -19,7 +19,7 @@ MonoBehaviour:
   - a1d115b3-ddaf-48ed-9bd4-cdfda443977f
   rect:
     serializedVersion: 2
-    x: 582
+    x: 583
     y: 92
     width: 200
     height: 100
@@ -27,6 +27,7 @@ MonoBehaviour:
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &-3003082962377024138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,6 +54,7 @@ MonoBehaviour:
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &-1955387660878345370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +81,7 @@ MonoBehaviour:
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +134,9 @@ MonoBehaviour:
       - predicate: 1
         parameters:
         - Give fish to the bridge guard
+        - Give fish to the bridge guard
         negate: 0
+  isRootNode: 0
 --- !u!114 &2951247709108383915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +163,7 @@ MonoBehaviour:
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &4116839530531742615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,14 +181,15 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 66
-    y: 448
+    x: 28
+    y: 454
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
+  isRootNode: 1
 --- !u!114 &5519360008509986194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +216,7 @@ MonoBehaviour:
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &6142306826480042531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +243,7 @@ MonoBehaviour:
   onExitAction: 
   condition:
     and: []
+  isRootNode: 0
 --- !u!114 &6481945533770220608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,4 +277,6 @@ MonoBehaviour:
       - predicate: 1
         parameters:
         - Give fish to the bridge guard
+        - Give fish to the bridge guard
         negate: 0
+  isRootNode: 1

@@ -33,6 +33,9 @@ namespace RPG.Control
         float timeSinceAggrevated = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
+        bool isFleeing = false;
+        Vector3 fleeDestination;
+
         enum PatrolType
         {
             Sequential,
@@ -94,6 +97,12 @@ namespace RPG.Control
         {
             if (health.IsDead()) return;
 
+            if (isFleeing)
+            {
+                FleeBehaviour();
+                return;
+            }
+
             if (IsAggrevated() && fighter.CanAttack(player))
             {
                 AttackBehaviour();
@@ -113,6 +122,25 @@ namespace RPG.Control
         public void Aggrevate()
         {
             timeSinceAggrevated = 0;
+        }
+
+        public void StartFleeing(Vector3 destination)
+        {
+            isFleeing = true;
+            fleeDestination = destination;
+            fighter.Cancel();
+            GetComponent<ActionScheduler>().CancelCurrentAction();
+            mover.StartMoveAction(destination, 1f);
+        }
+
+        private void FleeBehaviour()
+        {
+            float distanceToDestination = Vector3.Distance(transform.position, fleeDestination);
+            
+            if (distanceToDestination < 1f)
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         private void UpdateTimers()

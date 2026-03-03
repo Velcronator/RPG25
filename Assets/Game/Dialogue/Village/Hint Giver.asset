@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1838002847191168516
+--- !u!114 &-8939197716881016857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,22 +10,145 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 8d1347f4-ecfb-47fa-a287-5f0f1c48bde1
+  m_Name: 1ec90063-9d10-4330-a704-936a14434c82
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: you are too weak and no quest
+  text: Rockin
   children: []
   rect:
     serializedVersion: 2
-    x: 199
-    y: 149
+    x: 835
+    y: 308
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
-  isRootNode: 1
+  isRootNode: 0
+--- !u!114 &-8215413637256069389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 558ea0f0-91a3-4dd0-8de5-8f7dad3020c1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oh wow! You've got it right there!"
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 294
+    y: 409
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 8
+        parameters:
+        - 0935e90f-0534-4d28-a882-2fa50115ce9a
+        - 
+        negate: 0
+  isRootNode: 0
+--- !u!114 &-7418476296476269184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 98f349f6-9dcb-4c98-9c71-c572d26bccb7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Be sure to get some good equipment from the shop first.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1097
+    y: 40
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 8
+        parameters:
+        - 167e0640-75b7-428f-8f44-ff1c7835f2d1
+        - 
+        negate: 0
+    - or:
+      - predicate: 8
+        parameters:
+        - 030543d1-eea0-4ad4-a56b-5631eb02f108
+        - 
+        negate: 0
+  isRootNode: 0
+--- !u!114 &-5801650731319861039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 4b526cea-6a01-4ebf-b817-386852f42360
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Apart from ploughing my fields? Try attacking the guards.
+  children:
+  - 98f349f6-9dcb-4c98-9c71-c572d26bccb7
+  rect:
+    serializedVersion: 2
+    x: 847
+    y: 40
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 0
+--- !u!114 &-1401945065745220903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 568c8e1b-c830-4216-bbf6-53cbaa6039e9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I hear the guard up by the castle have a lot of gold.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 825
+    y: 194
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,10 +162,20 @@ MonoBehaviour:
   m_Name: Hint Giver
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: -1838002847191168516}
-  - {fileID: 980055733717226666}
+  - {fileID: 3790091042328859139}
+  - {fileID: 1317175212516336196}
+  - {fileID: 8072233546997630755}
+  - {fileID: -8215413637256069389}
+  - {fileID: 1837405176370742920}
+  - {fileID: 5775144263042960615}
+  - {fileID: -5801650731319861039}
+  - {fileID: 4770425530050659616}
+  - {fileID: -7418476296476269184}
+  - {fileID: -1401945065745220903}
+  - {fileID: 9106138371823610119}
+  - {fileID: -8939197716881016857}
   newNodeOffset: {x: 250, y: 0}
---- !u!114 &980055733717226666
+--- !u!114 &1317175212516336196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,19 +185,203 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 8ae31860-916d-48c6-9909-135a6d9faf89
+  m_Name: 1912afe0-ca7c-4aec-9f83-9a511a87e5f4
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: You have a quest
-  children: []
+  text: You need to be strong to use it though
+  children:
+  - 2148a78d-b345-4d8e-91d7-d86f6c7b4b57
+  - 82399a0a-ec6e-403a-8da8-04ff2e7e41b4
   rect:
     serializedVersion: 2
-    x: 194
-    y: 287
+    x: 300
+    y: 64
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - 
+        - 4
+        negate: 1
+  isRootNode: 0
+--- !u!114 &1837405176370742920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 2148a78d-b345-4d8e-91d7-d86f6c7b4b57
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: How do I get stronger?
+  children:
+  - 4b526cea-6a01-4ebf-b817-386852f42360
+  rect:
+    serializedVersion: 2
+    x: 570
+    y: 33
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
     and: []
-  isRootNode: 1
+  isRootNode: 0
+--- !u!114 &3790091042328859139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 04b1dfac-9cab-4ddd-986c-b070e708e212
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I hear the shop keeper has an awesome new sword
+  children:
+  - 1912afe0-ca7c-4aec-9f83-9a511a87e5f4
+  - 3315cc01-3882-4aad-8d57-dbc0cc5017ec
+  - 558ea0f0-91a3-4dd0-8de5-8f7dad3020c1
+  rect:
+    serializedVersion: 2
+    x: 25
+    y: 185
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 0
+--- !u!114 &4770425530050659616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: cb7e246c-4a72-40b9-8548-4e6c4973ddc4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: So pricey
+  children:
+  - 568c8e1b-c830-4216-bbf6-53cbaa6039e9
+  rect:
+    serializedVersion: 2
+    x: 567
+    y: 299
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 0
+--- !u!114 &5775144263042960615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 82399a0a-ec6e-403a-8da8-04ff2e7e41b4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Okay Thanks
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 566
+    y: 164
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 0
+--- !u!114 &8072233546997630755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 3315cc01-3882-4aad-8d57-dbc0cc5017ec
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I bet you could wield it, as strong as you are!
+  children:
+  - cb7e246c-4a72-40b9-8548-4e6c4973ddc4
+  - 6eab8a75-58fd-4e51-8f51-7a38a4dc6d21
+  rect:
+    serializedVersion: 2
+    x: 299
+    y: 224
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - 
+        - 4
+        negate: 0
+    - or:
+      - predicate: 8
+        parameters:
+        - 0935e90f-0534-4d28-a882-2fa50115ce9a
+        - 
+        negate: 1
+  isRootNode: 0
+--- !u!114 &9106138371823610119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 6eab8a75-58fd-4e51-8f51-7a38a4dc6d21
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: On the shopping list
+  children:
+  - 1ec90063-9d10-4330-a704-936a14434c82
+  rect:
+    serializedVersion: 2
+    x: 553
+    y: 393
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 0

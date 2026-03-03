@@ -93,12 +93,17 @@ namespace RPG.Dialogue
             }
 
             DialogueNode[] children = FilterOnCondition(currentDialogue.GetAIChildren(currentNode)).ToArray();
-            int randomIndex = UnityEngine.Random.Range(0, children.Count());
+            if (children.Length == 0)
+            {
+                Quit();
+                return;
+            }
+
+            int randomIndex = UnityEngine.Random.Range(0, children.Length);
             TriggerExitAction();
             currentNode = children[randomIndex];
             TriggerEnterAction();
             // TODO Add support for multiple AI responses
-            // If no children, end dialogue
             onConversationUpdated();
         }
 

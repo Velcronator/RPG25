@@ -7,7 +7,7 @@ using GameDevTV.Saving;
 
 namespace RPG.Stats
 {
-    public class BaseStats : MonoBehaviour, ISaveable
+    public class BaseStats : MonoBehaviour, ISaveable, IPredicateEvaluator
     {
         [Range(1, 99)]
         [SerializeField] int startingLevel = 1;
