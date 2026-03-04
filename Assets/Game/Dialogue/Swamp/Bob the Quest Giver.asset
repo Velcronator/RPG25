@@ -78,7 +78,19 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    and: []
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Slay the beast
+        - 
+        negate: 0
+    - or:
+      - predicate: 3
+        parameters:
+        - Slay the beast
+        - 
+        negate: 0
   isRootNode: 0
 --- !u!114 &-3816585228509424022
 MonoBehaviour:
@@ -197,7 +209,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37c68e5c13d17f34c9de1408e4e09eee, type: 3}
-  m_Name: Quest Giver
+  m_Name: Bob the Quest Giver
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 6085967525749456270}
@@ -266,7 +278,7 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: GiveQuest
+  onExitAction: GiveQuestSlayTheBeast
   condition:
     and: []
   isRootNode: 0
@@ -303,7 +315,7 @@ MonoBehaviour:
         parameters:
         - Slay the beast
         - 
-        negate: 0
+        negate: 1
   isRootNode: 0
 --- !u!114 &6085967525749456270
 MonoBehaviour:
@@ -378,14 +390,26 @@ MonoBehaviour:
   - 72106033-3fb6-46f6-aa9d-b7bdf75c5b0e
   rect:
     serializedVersion: 2
-    x: 295
+    x: 296
     y: 274
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    and: []
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Slay the beast
+        - 
+        negate: 0
+    - or:
+      - predicate: 3
+        parameters:
+        - Slay the beast
+        - 
+        negate: 1
   isRootNode: 0
 --- !u!114 &8313439186950190280
 MonoBehaviour:

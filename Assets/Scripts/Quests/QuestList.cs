@@ -14,6 +14,11 @@ namespace RPG.Quests
         public event Action onUpdate;
         public event Action<Quest> onQuestCompleted;
 
+        private void Update()
+        {   // TODO: optimize by only checking when something happens that could affect quest completion
+            CompleteObjectivesByPredicates();
+        }
+
         public void AddQuest(Quest quest)
         {
             if (HasQuest(quest)) return;
@@ -73,6 +78,25 @@ namespace RPG.Quests
                 if (!success)
                 {
                     GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
+                }
+            }
+        }
+
+        private void CompleteObjectivesByPredicates()
+        {
+            Debug.Log("Checking quest objectives by predicates");
+            foreach (QuestStatus status in statuses)
+            {
+                if (status.IsComplete()) continue;
+                Quest quest = status.GetQuest();
+                foreach (var objective in quest.GetObjectives())
+                {
+                    if (status.IsObjectiveComplete(objective.reference)) continue;
+                    if (!objective.usesCondition) continue;
+                    if (objective.completionCondition.Check(GetComponents<IPredicateEvaluator>()))
+                    {
+                        CompleteObjective(quest, objective.reference);
+                    }
                 }
             }
         }

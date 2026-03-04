@@ -15,10 +15,43 @@ MonoBehaviour:
   objectives:
   - reference: train
     description: Train up
+    usesCondition: 1
+    completionCondition:
+      and:
+      - or:
+        - predicate: 5
+          parameters:
+          - Strength
+          - 4
+          negate: 0
   - reference: equip
     description: Get Sword of Kaos
+    usesCondition: 1
+    completionCondition:
+      and:
+      - or:
+        - predicate: 8
+          parameters:
+          - 0935e90f-0534-4d28-a882-2fa50115ce9a
+          - 
+          negate: 0
   - reference: slayBeast
     description: Slay the beast of the East
+    usesCondition: 1
+    completionCondition:
+      and:
+      - or:
+        - predicate: 1
+          parameters:
+          - Slay the beast
+          - 
+          negate: 0
+      - or:
+        - predicate: 3
+          parameters:
+          - Slay the beast
+          - 
+          negate: 0
   rewards:
   - number: 500
     item: {fileID: 11400000, guid: bb336958f6bc54d4c8f99a4c3dc57f7e, type: 2}

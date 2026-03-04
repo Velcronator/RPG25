@@ -13,18 +13,37 @@ MonoBehaviour:
   m_Name: afd0a9db-7f72-4f36-adbd-1a1d901f6ff8
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: 
+  text: There is a tough fight ahead.
   children: []
   rect:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: 298
+    y: 261
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    and: []
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Slay the beast
+        - 
+        negate: 0
+    - or:
+      - predicate: 3
+        parameters:
+        - Slay the beast
+        - 
+        negate: 1
+    - or:
+      - predicate: 8
+        parameters:
+        - 0935e90f-0534-4d28-a882-2fa50115ce9a
+        - 
+        negate: 0
+  isRootNode: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,4 +58,88 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -483277221611592739}
+  - {fileID: 9006694675895010371}
+  - {fileID: 1240116878322316599}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1240116878322316599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 425b72bc-266b-4a04-a48f-e5e6ff34b1b4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Get the sword. It will make it easier.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 302
+    y: 136
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Slay the beast
+        - 
+        negate: 0
+    - or:
+      - predicate: 3
+        parameters:
+        - Slay the beast
+        - 
+        negate: 1
+    - or:
+      - predicate: 8
+        parameters:
+        - 0935e90f-0534-4d28-a882-2fa50115ce9a
+        - 
+        negate: 1
+  isRootNode: 1
+--- !u!114 &9006694675895010371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 8d008b99-3e5b-4b41-95e7-8628711b687d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You did it
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 292
+    y: 382
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Slay the beast
+        - 
+        negate: 0
+    - or:
+      - predicate: 3
+        parameters:
+        - Slay the beast
+        - 
+        negate: 0
+  isRootNode: 1
