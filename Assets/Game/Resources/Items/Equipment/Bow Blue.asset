@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: b2ac9e50-2c02-47ce-8452-b15817dfc136
   displayName: Bow Blue
-  description: Blue Bow
+  description: A finely honed instrument of silent death. It hungers to pierce the
+    hearts of your enemie. Yet even the swiftest arrow can be defied by a shadow
+    quick rival. Strike with precision, for the wind favors only the vigilant.
   icon: {fileID: 21300000, guid: 55c1a7e44ca30ef48a226dc542b4c3b0, type: 3}
   pickup: {fileID: 5988261900825953772, guid: fc254502b12215b49bfe347c961283dd, type: 3}
   stackable: 0
   price: 100
   category: 2
   allowedEquipLocation: 5
+  equipCondition:
+    and: []
   animatorOverride: {fileID: 22100000, guid: 31729f86c06644546bd08e64853a113d, type: 2}
   equippedPrefab: {fileID: -6636025961816357957, guid: 4adda246ad0e70d44b93429c5675aa0f, type: 3}
   weaponDamage: 1
