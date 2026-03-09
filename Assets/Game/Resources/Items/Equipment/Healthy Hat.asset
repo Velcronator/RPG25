@@ -21,7 +21,15 @@ MonoBehaviour:
   price: 30
   category: 1
   allowedEquipLocation: 0
+  equipCondition:
+    and: []
   additiveModifiers:
   - stat: 0
     value: 20
-  percentageModifiers: []
+  - stat: 3
+    value: 0
+  percentageModifiers:
+  - stat: 3
+    value: 1
+  - stat: 0
+    value: 0
