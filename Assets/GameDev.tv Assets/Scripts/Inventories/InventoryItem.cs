@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-#if UNITY_EDITOR
-using UnityEditor;
-using UnityEditor.XR;
-#endif
 using UnityEngine;
 
 namespace GameDevTV.Inventories
@@ -131,118 +127,9 @@ namespace GameDevTV.Inventories
             // to do anything with it.
         }
 
-        #region InventoryEditor Additions
-
         public Pickup GetPickup()
         {
             return pickup;
         }
-
-#if UNITY_EDITOR
-        /// <summary>
-        /// Convenience method, just to call EditorUtility.SetDirty(this);  It's optional, but it saves us some
-        /// typing with so many methods to set dirty.  There is debate over the need to use SetDirty within editor
-        /// code.  Extensive testing of this Editor in three different projects has shown me that without calling
-        /// EditorUtility.SetDirty(this) in SerializedObject setters you can experience data loss.  Saving is very
-        /// inconsistent.
-        /// </summary>
-        public void Dirty()
-        {
-            EditorUtility.SetDirty(this);
-        }
-        /// <summary>
-        /// Another convenience method.  Simply calls Undo.RecordObject(this, message).  
-        /// </summary>
-        /// <param name="message"></param>
-        public void SetUndo(string message)
-        {
-            Undo.RecordObject(this, message);
-        }
-
-        /// <summary>
-        /// A handy float comparison function to test for equality.  As floats are imprecise, comparing two seemingly identical floats
-        /// can yield false negatives.  This tests to a resolution of .001f
-        /// </summary>
-        /// <param name="value1"></param>
-        /// <param name="value2"></param>
-        /// <returns></returns>
-        public bool FloatEquals(float value1, float value2)
-        {
-            return Math.Abs(value1 - value2) < .001f;
-        }
-
-        public void SetDisplayName(string newDisplayName)
-        {
-            if (newDisplayName == displayName) return;
-            SetUndo("Change Display Name");
-            displayName = newDisplayName;
-            Dirty();
-        }
-
-        public void SetDescription(string newDescription)
-        {
-            if (newDescription == description) return;
-            SetUndo("Change Description");
-            description = newDescription;
-            Dirty();
-        }
-
-        public void SetIcon(Sprite newIcon)
-        {
-            if (icon == newIcon) return;
-            SetUndo("Change Icon");
-            icon = newIcon;
-            Dirty();
-        }
-
-        public void SetPickup(Pickup newPickup)
-        {
-            if (pickup == newPickup) return;
-            SetUndo("Change Pickup");
-            pickup = newPickup;
-            Dirty();
-        }
-
-        public void SetItemID(string newItemID)
-        {
-            if (itemID == newItemID) return;
-            SetUndo("Change ItemID");
-            itemID = newItemID;
-            Dirty();
-        }
-
-        public void SetStackable(bool newStackable)
-        {
-            if (stackable == newStackable) return;
-            SetUndo(stackable ? "Set Not Stackable" : "Set Stackable");
-            stackable = newStackable;
-            Dirty();
-        }
-
-
-
-        bool drawInventoryItem = true;
-        [NonSerialized] protected GUIStyle foldoutStyle;
-        [NonSerialized] protected GUIStyle contentStyle; 
-        public virtual void DrawCustomInspector()
-        {
-            contentStyle = new GUIStyle { padding = new RectOffset(15, 15, 0, 0) };
-
-            foldoutStyle = new GUIStyle(EditorStyles.foldout) { fontStyle = FontStyle.Bold };
-            drawInventoryItem = EditorGUILayout.Foldout(drawInventoryItem, "InventoryItem Data", foldoutStyle);
-            if (!drawInventoryItem) return;
-            EditorGUILayout.BeginVertical(contentStyle);
-            SetItemID(EditorGUILayout.TextField("ItemID (clear to reset", GetItemID()));
-            SetDisplayName(EditorGUILayout.TextField("Display name", GetDisplayName()));
-            SetDescription(EditorGUILayout.TextField("Description", GetDescription()));
-            SetIcon((Sprite)EditorGUILayout.ObjectField("Icon", GetIcon(), typeof(Sprite), false));
-            SetPickup((Pickup)EditorGUILayout.ObjectField("Pickup", pickup, typeof(Pickup), false));
-            SetStackable(EditorGUILayout.Toggle("Stackable", IsStackable()));
-            EditorGUILayout.EndVertical();
-        }
-
-#endif
-
-        #endregion
     }
 }
