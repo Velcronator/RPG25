@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+using UnityEditor.XR;
+#endif
 using UnityEngine;
 
 namespace GameDevTV.Inventories
@@ -156,6 +159,18 @@ namespace GameDevTV.Inventories
             Undo.RecordObject(this, message);
         }
 
+        /// <summary>
+        /// A handy float comparison function to test for equality.  As floats are imprecise, comparing two seemingly identical floats
+        /// can yield false negatives.  This tests to a resolution of .001f
+        /// </summary>
+        /// <param name="value1"></param>
+        /// <param name="value2"></param>
+        /// <returns></returns>
+        public bool FloatEquals(float value1, float value2)
+        {
+            return Math.Abs(value1 - value2) < .001f;
+        }
+
         public void SetDisplayName(string newDisplayName)
         {
             if (newDisplayName == displayName) return;
@@ -204,8 +219,26 @@ namespace GameDevTV.Inventories
             Dirty();
         }
 
+
+
+        bool drawInventoryItem = true;
+        public GUIStyle foldoutStyle;
+        public virtual void DrawCustomInspector()
+        {
+            foldoutStyle = new GUIStyle(EditorStyles.foldout);
+            foldoutStyle.fontStyle = FontStyle.Bold;
+            drawInventoryItem = EditorGUILayout.Foldout(drawInventoryItem, "InventoryItem Data", foldoutStyle);
+            if (!drawInventoryItem) return;
+            SetItemID(EditorGUILayout.TextField("ItemID (clear to reset", GetItemID()));
+            SetDisplayName(EditorGUILayout.TextField("Display name", GetDisplayName()));
+            SetDescription(EditorGUILayout.TextField("Description", GetDescription()));
+            SetIcon((Sprite)EditorGUILayout.ObjectField("Icon", GetIcon(), typeof(Sprite), false));
+            SetPickup((Pickup)EditorGUILayout.ObjectField("Pickup", pickup, typeof(Pickup), false));
+            SetStackable(EditorGUILayout.Toggle("Stackable", IsStackable()));
+        }
+
 #endif
 
-        #endregion
+#endregion
     }
 }

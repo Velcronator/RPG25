@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using GameDevTV.Inventories;
 using RPG.Stats;
@@ -41,5 +42,15 @@ namespace RPG.Inventories
                 }
             }
         }
+
+        #region InventoryItemEditor Changes
+#if UNITY_EDITOR
+
+#endif
+        #endregion
+
     }
+
+
+
 }

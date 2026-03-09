@@ -14,13 +14,89 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 8314807c-253c-4863-b93a-6f7418f174d4
   displayName: Fireball
-  description: Basic Fireball Spell
+  description: "With a flick of the wrist, unleash a searing inferno that reduces
+    legions to ashen memories\u2014a gift of pure, incandescent destruction.\""
   icon: {fileID: 21300000, guid: 962f4e63cecd4024da48777f73e4c7f4, type: 3}
   pickup: {fileID: 8823708510133403970, guid: 977713336b0413843a24a2c87da88a9c, type: 3}
   stackable: 0
   price: 250
   category: 5
+  foldoutStyle:
+    m_Name: Foldout
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds:
+      - {fileID: -5146377680766036859, guid: 0000000000000000d000000000000000, type: 0}
+      m_TextColor: {r: 0.007843138, g: 0.007843138, b: 0.007843138, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0.007843138, g: 0.007843138, b: 0.007843138, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds:
+      - {fileID: 8151885268425896248, guid: 0000000000000000d000000000000000, type: 0}
+      m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds:
+      - {fileID: 164480878953057837, guid: 0000000000000000d000000000000000, type: 0}
+      m_TextColor: {r: 0, g: 0.23529412, b: 0.53333336, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds:
+      - {fileID: -3648207651762151017, guid: 0000000000000000d000000000000000, type: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0.007843138, g: 0.007843138, b: 0.007843138, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds:
+      - {fileID: 7786529490676408977, guid: 0000000000000000d000000000000000, type: 0}
+      m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds:
+      - {fileID: 5162036400036804466, guid: 0000000000000000d000000000000000, type: 0}
+      m_TextColor: {r: 0, g: 0.23529412, b: 0.53333336, a: 1}
+    m_Border:
+      m_Left: 14
+      m_Right: 0
+      m_Top: 13
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 4
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 14
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: -2
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 12
+    m_FontStyle: 1
+    m_Alignment: 3
+    m_WordWrap: 0
+    m_RichText: 0
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
   allowedEquipLocation: 5
+  equipCondition:
+    and: []
   animatorOverride: {fileID: 22100000, guid: efb12489ae9985e418b1e5a2f15fa67f, type: 2}
   equippedPrefab: {fileID: 0}
   weaponDamage: 5
