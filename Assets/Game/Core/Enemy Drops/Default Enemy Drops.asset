@@ -19,7 +19,7 @@ MonoBehaviour:
     - 8
     minNumber: 080000000a000000
     maxNumber: 0c0000000e000000
-  - item: {fileID: 11400000, guid: 8fa7ad9d088c110408c7e4125f5e4a61, type: 2}
+  - item: {fileID: 11400000, guid: 842cad8b83aab28458799cbe502ffd75, type: 2}
     relativeChance:
     - 5
     - 8
