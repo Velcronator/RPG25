@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using GameDevTV.Inventories;
 using GameDevTV.Saving;
 using RPG.Control;
+using RPG.Dialogue;
 using RPG.Inventories;
 using RPG.Stats;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace RPG.Shops
         [Range(0f, 100f)]
         [SerializeField] float sellingPercentage = 50f;
         [SerializeField] float maximumBarterDiscount = 80f;
+        [SerializeField] bool disableDirectInteractionWhenDialogue = true;
 
         [SerializeField] StockItemConfig[] stockConfig;
 
@@ -210,11 +212,27 @@ namespace RPG.Shops
 
         public bool HandleRaycast(PlayerController callingController)
         {
+            if (disableDirectInteractionWhenDialogue && GetComponent<AIConversant>() != null)
+            {
+                return false;
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 callingController.GetComponent<Shopper>().SetActiveShop(this);
             }
             return true;
+        }
+
+        public void OpenShop()
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player == null) return;
+
+            Shopper shopper = player.GetComponent<Shopper>();
+            if (shopper == null) return;
+
+            shopper.SetActiveShop(this);
         }
 
         private int CountItemsInInventory(InventoryItem item)

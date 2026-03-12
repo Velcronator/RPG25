@@ -1339,10 +1339,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360837630}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2345,6 +2345,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2366,9 +2368,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &529488039
 MeshFilter:
@@ -2997,6 +3001,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deb970a7aa8715849aea3107e24d5e71, type: 3}
+--- !u!1 &802902881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3231041850531574421, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+  m_PrefabInstance: {fileID: 1192416313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &817363007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4610,7 +4619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23974356087880867, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.27
+      value: -34.79
       objectReference: {fileID: 0}
     - target: {fileID: 23974356087880867, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4618,7 +4627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23974356087880867, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.49
+      value: 29.27
       objectReference: {fileID: 0}
     - target: {fileID: 23974356087880867, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4667,7 +4676,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3231041850531574421, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1208195320}
+    - targetCorrespondingSourceObject: {fileID: 3231041850531574421, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1208195331}
   m_SourcePrefab: {fileID: 100100000, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
 --- !u!4 &1197215086 stripped
 Transform:
@@ -4754,6 +4769,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 23974356087880867, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
   m_PrefabInstance: {fileID: 1192416313}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1208195320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802902881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84f4cf11b859d049a463831ba4f0cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.AIConversant
+  dialogue: {fileID: 11400000, guid: 041409f45890ef745a698ffdfbf06ee1, type: 2}
+  conversantName: Mandy
+--- !u!114 &1208195321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4294287812518524326, guid: 461a246694df73c41a2e5b925fc3996f, type: 3}
+  m_PrefabInstance: {fileID: 1192416313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802902881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c2201fb06ad9c4186a448ccf17b89f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1208195331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802902881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2552c4b5aaf5957489b3348a8251da6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueTrigger
+  action: OpenShop
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1208195321}
+        m_TargetAssemblyTypeName: RPG.Shops.Shop, Assembly-CSharp
+        m_MethodName: OpenShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1216534712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5216,7 +5284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296432605}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.029512744, y: 0.36479813, z: -0.011569748, w: 0.9305469}
+  m_LocalRotation: {x: 0.03192906, y: 0.23210756, z: -0.0076233945, w: 0.9721361}
   m_LocalPosition: {x: -32.11, y: 3, z: -34.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6567,7 +6635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1585434074
 Transform:
   m_ObjectHideFlags: 0
@@ -6577,7 +6645,7 @@ Transform:
   m_GameObject: {fileID: 1585434073}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 11.5, y: 0, z: -6.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
