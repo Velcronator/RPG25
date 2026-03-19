@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-971011918342205067
+--- !u!114 &-7208570963252513277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,24 +10,70 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
-  m_Name: 065f7c90-615a-4d90-859d-512309afdbc9
+  m_Name: 6a6900ba-b298-420c-9833-d64bdb4d6ce9
   m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueNode
   isPlayerSpeaking: 0
-  text: Greetins stranger.
+  text: Can I interest you ion  a shield?
   children:
-  - a84ab702-2fec-46b0-8e5d-2df5b1d71dd6
+  - 6cabe98b-2248-4612-950b-22e184579e76
   - bc3d73d9-7ce0-4e80-818a-4c08ee41c3f7
   rect:
     serializedVersion: 2
-    x: 21
-    y: 68
+    x: 92
+    y: 255
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    and: []
-  isRootNode: 0
+    and:
+    - or:
+      - predicate: 6
+        parameters:
+        - 167e0640-75b7-428f-8f44-ff1c7835f2d1
+        - 
+        negate: 0
+    - or:
+      - predicate: 4
+        parameters:
+        - 2
+        - 
+        negate: 0
+  isRootNode: 1
+--- !u!114 &-1438597715516401190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 9da79035-bc99-44fb-9549-2e2e5564b2ec
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueNode
+  isPlayerSpeaking: 0
+  text: Well hello stranger Daggers for sale
+  children:
+  - bc3d73d9-7ce0-4e80-818a-4c08ee41c3f7
+  - a84ab702-2fec-46b0-8e5d-2df5b1d71dd6
+  rect:
+    serializedVersion: 2
+    x: 94
+    y: 79
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 6
+        parameters:
+        - 167e0640-75b7-428f-8f44-ff1c7835f2d1
+        - 
+        negate: 1
+  isRootNode: 1
 --- !u!114 &-313400271773050097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,8 +91,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 245
-    y: 15
+    x: 1121
+    y: 288
     width: 200
     height: 100
   onEnterAction: 
@@ -67,10 +113,39 @@ MonoBehaviour:
   m_Name: Candy Emporium
   m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.Dialogue
   nodes:
-  - {fileID: -971011918342205067}
   - {fileID: -313400271773050097}
   - {fileID: 4899020827238259283}
+  - {fileID: -1438597715516401190}
+  - {fileID: -7208570963252513277}
+  - {fileID: 3681118163309404}
+  - {fileID: 9155095531986047550}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &3681118163309404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 6cabe98b-2248-4612-950b-22e184579e76
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueNode
+  isPlayerSpeaking: 1
+  text: Sounds good
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 405
+    y: 361
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: OpenShop
+  condition:
+    and: []
+  isRootNode: 0
 --- !u!114 &4899020827238259283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,8 +163,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 245
-    y: 124
+    x: 450
+    y: 193
     width: 200
     height: 100
   onEnterAction: 
@@ -97,3 +172,30 @@ MonoBehaviour:
   condition:
     and: []
   isRootNode: 0
+--- !u!114 &9155095531986047550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: b562c645-b8c3-49cf-a1c0-3807868ec811
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueNode
+  isPlayerSpeaking: 0
+  text: Candy's Emporium Weapons and Healoth Potions.
+  children:
+  - a84ab702-2fec-46b0-8e5d-2df5b1d71dd6
+  rect:
+    serializedVersion: 2
+    x: 89
+    y: 438
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 1

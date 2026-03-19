@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GameDevTV.Inventories;
+using TMPro;
 
 namespace GameDevTV.UI.Inventories
 {
@@ -13,21 +14,43 @@ namespace GameDevTV.UI.Inventories
     {
         // CONFIG DATA
         [SerializeField] InventorySlotUI InventoryItemPrefab = null;
+        [SerializeField] bool isPlayerInventory = true;
+        [SerializeField] TextMeshProUGUI Title;
 
         // CACHE
-        Inventory playerInventory;
+        Inventory selectedInventory;
 
         // LIFECYCLE METHODS
 
-        private void Awake() 
+        // LIFECYCLE METHODS
+
+        private void Awake()
         {
-            playerInventory = Inventory.GetPlayerInventory();
-            playerInventory.inventoryUpdated += Redraw;
+            if (isPlayerInventory)
+            {
+                selectedInventory = Inventory.GetPlayerInventory();
+                selectedInventory.inventoryUpdated += Redraw;
+            }
         }
 
         private void Start()
         {
-            Redraw();
+            if (isPlayerInventory)
+            {
+                Redraw();
+            }
+        }
+
+        public bool Setup(GameObject user)
+        {
+            if (user.TryGetComponent(out selectedInventory))
+            {
+                selectedInventory.inventoryUpdated += Redraw;
+                Title.text = selectedInventory.name; //perhaps add a field to Inventory for a displayname
+                Redraw();
+                return true;
+            }
+            return false;
         }
 
         // PRIVATE
@@ -39,10 +62,10 @@ namespace GameDevTV.UI.Inventories
                 Destroy(child.gameObject);
             }
 
-            for (int i = 0; i < playerInventory.GetSize(); i++)
+            for (int i = 0; i < selectedInventory.GetSize(); i++)
             {
                 var itemUI = Instantiate(InventoryItemPrefab, transform);
-                itemUI.Setup(playerInventory, i);
+                itemUI.Setup(selectedInventory, i);
             }
         }
     }

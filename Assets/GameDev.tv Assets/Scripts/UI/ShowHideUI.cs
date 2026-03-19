@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameDevTV.UI.Inventories;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,11 +9,23 @@ namespace GameDevTV.UI
     {
         [SerializeField] KeyCode toggleKey = KeyCode.Escape;
         [SerializeField] GameObject uiContainer = null;
+        [SerializeField] bool isOtherInventoryUsed = true;
+        [SerializeField] GameObject otherInventoryContainer = null;
+        [SerializeField] InventoryUI otherInventoryUI = null;
+
+        public bool IsOtherInventoryEnabled => isOtherInventoryUsed && otherInventoryUI != null;
 
         // Start is called before the first frame update
         void Start()
         {
+            if (uiContainer == null)
+            {
+                Debug.LogError($"{nameof(ShowHideUI)} missing {nameof(uiContainer)} reference.", this);
+                return;
+            }
+
             uiContainer.SetActive(false);
+            if (otherInventoryContainer != null) otherInventoryContainer.SetActive(false);
         }
 
         // Update is called once per frame
@@ -26,7 +39,40 @@ namespace GameDevTV.UI
 
         public void Toggle()
         {
+            if (uiContainer == null)
+            {
+                Debug.LogError($"{nameof(ShowHideUI)} missing {nameof(uiContainer)} reference.", this);
+                return;
+            }
+
+            if (otherInventoryContainer != null) otherInventoryContainer.SetActive(false);
             uiContainer.SetActive(!uiContainer.activeSelf);
+        }
+
+        public void ShowOtherInventory(GameObject go)
+        {
+            if (!IsOtherInventoryEnabled)
+            {
+                Debug.LogWarning($"{nameof(ShowHideUI)} called for other inventory but it's not configured.", this);
+                return;
+            }
+
+            if (uiContainer == null)
+            {
+                Debug.LogError($"{nameof(ShowHideUI)} missing {nameof(uiContainer)} reference.", this);
+                return;
+            }
+
+            uiContainer.SetActive(true);
+            if (otherInventoryContainer != null)
+            {
+                otherInventoryContainer.SetActive(true);
+            }
+
+            if (!otherInventoryUI.Setup(go))
+            {
+                Debug.LogWarning($"{nameof(ShowHideUI)} could not set up other inventory for {go.name}.", this);
+            }
         }
     }
 }
