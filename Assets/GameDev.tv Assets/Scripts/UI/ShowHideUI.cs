@@ -9,11 +9,10 @@ namespace GameDevTV.UI
     {
         [SerializeField] KeyCode toggleKey = KeyCode.Escape;
         [SerializeField] GameObject uiContainer = null;
-        [SerializeField] bool isOtherInventoryUsed = true;
         [SerializeField] GameObject otherInventoryContainer = null;
         [SerializeField] InventoryUI otherInventoryUI = null;
 
-        public bool IsOtherInventoryEnabled => isOtherInventoryUsed && otherInventoryUI != null;
+        public bool HasOtherInventory => otherInventoryContainer != null;
 
         // Start is called before the first frame update
         void Start()
@@ -51,7 +50,7 @@ namespace GameDevTV.UI
 
         public void ShowOtherInventory(GameObject go)
         {
-            if (!IsOtherInventoryEnabled)
+            if (!HasOtherInventory)
             {
                 Debug.LogWarning($"{nameof(ShowHideUI)} called for other inventory but it's not configured.", this);
                 return;

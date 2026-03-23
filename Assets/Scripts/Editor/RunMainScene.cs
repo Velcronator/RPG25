@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 class EditorScrips : EditorWindow
 {
@@ -10,7 +11,13 @@ class EditorScrips : EditorWindow
     {
         if (!EditorApplication.isPlaying)
         {
-            string currentSceneName = EditorSceneManager.GetActiveScene().path;
+            Scene activeScene = EditorSceneManager.GetActiveScene();
+            if (activeScene.isDirty)
+            {
+                EditorSceneManager.SaveScene(activeScene);
+            }
+
+            string currentSceneName = activeScene.path;
             File.WriteAllText(".lastScene", currentSceneName);
 
             EditorSceneManager.OpenScene("Assets/Scenes/00 Main Menu.unity");

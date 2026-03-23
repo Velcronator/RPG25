@@ -85,7 +85,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleKey: 105
   uiContainer: {fileID: 1034273193031051067}
-  isOtherInventoryUsed: 1
   otherInventoryContainer: {fileID: 366615422476642037}
   otherInventoryUI: {fileID: 4342799365872436378}
 --- !u!114 &7296689130965556425
@@ -5486,7 +5485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8670066852849924449, guid: 324556a1566060347a27adb2814659a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -665.12354
+      value: -665.12317
       objectReference: {fileID: 0}
     - target: {fileID: 8670304244120494113, guid: 324556a1566060347a27adb2814659a0, type: 3}
       propertyPath: m_AnchorMax.x

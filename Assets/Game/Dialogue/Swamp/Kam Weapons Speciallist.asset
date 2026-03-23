@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1438597715516401190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 9da79035-bc99-44fb-9549-2e2e5564b2ec
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueNode
+  isPlayerSpeaking: 0
+  text: Well hello stranger Sword of Kaos?
+  children:
+  - a84ab702-2fec-46b0-8e5d-2df5b1d71dd6
+  - 3c886978-a101-4f52-91fa-7c414a0004d9
+  rect:
+    serializedVersion: 2
+    x: 94
+    y: 79
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: 6
+        parameters:
+        - 0935e90f-0534-4d28-a882-2fa50115ce9a
+        - 
+        negate: 1
+  isRootNode: 1
+--- !u!114 &-313400271773050097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: a84ab702-2fec-46b0-8e5d-2df5b1d71dd6
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueNode
+  isPlayerSpeaking: 1
+  text: What do you have for sale?
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 615
+    y: 244
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: OpenShop
+  condition:
+    and: []
+  isRootNode: 0
+--- !u!114 &-68560367613140108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: 3c886978-a101-4f52-91fa-7c414a0004d9
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueNode
+  isPlayerSpeaking: 1
+  text: Yeah Nah
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 616
+    y: 359
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c68e5c13d17f34c9de1408e4e09eee, type: 3}
+  m_Name: Kam Weapons Speciallist
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.Dialogue
+  nodes:
+  - {fileID: -313400271773050097}
+  - {fileID: -1438597715516401190}
+  - {fileID: 9155095531986047550}
+  - {fileID: -68560367613140108}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &9155095531986047550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa1ece36dcd256439edb17de42fc66d, type: 3}
+  m_Name: b562c645-b8c3-49cf-a1c0-3807868ec811
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Dialogue.DialogueNode
+  isPlayerSpeaking: 0
+  text: Kams Weapons and Health Potions.
+  children:
+  - a84ab702-2fec-46b0-8e5d-2df5b1d71dd6
+  - 3c886978-a101-4f52-91fa-7c414a0004d9
+  rect:
+    serializedVersion: 2
+    x: 90
+    y: 434
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+  isRootNode: 1

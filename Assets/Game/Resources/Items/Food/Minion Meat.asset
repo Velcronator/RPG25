@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Not the greatest but a considered a delicasy by some
   icon: {fileID: 21300000, guid: 4a39cb4b272639541b7bd5ac0649acf7, type: 3}
   pickup: {fileID: 7821825647229910463, guid: e70d94598459f1645ac6f443db9bdbc6, type: 3}
-  stackable: 0
+  stackable: 1
   price: 5
   category: 6
   consumable: 1

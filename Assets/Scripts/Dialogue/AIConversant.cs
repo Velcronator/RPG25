@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RPG.Dialogue
 {
-    public class AIConversant : MonoBehaviour, IRaycastable
+    public class AIConversant : MonoBehaviour, IRaycastable, IConversant
     {
         [SerializeField] Dialogue dialogue = null;
         [SerializeField] string conversantName;
@@ -14,16 +14,16 @@ namespace RPG.Dialogue
             return CursorType.Dialogue;
         }
 
+        public bool CanConverse()
+        {
+            if (dialogue == null) return false;
+            Health health = GetComponent<Health>();
+            return !(health && health.IsDead());
+        }
+
         public bool HandleRaycast(PlayerController callingController)
         {
-            if (dialogue == null)
-            {
-                return false;
-            }
-
-            Health health = GetComponent<Health>();
-            if (health && health.IsDead()) return false;
-
+            if (!CanConverse()) return false;
             if (Input.GetMouseButtonDown(0))
             {
                 callingController.GetComponent<PlayerConversant>().StartDialogue(this, dialogue);

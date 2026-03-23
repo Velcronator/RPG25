@@ -13,9 +13,14 @@ namespace RPG.Cinematics
         {
             if (!alreadyTriggered && other.gameObject.tag == "Player")
             {
-                alreadyTriggered = true;
-                GetComponent<PlayableDirector>().Play();
+                RunCinematics();
             }
+        }
+
+        public void RunCinematics()
+        {
+            alreadyTriggered = true;
+            GetComponent<PlayableDirector>().Play();
         }
 
         public object CaptureState()

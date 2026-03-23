@@ -1,4 +1,6 @@
-﻿using GameDevTV.UI;
+﻿using System;
+using System.Linq;
+using GameDevTV.UI;
 using RPG.Control;
 using UnityEngine;
 
@@ -7,6 +9,13 @@ namespace GameDevTV.Inventories
     [RequireComponent(typeof(Inventory))]
     public class OtherInventory : MonoBehaviour, IRaycastable
     {
+        private ShowHideUI showHideUI;
+
+        private void Awake()
+        {
+            showHideUI = FindObjectsByType<ShowHideUI>(FindObjectsSortMode.None).FirstOrDefault(s => s.HasOtherInventory);
+        }
+
         public CursorType GetCursorType()
         {
             return CursorType.Pickup;
@@ -14,25 +23,10 @@ namespace GameDevTV.Inventories
 
         public bool HandleRaycast(PlayerController callingController)
         {
+            if (showHideUI == null) return false;
             if (Input.GetMouseButtonDown(0))
             {
-                ShowHideUI targetUI = null;
-                foreach (var ui in FindObjectsByType<ShowHideUI>(FindObjectsSortMode.None))
-                {
-                    if (ui.IsOtherInventoryEnabled)
-                    {
-                        targetUI = ui;
-                        break;
-                    }
-                }
-
-                if (targetUI == null)
-                {
-                    Debug.LogError($"{nameof(OtherInventory)} could not find a configured {nameof(ShowHideUI)}.", this);
-                    return true;
-                }
-
-                targetUI.ShowOtherInventory(gameObject);
+                showHideUI.ShowOtherInventory(gameObject);
             }
             return true;
         }
